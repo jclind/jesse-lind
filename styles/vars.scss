@@ -1,0 +1,23 @@
+@import './functions.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+$primary: #ff7c7c;
+$secondary: #ffd082;
+$tertiary: #88e1f2;
+
+$white: #ffffff;
+$secondary-text: #d6d6d6;
+
+$primary-background: #21243d;
+$secondary-background: #1b1e34;
+$tertiary-background: #131524;
+
+// Dimentions
+$max-width: 1200px;
+
+$border-radius: 10px;
+
+// Fonts
+$font: 'Montserrat', sans-serif;
+
+$title-content-padding: toRem(20);

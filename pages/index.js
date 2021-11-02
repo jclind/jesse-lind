@@ -1,17 +1,27 @@
 import React from 'react'
-
+import JLMainLogo from '../components/images/JLMainLogo'
+import BackgroundIcons from '../components/images/BackgroundIcons'
 const index = () => {
   return (
-    <>
-      <h1>Hello there</h1>
-      <h2>This is a sub-title</h2>
-      <button className='action-btn'>Let&apos;s Talk!</button> <br />
-      <button className='action-btn'>View My Skills</button>
-      <p>
-        Want to collaborate, have a question, or just want to say hi? Shoot me a
-        message and I’ll reply asap!
-      </p>
-    </>
+    <div className='page home-page'>
+      <div className='container'>
+        <div className='content'>
+          <h1>Hi, I&apos;m Jesse</h1>
+          <p>
+            I create <span className='highlight'>clean</span> and{' '}
+            <span className='highlight'>functional</span> websites you can count
+            on.
+          </p>
+          <button className='action-btn'>Let&apos;s Talk!</button>
+        </div>
+        <div className='logo'>
+          <JLMainLogo />
+        </div>
+        <div className='background-icons'>
+          <BackgroundIcons className='icons' />
+        </div>
+      </div>
+    </div>
   )
 }
 

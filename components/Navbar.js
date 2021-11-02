@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Router from 'next/router'
 import Link from 'next/link'
 import NavLogo from './images/NavLogo'
 import Hamburger from 'hamburger-react'
@@ -9,15 +10,21 @@ const Navbar = () => {
   const toggleShow = () => {
     setShow(!show)
   }
-  const handleClick = () => {}
+  const handleClick = () => {
+    setShow(false)
+  }
 
   return (
     <nav>
       <div className='nav-header'>
-        <div className='logo-container'>
-          <Link href='/' exact={true} onClick={handleClick}>
-            <NavLogo />
-          </Link>
+        <div
+          className='logo-container'
+          onClick={() => {
+            Router.push('/')
+            handleClick()
+          }}
+        >
+          <NavLogo />
         </div>
         <div
           className={show ? 'hamburger-container show' : ' hamburger-container'}

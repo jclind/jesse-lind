@@ -20,6 +20,8 @@ a {
 
 h1,
 h2 {
+  padding: 0;
+  margin: 0;
   font-weight: 500;
   padding-bottom: 1.25rem;
 }
@@ -33,6 +35,8 @@ h2 {
 }
 
 p {
+  padding: 0;
+  margin: 0;
   font-size: 1.125rem;
   color: #d6d6d6;
 }
@@ -53,5 +57,27 @@ p {
   font-weight: bold;
   font-size: 1.125rem;
   padding: 10px 15px;
+  margin-top: 2.1875rem;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.highlight {
+  color: #ff7c7c;
+  font-size: 1.125rem;
+  font-weight: bold;
 }
 /*# sourceMappingURL=globals.css.map */

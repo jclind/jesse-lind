@@ -21,6 +21,8 @@ a {
 
 h1,
 h2 {
+  padding: 0;
+  margin: 0;
   font-weight: 500;
   padding-bottom: $title-content-padding;
 }
@@ -34,6 +36,8 @@ h2 {
 }
 
 p {
+  padding: 0;
+  margin: 0;
   font-size: toRem(18);
   color: $secondary-text;
 }
@@ -53,4 +57,28 @@ p {
   font-weight: bold;
   font-size: toRem(18);
   padding: 10px 15px;
+
+  margin-top: toRem(35);
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 100%;
+  width: 100%;
+}
+.container {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  // padding-top: $nav-height + $nav-margin-height;
+}
+
+.highlight {
+  color: $primary;
+  font-size: toRem(18);
+  font-weight: bold;
 }

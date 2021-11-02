@@ -17,7 +17,7 @@ nav {
 
     .logo-container,
     .hamburger-container {
-      z-index: 10;
+      z-index: 15;
     }
     .hamburger-container {
       color: $secondary;
@@ -32,7 +32,7 @@ nav {
   }
   .nav-links.show {
     position: absolute;
-    z-index: 5;
+    z-index: 10;
     top: 0;
     left: 0;
     display: flex;
@@ -45,5 +45,27 @@ nav {
     font-size: toRem(24);
     color: $primary-background;
     background: $secondary;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    .nav-header {
+      .hamburger-container {
+        display: none;
+      }
+    }
+    .nav-links {
+      position: relative;
+      display: flex !important;
+      flex-direction: row;
+      align-items: center;
+      gap: toRem(33);
+
+      font-size: toRem(18);
+      padding: 0;
+      margin: 0;
+      color: $secondary;
+    }
   }
 }

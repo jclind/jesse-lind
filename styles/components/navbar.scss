@@ -1,0 +1,49 @@
+@import '../vars.scss';
+@import '../functions.scss';
+
+nav {
+  height: $nav-height;
+  width: $nav-width;
+  // background: blue;
+  margin: 0 auto;
+  margin-top: $nav-margin-height;
+
+  .nav-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-container,
+    .hamburger-container {
+      z-index: 10;
+    }
+    .hamburger-container {
+      color: $secondary;
+    }
+    .hamburger-container.show {
+      color: $primary-background;
+    }
+  }
+
+  .nav-links {
+    display: none;
+  }
+  .nav-links.show {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: toRem(65);
+    flex-direction: column;
+    align-items: center;
+    padding-top: $nav-height + $nav-margin-height + $px-100;
+    height: 100vh;
+    width: 100%;
+    font-size: toRem(24);
+    color: $primary-background;
+    background: $secondary;
+  }
+}

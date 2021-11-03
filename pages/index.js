@@ -1,6 +1,7 @@
 import React from 'react'
 import JLMainLogo from '../components/images/JLMainLogo'
 import BackgroundIcons from '../components/images/BackgroundIcons'
+
 const index = () => {
   return (
     <div className='page home-page'>

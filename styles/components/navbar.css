@@ -2,6 +2,7 @@
 nav {
   height: 2rem;
   width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
   margin-top: 2.25rem;
 }
@@ -87,6 +88,13 @@ nav .nav-links.show {
     padding: 0;
     margin: 0;
     color: #ffd082;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav .nav-links {
+    gap: 3.75rem;
+    font-size: 1.25rem;
   }
 }
 /*# sourceMappingURL=navbar.css.map */

@@ -29,6 +29,9 @@ h2 {
 
 h1 {
   font-size: toRem(36);
+  @media screen and (min-width: 1200px) {
+    font-size: toRem(48);
+  }
 }
 
 h2 {
@@ -40,6 +43,9 @@ p {
   margin: 0;
   font-size: toRem(18);
   color: $secondary-text;
+  @media screen and (min-width: 1200px) {
+    font-size: toRem(20);
+  }
 }
 
 .action-btn {
@@ -59,6 +65,10 @@ p {
   padding: 10px 15px;
 
   margin-top: toRem(35);
+  @media screen and (min-width: 1200px) {
+    font-size: toRem(24);
+    padding: 15px 20px;
+  }
 }
 
 .page {
@@ -79,6 +89,5 @@ p {
 
 .highlight {
   color: $primary;
-  font-size: toRem(18);
   font-weight: bold;
 }

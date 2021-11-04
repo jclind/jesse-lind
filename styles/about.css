@@ -8,6 +8,12 @@
   max-width: 600px;
 }
 
+.about-page .about {
+  max-width: 1200px;
+  border-bottom: 1px solid #ff7c7c;
+  padding-bottom: 3.75rem;
+}
+
 .about-page .about .about-img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,7 +33,7 @@
 }
 
 .about-page .skills {
-  margin-top: 7.5rem;
+  margin-top: 3.75rem;
   padding-bottom: 7.5rem;
 }
 
@@ -40,6 +46,7 @@
   display: grid;
   gap: 1.25rem;
   margin-top: 3.125rem;
+  justify-items: center;
 }
 
 .about-page .skills .skills-container .skill-box {
@@ -55,7 +62,8 @@
           align-items: center;
   border-radius: 10px;
   padding: 2.8125rem 5%;
-  max-width: 475px;
+  max-width: 500px;
+  width: 100%;
   background: #1b1e34;
 }
 
@@ -98,5 +106,90 @@
   border-radius: 20px;
   background: #131524;
   color: #d6d6d6;
+}
+
+@media screen and (min-width: 768px) {
+  .about-page .about {
+    height: calc(100vh - 2rem - 2.25rem - 10%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 5%;
+  }
+  .about-page .about .about-img {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 280px;
+    height: 280px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .about-page .about .text {
+    max-width: 375px;
+    font-size: 0.875rem;
+  }
+  .about-page .about .about-content {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+  }
+  .about-page .skills {
+    margin-top: 0;
+    padding-top: 10%;
+    text-align: center;
+  }
+  .about-page .skills .skills-container .skill-box {
+    padding-bottom: 3.75rem;
+  }
+  .about-page .skills .text {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 816px) {
+  .about-page .about .about-img {
+    width: 310px;
+    height: 310px;
+  }
+  .about-page .about .text {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-page .about {
+    height: calc(100vh - 2rem - 2.25rem);
+  }
+  .about-page .about .about-img {
+    width: 400px;
+    height: 400px;
+  }
+  .about-page .about .text {
+    max-width: 500px;
+    font-size: 1.125rem;
+  }
+  .about-page .skills {
+    max-width: 1200px;
+  }
+  .about-page .skills .text {
+    max-width: 80%;
+  }
+  .about-page .skills .skills-container {
+    margin-top: 6.25rem;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.875rem;
+  }
 }
 /*# sourceMappingURL=about.css.map */

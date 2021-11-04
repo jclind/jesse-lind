@@ -14,21 +14,21 @@ const AboutPageImg = () => {
   console.log(width)
   return (
     <>
-      {width >= 1200 ? (
-        <div>hi</div>
-      ) : width >= 618 ? (
-        <Image
+      {width >= 768 ? (
+        <img
           src='/about-page-img-md.png'
           alt='About Page'
-          width={310}
-          height={310}
+          // objectFit={'contain'}
+          // width={310}
+          // height={310}
         />
       ) : (
-        <Image
+        <img
           src='/about-page-img.png'
           alt='About Page'
-          width={210}
-          height={210}
+          // objectFit={'contain'}
+          // width={210}
+          // height={210}
         />
       )}
     </>

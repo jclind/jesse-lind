@@ -10,6 +10,9 @@
   }
 
   .about {
+    max-width: $max-width;
+    border-bottom: 1px solid $primary;
+    padding-bottom: toRem(60);
     .about-img {
       display: flex;
       justify-content: center;
@@ -23,7 +26,7 @@
     }
   }
   .skills {
-    margin-top: toRem(120);
+    margin-top: toRem(60);
     padding-bottom: toRem(120);
     .text {
       color: $secondary-text;
@@ -32,6 +35,7 @@
       display: grid;
       gap: toRem(20);
       margin-top: toRem(50);
+      justify-items: center;
       .skill-box {
         display: flex;
         flex-direction: column;
@@ -39,7 +43,8 @@
 
         border-radius: 10px;
         padding: toRem(45) 5%;
-        max-width: 475px;
+        max-width: 500px;
+        width: 100%;
         background: $secondary-background;
 
         .icon-container {
@@ -73,6 +78,75 @@
     }
   }
 
-  @media screen and (min-width: 618px) {
+  @media screen and (min-width: 768px) {
+    .about {
+      height: calc(100vh - #{$nav-height} - #{$nav-margin-height} - 10%);
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 5%;
+      .about-img {
+        justify-content: center;
+        width: 280px;
+        height: 280px;
+        flex-shrink: 0;
+      }
+      .text {
+        max-width: 375px;
+        font-size: toRem(14);
+      }
+      .about-content {
+        flex: 3;
+      }
+    }
+    .skills {
+      margin-top: 0;
+      padding-top: 10%;
+      .skills-container {
+        .skill-box {
+          padding-bottom: toRem(60);
+        }
+      }
+      text-align: center;
+      .text {
+        margin: 0 auto;
+      }
+    }
+  }
+  @media screen and (min-width: 816px) {
+    .about {
+      .about-img {
+        width: 310px;
+        height: 310px;
+      }
+      .text {
+        max-width: 400px;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .about {
+      height: calc(100vh - #{$nav-height} - #{$nav-margin-height});
+      .about-img {
+        width: 400px;
+        height: 400px;
+      }
+      .text {
+        max-width: 500px;
+        font-size: toRem(18);
+      }
+    }
+    .skills {
+      max-width: $max-width;
+      .text {
+        max-width: 80%;
+      }
+      .skills-container {
+        margin-top: toRem(100);
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: toRem(30);
+      }
+    }
   }
 }

@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+.projects-page {
+  padding-top: 4.25rem;
+}
+
+.projects-page h1 {
+  text-align: center;
+  margin: 0;
+  margin-top: 2.5rem;
+}
+
+.projects-page .projects-container .project-item {
+  margin: 0 auto;
+}
+/*# sourceMappingURL=projects.css.map */

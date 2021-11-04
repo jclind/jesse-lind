@@ -1,0 +1,17 @@
+@import './vars.scss';
+@import './functions.scss';
+
+.projects-page {
+  padding-top: $nav-height + $nav-margin-height;
+
+  h1 {
+    text-align: center;
+    margin: 0;
+    margin-top: toRem(40);
+  }
+  .projects-container {
+    .project-item {
+      margin: 0 auto;
+    }
+  }
+}

@@ -15,21 +15,9 @@ const AboutPageImg = () => {
   return (
     <>
       {width >= 768 ? (
-        <img
-          src='/about-page-img-md.png'
-          alt='About Page'
-          // objectFit={'contain'}
-          // width={310}
-          // height={310}
-        />
+        <img src='/about-page-img-md.png' alt='About Page' />
       ) : (
-        <img
-          src='/about-page-img.png'
-          alt='About Page'
-          // objectFit={'contain'}
-          // width={210}
-          // height={210}
-        />
+        <img src='/about-page-img.png' alt='About Page' />
       )}
     </>
   )

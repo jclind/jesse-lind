@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+.project {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.project h3 {
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+}
+
+.project .text {
+  color: #d6d6d6;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+/*# sourceMappingURL=project-item.css.map */

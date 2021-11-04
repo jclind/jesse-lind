@@ -1,0 +1,18 @@
+@import '../vars.scss';
+@import '../functions.scss';
+
+.project {
+  width: fit-content;
+  margin: 0 auto;
+  // background: $primary-background;
+  h3 {
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+  }
+  .text {
+    color: $secondary-text;
+    font-size: toRem(14);
+    font-weight: bold;
+  }
+}

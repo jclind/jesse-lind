@@ -3,6 +3,8 @@ import '../styles/globals.css'
 import '../styles/components/navbar.css'
 import '../styles/home.css'
 import '../styles/about.css'
+import '../styles/projects.css'
+import '../styles/components/project-item.css'
 import Layout from '../components/Layout'
 
 function MyApp({ Component, pageProps }) {

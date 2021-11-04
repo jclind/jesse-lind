@@ -3,8 +3,11 @@ nav {
   height: 2rem;
   width: 90%;
   max-width: 1200px;
+  background: none;
+  z-index: -1;
   margin: 0 auto;
   margin-top: 2.25rem;
+  cursor: pointer;
 }
 
 nav .nav-header {
@@ -60,6 +63,7 @@ nav .nav-links.show {
   font-size: 1.5rem;
   color: #21243d;
   background: #ffd082;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

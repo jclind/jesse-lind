@@ -1,6 +1,7 @@
 @import './vars.scss';
 
 .home-page {
+  overflow: hidden;
   .container {
     max-width: $max-width;
     overflow: hidden;
@@ -81,4 +82,210 @@
       opacity: 1 !important;
     }
   }
+}
+
+.background-icons-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes a1 {
+  from {
+    left: -25%;
+  }
+  50%,
+  to {
+    left: 140%;
+  }
+}
+@keyframes a2 {
+  from {
+    right: 20%;
+    bottom: -15%;
+  }
+  to {
+    bottom: 120%;
+    right: 150%;
+  }
+}
+@keyframes a3 {
+  from {
+    left: -50%;
+    bottom: -15%;
+  }
+  to {
+    left: 150%;
+    bottom: 250%;
+  }
+}
+@keyframes a4 {
+  from {
+    right: -5%;
+    bottom: -15%;
+  }
+  to {
+    right: 40%;
+    bottom: 155%;
+  }
+}
+@keyframes a5 {
+  from {
+    right: -5%;
+    top: -200%;
+  }
+  to {
+    right: 105%;
+    top: 150%;
+  }
+}
+@keyframes a6 {
+  from,
+  40% {
+    left: -50%;
+    bottom: -120%;
+  }
+  to {
+    left: 150%;
+    bottom: 250%;
+  }
+}
+@keyframes a7 {
+  from,
+  50% {
+    left: -10%;
+    top: -10%;
+  }
+  to {
+    left: 110%;
+    top: 90%;
+  }
+}
+@keyframes a8 {
+  from,
+  30% {
+    left: -10%;
+    bottom: 10%;
+  }
+  to {
+    left: 150%;
+    bottom: 90%;
+  }
+}
+@keyframes a9 {
+  from,
+  30% {
+    left: 50%;
+    bottom: -10%;
+  }
+  to {
+    left: 120%;
+    bottom: 95%;
+  }
+}
+@keyframes a10 {
+  from,
+  60% {
+    left: 30%;
+    top: -5%;
+  }
+  to {
+    left: -10%;
+    top: 60%;
+  }
+}
+@keyframes a11 {
+  from,
+  60% {
+    left: 50%;
+    bottom: -5%;
+  }
+  to {
+    left: 25%;
+    bottom: 105%;
+  }
+}
+
+.item {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  opacity: 0.5;
+
+  // mask: url('../public/branch-icon.svg');
+  // mask-repeat: no-repeat;
+  // background: red;
+}
+.replaced-svg {
+  fill: red;
+  color: red;
+}
+.item1 {
+  left: -25%;
+  top: 115px;
+  background: lightcoral;
+  animation: a1 60s linear infinite;
+}
+.item2 {
+  right: 20%;
+  bottom: -15%;
+  background: lightblue;
+  animation: a2 20s linear infinite;
+}
+.item3 {
+  left: -50%;
+  bottom: -15%;
+  background: lightgreen;
+  animation: a3 40s linear infinite;
+}
+.item4 {
+  right: -5%;
+  bottom: -15%;
+  background: lightyellow;
+  animation: a4 40s linear infinite;
+}
+.item5 {
+  right: -5%;
+  top: -200%;
+  background: blueviolet;
+  animation: a5 60s linear infinite;
+}
+.item6 {
+  left: -50%;
+  bottom: -120%;
+  background: blueviolet;
+  animation: a6 120s linear infinite;
+}
+.item7 {
+  left: -10%;
+  top: -10%;
+  background: rgb(113, 158, 255);
+  animation: a7 60s linear infinite;
+}
+.item8 {
+  left: -10%;
+  bottom: 10%;
+  background: rgb(113, 158, 255);
+  animation: a8 60s linear infinite;
+}
+.item9 {
+  left: 50%;
+  bottom: -10%;
+  background: rgb(195, 255, 55);
+  animation: a9 80s linear infinite;
+}
+.item10 {
+  left: 30%;
+  top: -5%;
+  background: rgb(255, 29, 85);
+  animation: a10 60s linear infinite;
+}
+.item11 {
+  left: 50%;
+  bottom: -5%;
+  background: rgb(255, 213, 224);
+  animation: a11 60s linear infinite;
 }

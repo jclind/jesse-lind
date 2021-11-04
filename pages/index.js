@@ -1,6 +1,7 @@
 import React from 'react'
 import JLMainLogo from '../components/images/JLMainLogo'
-import BackgroundIcons from '../components/images/BackgroundIcons'
+// import BackgroundIcons from '../components/images/BackgroundIcons'
+import BackgroundIcons from '../components/BackgroundIcons'
 
 const index = () => {
   return (
@@ -18,9 +19,7 @@ const index = () => {
         <div className='logo'>
           <JLMainLogo />
         </div>
-        <div className='background-icons'>
-          <BackgroundIcons className='icons' />
-        </div>
+        <BackgroundIcons />
       </div>
     </div>
   )

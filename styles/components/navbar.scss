@@ -5,9 +5,12 @@ nav {
   height: $nav-height;
   width: $nav-width;
   max-width: $max-width;
+  background: none;
+  z-index: -1;
   // background: blue;
   margin: 0 auto;
   margin-top: $nav-margin-height;
+  cursor: pointer;
 
   .nav-header {
     width: 100%;
@@ -46,6 +49,7 @@ nav {
     font-size: toRem(24);
     color: $primary-background;
     background: $secondary;
+    cursor: pointer;
   }
 
   @media screen and (min-width: 768px) {

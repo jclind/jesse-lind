@@ -36,11 +36,11 @@ const points = [
   { l6: [30, -5] },
   { l7: [20, -5] },
 ]
-const colors = [
-  'brightness(0) saturate(100%) invert(96%) sepia(4%) saturate(7343%) hue-rotate(162deg) brightness(96%) contrast(98%)',
-  'brightness(0) saturate(100%) invert(87%) sepia(6%) saturate(3450%) hue-rotate(331deg) brightness(104%) contrast(101%)',
-  'brightness(0) saturate(100%) invert(73%) sepia(99%) saturate(2662%) hue-rotate(311deg) brightness(103%) contrast(136%)',
-]
+// const colors = [
+//   'brightness(0) saturate(100%) invert(96%) sepia(4%) saturate(7343%) hue-rotate(162deg) brightness(96%) contrast(98%)',
+//   'brightness(0) saturate(100%) invert(87%) sepia(6%) saturate(3450%) hue-rotate(331deg) brightness(104%) contrast(101%)',
+//   'brightness(0) saturate(100%) invert(73%) sepia(99%) saturate(2662%) hue-rotate(311deg) brightness(103%) contrast(136%)',
+// ]
 const icons = [
   '/branch-icon.svg',
   '/bug-icon.svg',
@@ -54,7 +54,8 @@ const icons = [
   '/js-icon.svg',
   '/react-icon.svg',
   '/right-arrow-icon.svg',
-  '/next-js-icon.svg',
+  '/left-arrow-icon.svg',
+  '/next-icon.svg',
   '/scss-icon.svg',
   '/vscode-icon.svg',
 ]
@@ -111,12 +112,12 @@ const BackgroundIcons = () => {
     el.setAttribute('class', 'item svg')
     el.setAttribute('src', `${icons[randomNumber(0, icons.length)]}`)
     document.querySelector('.background-icons-container').appendChild(el)
-    el.style.filter = colors[randomNumber(0, colors.length)]
+    // el.style.filter = colors[randomNumber(0, colors.length)]
 
     // Random time between 15 and 35 seconds
-    const randTime = randomNumber(15000, 40000)
-    // Random rotation degree between 45 and 520
-    const randRot = randomNumber(45, 520)
+    const randTime = randomNumber(15000, 35000)
+    // Random rotation degree between 0 and 520
+    const randRot = randomNumber(0, 520)
 
     const animation = document.getElementById(`${id}`).animate(
       [
@@ -142,7 +143,7 @@ const BackgroundIcons = () => {
 
   useEffect(() => {
     const spawnLoop = () => {
-      const randTime = randomNumber(2000, 9000)
+      const randTime = randomNumber(3000, 10000)
       setTimeout(() => {
         createEl()
         spawnLoop()

@@ -1,26 +1,27 @@
 import React from 'react'
+import AboutPageImg from '../components/images/AboutPageImg'
 
 const about = () => {
   return (
     <div className='page about-page'>
       <div className='about section'>
-        <img
-          src='/about-page-img.png'
-          alt='Person sitting on computer desk'
-          className='about-img'
-        />
-        <h1 className='title'>About Me</h1>
-        <p className='text'>
-          Hello! I’m Jesse, a 19 year old from Pittsburgh Pennsylvania. In 2016,
-          my brother callenged me to solve a couple html problems on
-          FreeCodeCamp.org and the rest is history, I had found a grand new
-          passion.
-        </p>
-        <p className='text'>
-          Since that day I have been studying and learning all I can about
-          everything from how computers work to what makes an incredible user
-          experience on a website.
-        </p>
+        <div className='about-img'>
+          <AboutPageImg />
+        </div>
+        <div className='about-content'>
+          <h1 className='title'>About Me</h1>
+          <p className='text'>
+            Hello! I’m Jesse, a 19 year old from Pittsburgh Pennsylvania. In
+            2016, my brother callenged me to solve a couple html problems on
+            FreeCodeCamp.org and the rest is history, I had found a grand new
+            passion.
+          </p>
+          <p className='text'>
+            Since that day I have been studying and learning all I can about
+            everything from how computers work to what makes an incredible user
+            experience on a website.
+          </p>
+        </div>
         <button className='action-btn'>View My Skills</button>
       </div>
       <div className='skills section'>

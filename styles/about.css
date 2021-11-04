@@ -5,10 +5,16 @@
 
 .about-page p {
   line-height: 150%;
+  max-width: 600px;
 }
 
 .about-page .about .about-img {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1.875rem auto;
 }
 

@@ -6,11 +6,13 @@
 
   p {
     line-height: 150%;
+    max-width: 600px;
   }
 
   .about {
     .about-img {
-      display: block;
+      display: flex;
+      justify-content: center;
       margin: toRem(30) auto;
     }
     .text {
@@ -69,5 +71,8 @@
         }
       }
     }
+  }
+
+  @media screen and (min-width: 618px) {
   }
 }

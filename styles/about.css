@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+.about-page {
+  padding-top: 4.25rem;
+}
+
+.about-page p {
+  line-height: 150%;
+}
+
+.about-page .about .about-img {
+  display: block;
+  margin: 1.875rem auto;
+}
+
+.about-page .about .text {
+  padding-bottom: 0.625rem;
+}
+
+.about-page .about p:last-of-type {
+  padding: 0;
+}
+
+.about-page .skills {
+  margin-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.about-page .skills .text {
+  color: #d6d6d6;
+}
+
+.about-page .skills .skills-container {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 3.125rem;
+}
+
+.about-page .skills .skills-container .skill-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  padding: 2.8125rem 5%;
+  max-width: 475px;
+  background: #1b1e34;
+}
+
+.about-page .skills .skills-container .skill-box .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background: #131524;
+  margin-bottom: 3.125rem;
+}
+
+.about-page .skills .skills-container .skill-box .skill-title {
+  padding-bottom: 1.875rem;
+}
+
+.about-page .skills .skills-container .skill-box .skill-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.9375rem;
+  font-size: 0.875rem;
+}
+
+.about-page .skills .skills-container .skill-box .skill-items .skill-item {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: #131524;
+  color: #d6d6d6;
+}
+/*# sourceMappingURL=about.css.map */

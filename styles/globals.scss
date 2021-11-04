@@ -49,28 +49,30 @@ p {
   }
 }
 
-.action-btn {
+button {
   display: flex;
   align-items: center;
   margin: 0;
-
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+.action-btn {
   color: $primary-background;
   background: $secondary;
 
-  outline: none;
-  border: none;
   border-radius: $border-radius;
 
   font-weight: bold;
   font-size: toRem(18);
-  padding: 10px 15px;
+  padding: 15px 20px;
 
   margin-top: toRem(35);
   @media screen and (min-width: 1200px) {
     font-size: toRem(24);
-    padding: 15px 20px;
+    // padding: 15px 20px;
   }
-  cursor: pointer;
 }
 
 .page {
@@ -88,7 +90,10 @@ p {
   margin: 0 auto;
   // padding-top: $nav-height + $nav-margin-height;
 }
-
+.section {
+  width: 90%;
+  margin: 0 auto;
+}
 .highlight {
   color: $primary;
   font-weight: bold;

@@ -56,7 +56,7 @@ p {
   }
 }
 
-.action-btn {
+button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,22 +64,25 @@ p {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-  color: #21243d;
-  background: #ffd082;
   outline: none;
   border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.action-btn {
+  color: #21243d;
+  background: #ffd082;
   border-radius: 10px;
   font-weight: bold;
   font-size: 1.125rem;
-  padding: 10px 15px;
+  padding: 15px 20px;
   margin-top: 2.1875rem;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 1200px) {
   .action-btn {
     font-size: 1.5rem;
-    padding: 15px 20px;
   }
 }
 
@@ -95,6 +98,11 @@ p {
 
 .container {
   height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section {
   width: 90%;
   margin: 0 auto;
 }

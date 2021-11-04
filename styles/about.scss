@@ -1,0 +1,73 @@
+@import './vars.scss';
+@import './functions.scss';
+
+.about-page {
+  padding-top: $nav-height + $nav-margin-height;
+
+  p {
+    line-height: 150%;
+  }
+
+  .about {
+    .about-img {
+      display: block;
+      margin: toRem(30) auto;
+    }
+    .text {
+      padding-bottom: toRem(10);
+    }
+    p:last-of-type {
+      padding: 0;
+    }
+  }
+  .skills {
+    margin-top: toRem(120);
+    padding-bottom: toRem(120);
+    .text {
+      color: $secondary-text;
+    }
+    .skills-container {
+      display: grid;
+      gap: toRem(20);
+      margin-top: toRem(50);
+      .skill-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 10px;
+        padding: toRem(45) 5%;
+        max-width: 475px;
+        background: $secondary-background;
+
+        .icon-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 120px;
+          width: 120px;
+          border-radius: 50%;
+          background: $tertiary-background;
+          margin-bottom: toRem(50);
+        }
+
+        .skill-title {
+          padding-bottom: toRem(30);
+        }
+        .skill-items {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: toRem(15);
+          font-size: toRem(14);
+          .skill-item {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: $tertiary-background;
+            color: $secondary-text;
+          }
+        }
+      }
+    }
+  }
+}

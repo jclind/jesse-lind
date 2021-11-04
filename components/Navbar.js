@@ -34,18 +34,18 @@ const Navbar = () => {
         </div>
       </div>
       <div className={show ? 'nav-links show' : 'nav-links'}>
-        <div className='nav-link'>
-          <Link href='/about' exact={true} onClick={handleClick}>
+        <div className='nav-link' onClick={handleClick}>
+          <Link href='/about' exact={true}>
             About
           </Link>
         </div>
-        <div className='nav-link'>
-          <Link href='/projects' exact={true} onClick={handleClick}>
+        <div className='nav-link' onClick={handleClick}>
+          <Link href='/projects' exact={true}>
             Projects
           </Link>
         </div>
-        <div className='nav-link'>
-          <Link href='/contact' exact={true} onClick={handleClick}>
+        <div className='nav-link' onClick={handleClick}>
+          <Link href='/contact' exact={true}>
             Contact
           </Link>
         </div>

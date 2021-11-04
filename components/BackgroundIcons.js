@@ -111,7 +111,9 @@ const BackgroundIcons = () => {
     el.setAttribute('id', id)
     el.setAttribute('class', 'item svg')
     el.setAttribute('src', `${icons[randomNumber(0, icons.length)]}`)
-    document.querySelector('.background-icons-container').appendChild(el)
+    if (document.querySelector('.background-icons-container')) {
+      document.querySelector('.background-icons-container').appendChild(el)
+    }
     // el.style.filter = colors[randomNumber(0, colors.length)]
 
     // Random time between 15 and 35 seconds
@@ -119,25 +121,29 @@ const BackgroundIcons = () => {
     // Random rotation degree between 0 and 520
     const randRot = randomNumber(0, 520)
 
-    const animation = document.getElementById(`${id}`).animate(
-      [
+    if (document.getElementById(`${id}`)) {
+      const animation = document.getElementById(`${id}`).animate(
+        [
+          {
+            top: `${first[0]}%`,
+            left: `${first[1]}%`,
+            transform: `rotate(0deg)`,
+          },
+          {
+            top: `${second[0]}%`,
+            left: `${second[1]}%`,
+            transform: `rotate(${randRot}deg)`,
+          },
+        ],
         {
-          top: `${first[0]}%`,
-          left: `${first[1]}%`,
-          transform: `rotate(0deg)`,
-        },
-        {
-          top: `${second[0]}%`,
-          left: `${second[1]}%`,
-          transform: `rotate(${randRot}deg)`,
-        },
-      ],
-      {
-        duration: randTime,
+          duration: randTime,
+        }
+      )
+      animation.onfinish = function () {
+        if (el) {
+          el.remove()
+        }
       }
-    )
-    animation.onfinish = function () {
-      el.remove()
     }
   }
 

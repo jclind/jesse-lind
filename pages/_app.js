@@ -2,6 +2,7 @@ import 'normalize.css'
 import '../styles/globals.css'
 import '../styles/components/navbar.css'
 import '../styles/home.css'
+import '../styles/about.css'
 import Layout from '../components/Layout'
 
 function MyApp({ Component, pageProps }) {

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { randomNumber } from '../util/randomNumber'
+
 const points = [
   { ctl: [-5, -5] },
   { t1: [-5, 20] },
@@ -110,9 +111,7 @@ const BackgroundIcons = () => {
     el.setAttribute('class', 'item svg')
     el.setAttribute('src', `${icons[randomNumber(0, icons.length)]}`)
     document.querySelector('.background-icons-container').appendChild(el)
-    // el.style.filter = ''
     el.style.filter = colors[randomNumber(0, colors.length)]
-    // ' brightness(0) saturate(100%) invert(96%) sepia(4%) saturate(7343%) hue-rotate(162deg) brightness(96%) contrast(98%)'
 
     // Random time between 15 and 35 seconds
     const randTime = randomNumber(15000, 40000)
@@ -143,7 +142,7 @@ const BackgroundIcons = () => {
 
   useEffect(() => {
     const spawnLoop = () => {
-      const randTime = randomNumber(2000, 10000)
+      const randTime = randomNumber(2000, 9000)
       setTimeout(() => {
         createEl()
         spawnLoop()
@@ -158,7 +157,7 @@ const BackgroundIcons = () => {
       createEl()
     }, 2000)
     spawnLoop()
-  }, [])
+  })
 
   return <div className='background-icons-container'></div>
 }

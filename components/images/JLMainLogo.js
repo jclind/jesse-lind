@@ -16,7 +16,12 @@ const JLMainLogo = () => {
   return (
     <>
       {width >= 1200 ? (
-        <Image src='/JL-main-logo-lg.png' width={300} height={500} />
+        <Image
+          src='/JL-main-logo-lg.png'
+          width={300}
+          height={500}
+          alt='Jesse Lind Logo'
+        />
       ) : width >= 618 ? (
         <div>
           <svg

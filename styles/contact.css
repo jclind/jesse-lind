@@ -38,6 +38,7 @@
 }
 
 .contact-page .form-container .form {
+  max-width: 500px;
   width: 90%;
   margin: 0 auto;
   padding: 3.125rem 0;
@@ -53,6 +54,7 @@
   gap: 0.5rem;
   font-size: 0.875rem;
   margin-bottom: 1.875rem;
+  color: #d6d6d6;
 }
 
 .contact-page .form-container .form form .names {
@@ -63,6 +65,12 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 2.1875rem;
+}
+
+.contact-page .form-container .form form .names label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .contact-page .form-container .form form label {
@@ -79,5 +87,40 @@
 
 .contact-page .form-container .form form .action-btn {
   margin: 0;
+  opacity: 0.5;
+}
+
+.contact-page .form-container .form form:valid .action-btn {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-page .info {
+    margin: 7.5rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-page .info .img-container img {
+    width: 340px;
+  }
+  .contact-page .info .flex-box {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .contact-page .form-container .form .email {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.125rem;
+    margin-bottom: 2.1875rem;
+  }
 }
 /*# sourceMappingURL=contact.css.map */

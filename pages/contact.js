@@ -5,10 +5,10 @@ const contact = () => {
     <>
       <div className='page contact-page'>
         <div className='info'>
-          <div className='img-container'>
+          <div className='img-container flex-box'>
             <img src='/contact-page-img.png' alt='contact page' />
           </div>
-          <div className='content'>
+          <div className='content flex-box'>
             <h1>Contact Me</h1>
             <p className='text'>
               Want to collaborate, have a question, or just want to say hi?

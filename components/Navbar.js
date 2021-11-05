@@ -28,9 +28,8 @@ const Navbar = () => {
         </div>
         <div
           className={show ? 'hamburger-container show' : ' hamburger-container'}
-          onClick={toggleShow}
         >
-          <Hamburger className='hamburger' />
+          <Hamburger className='hamburger' toggled={show} toggle={setShow} />
         </div>
       </div>
       <div className={show ? 'nav-links show' : 'nav-links'}>

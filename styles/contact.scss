@@ -1,0 +1,67 @@
+@import './vars.scss';
+@import './functions.scss';
+
+.contact-page {
+  padding-top: $nav-height + $nav-margin-height;
+
+  .info {
+    margin: 0 auto;
+    width: 90%;
+    .img-container {
+      width: fit-content;
+      margin: 0 auto;
+      margin-top: toRem(40);
+      margin-bottom: toRem(30);
+      img {
+        object-fit: contain;
+        width: 225px;
+      }
+    }
+    .content {
+      .social-icons {
+        display: flex;
+        gap: toRem(20);
+        margin-top: toRem(30);
+      }
+    }
+  }
+  .form-container {
+    width: 100%;
+    background: $secondary-background;
+    margin-top: toRem(50);
+
+    .form {
+      width: 90%;
+      margin: 0 auto;
+      padding: toRem(50) 0;
+
+      .email {
+        display: flex;
+        align-items: center;
+        gap: toRem(8);
+        font-size: toRem(14);
+        margin-bottom: toRem(30);
+      }
+      form {
+        .names {
+          display: flex;
+          justify-content: space-between;
+          gap: toRem(35);
+        }
+        label {
+          font-size: toRem(12);
+          color: $secondary-text;
+          padding-bottom: toRem(30);
+          input,
+          textarea {
+            margin-top: toRem(5);
+            width: 100%;
+          }
+        }
+        .action-btn {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

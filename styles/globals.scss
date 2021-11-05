@@ -52,6 +52,24 @@ p {
   }
 }
 
+label {
+  display: flex;
+  flex-direction: column;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+  background: $primary-background;
+  border-radius: $border-radius;
+  color: white;
+  font-size: toRem(14);
+  padding: toRem(5);
+}
+input {
+  height: 45px;
+}
+
 button {
   display: flex;
   align-items: center;

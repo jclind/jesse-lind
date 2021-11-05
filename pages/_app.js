@@ -5,6 +5,7 @@ import '../styles/home.css'
 import '../styles/about.css'
 import '../styles/projects.css'
 import '../styles/components/project-item.css'
+import '../styles/contact.css'
 import Layout from '../components/Layout'
 
 function MyApp({ Component, pageProps }) {

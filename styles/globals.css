@@ -61,6 +61,31 @@ p {
   }
 }
 
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+  background: #21243d;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.875rem;
+  padding: 0.3125rem;
+}
+
+input {
+  height: 45px;
+}
+
 button {
   display: -webkit-box;
   display: -ms-flexbox;

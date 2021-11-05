@@ -100,20 +100,23 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 5rem;
   }
   .contact-page .info .img-container img {
     width: 340px;
   }
-  .contact-page .info .flex-box {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+  .contact-page .info .img-container {
+    padding: 0;
+    margin: 0;
+  }
+  .contact-page .info .content {
+    max-width: 400px;
   }
   .contact-page .form-container .form .email {
     -webkit-box-pack: center;
@@ -121,6 +124,73 @@
             justify-content: center;
     font-size: 1.125rem;
     margin-bottom: 2.1875rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  .contact-page .info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contact-page .info .img-container img {
+    width: 500px;
+  }
+  .contact-page .info .content {
+    max-width: 500px;
+  }
+  .contact-page .form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .contact-page .info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .contact-page .form-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 /*# sourceMappingURL=contact.css.map */

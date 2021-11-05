@@ -10,8 +10,14 @@
     margin-top: toRem(40);
   }
   .projects-container {
+    margin-top: toRem(30);
+    display: grid;
+    gap: toRem(25);
     .project-item {
+      width: fit-content;
       margin: 0 auto;
+      padding-bottom: toRem(25);
+      // border-bottom: 1px solid $primary;
     }
   }
 }

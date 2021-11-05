@@ -4,12 +4,59 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+  border-radius: 10px;
+}
+
+.project .img-container {
+  position: relative;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.project .img-container .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.project .img-container .overlay .visit-btn {
+  color: #21243d;
+  background: #ffd082;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.project .img-container .overlay:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .project h3 {
   text-transform: capitalize;
   margin: 0;
   padding: 0;
+  margin-top: 0.5rem;
+  padding-bottom: 0.125rem;
 }
 
 .project .text {

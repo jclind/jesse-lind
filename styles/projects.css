@@ -9,7 +9,18 @@
   margin-top: 2.5rem;
 }
 
+.projects-page .projects-container {
+  margin-top: 1.875rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5625rem;
+}
+
 .projects-page .projects-container .project-item {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 0 auto;
+  padding-bottom: 1.5625rem;
 }
 /*# sourceMappingURL=projects.css.map */

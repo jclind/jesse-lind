@@ -3,6 +3,7 @@
 
 .contact-page {
   padding-top: $nav-height + $nav-margin-height;
+  min-height: 970px;
 
   .info {
     margin: 0 auto;
@@ -29,6 +30,7 @@
     }
   }
   .form-container {
+    // min-height: 970px;
     width: 100%;
     background: $secondary-background;
     margin-top: toRem(50);
@@ -132,6 +134,19 @@
       }
       .content {
         max-width: 500px;
+
+        .social-icons {
+          position: absolute;
+          bottom: 2rem;
+          gap: toRem(30);
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: fit-content;
+          .icon {
+            height: 25px;
+          }
+        }
       }
     }
 

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 .contact-page {
   padding-top: 4.25rem;
+  min-height: 970px;
 }
 
 .contact-page .info {
@@ -167,6 +168,20 @@
   }
   .contact-page .info .content {
     max-width: 500px;
+  }
+  .contact-page .info .content .social-icons {
+    position: absolute;
+    bottom: 2rem;
+    gap: 1.875rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .contact-page .info .content .social-icons .icon {
+    height: 25px;
   }
   .contact-page .form-container {
     display: -webkit-box;

@@ -48,8 +48,10 @@ p {
   font-size: toRem(18);
   color: $secondary-text;
   @media screen and (min-width: 1200px) {
-    font-size: toRem(20);
+    // font-size: toRem(20);
   }
+  line-height: 150%;
+  max-width: 600px;
 }
 
 label {

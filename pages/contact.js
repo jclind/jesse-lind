@@ -5,30 +5,40 @@ const contact = () => {
     <>
       <div className='page contact-page'>
         <div className='info'>
-          <div className='img-container'>
-            <img src='/contact-page-img.png' alt='contact page' />
-          </div>
-          <div className='content'>
-            <h1>Contact Me</h1>
-            <p className='text'>
-              Interested in hiring me? Have a question? or just want to say hi?
-              Shoot me a message and I’ll reply asap!
-            </p>
-            <div className='social-icons'>
-              <img
-                src='/contact-instagram.svg'
-                alt='instagram'
-                className='icon'
-              />
-              <img src='/contact-twitter.svg' alt='twitter' className='icon' />
-              <img
-                src='/contact-linkedin.svg'
-                alt='linkedin'
-                className='icon'
-              />
-              <img src='/contact-github.svg' alt='github' className='icon' />
-              <img src='/contact-coffee.svg' alt='coffee' className='icon' />
-              <img src='/contact-discord.svg' alt='discord' className='icon' />
+          <div className='info-inner'>
+            <div className='img-container'>
+              <img src='/contact-page-img.png' alt='contact page' />
+            </div>
+            <div className='content'>
+              <h1>Contact Me</h1>
+              <p className='text'>
+                Interested in hiring me? Have a question? or just want to say
+                hi? Shoot me a message and I’ll reply asap!
+              </p>
+              <div className='social-icons'>
+                <img
+                  src='/contact-instagram.svg'
+                  alt='instagram'
+                  className='icon'
+                />
+                <img
+                  src='/contact-twitter.svg'
+                  alt='twitter'
+                  className='icon'
+                />
+                <img
+                  src='/contact-linkedin.svg'
+                  alt='linkedin'
+                  className='icon'
+                />
+                <img src='/contact-github.svg' alt='github' className='icon' />
+                <img src='/contact-coffee.svg' alt='coffee' className='icon' />
+                <img
+                  src='/contact-discord.svg'
+                  alt='discord'
+                  className='icon'
+                />
+              </div>
             </div>
           </div>
         </div>

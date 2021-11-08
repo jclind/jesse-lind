@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 const contact = () => {
+  const discordTag = 'Thinrin#4693'
+  const discordTooltip = useRef()
+
+  function copyText(e) {
+    navigator.clipboard.writeText(discordTag)
+    discordTooltip.current.innerText = 'Copied'
+    setTimeout(() => {
+      discordTooltip.current.innerText = 'Copy'
+    }, 3000)
+  }
+
   return (
     <>
       <div className='page contact-page'>
@@ -17,40 +28,63 @@ const contact = () => {
               </p>
               <div className='contact-info'>
                 <div className='email'>
-                  <img src='/contact-mail.svg' alt='mail' />{' '}
+                  <a href='mailto:jesselindcs@gmail.com'>
+                    <img src='/contact-mail.svg' alt='mail' />
+                  </a>
                   <span>Jesselindcs@gmail.com</span>
                 </div>
                 <div className='social-icons'>
-                  <img
-                    src='/contact-instagram.svg'
-                    alt='instagram'
+                  <a
+                    href='https://www.instagram.com/jclind02/'
+                    target='_blank'
+                    rel='noopener noreferrer'
                     className='icon'
-                  />
-                  <img
-                    src='/contact-twitter.svg'
-                    alt='twitter'
+                  >
+                    <img src='/contact-instagram.svg' alt='instagram' />
+                  </a>
+                  <a
+                    href='https://twitter.com/jclind02'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <img src='/contact-twitter.svg' alt='twitter' />
+                  </a>
+                  <a
+                    href='https://www.linkedin.com/in/jesseclind/'
+                    target='_blank'
+                    rel='noopener noreferrer'
                     className='icon'
-                  />
-                  <img
-                    src='/contact-linkedin.svg'
-                    alt='linkedin'
+                  >
+                    <img src='/contact-linkedin.svg' alt='linkedin' />
+                  </a>
+                  <a
+                    href='https://github.com/jclind'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <img src='/contact-github.svg' alt='github' />
+                  </a>
+                  <a
+                    href='https://www.buymeacoffee.com/jesseclind'
+                    target='_blank'
+                    rel='noopener noreferrer'
                     className='icon'
-                  />
-                  <img
-                    src='/contact-github.svg'
-                    alt='github'
+                  >
+                    <img src='/contact-coffee.svg' alt='coffee' />
+                  </a>
+                  <div
+                    href=''
+                    target='_blank'
+                    rel='noopener noreferrer'
                     className='icon'
-                  />
-                  <img
-                    src='/contact-coffee.svg'
-                    alt='coffee'
-                    className='icon'
-                  />
-                  <img
-                    src='/contact-discord.svg'
-                    alt='discord'
-                    className='icon'
-                  />
+                    onClick={copyText}
+                    onKeyPress={copyText}
+                  >
+                    <img src='/contact-discord.svg' alt='discord' />
+                    <span className='tooltiptext' ref={discordTooltip}>
+                      Copy
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -58,24 +92,24 @@ const contact = () => {
         </div>
         <div className='form-container'>
           <div className='form'>
-            <form action=''>
+            <form action='https://formspree.io/f/xknklanj' method='POST'>
               <div className='names'>
                 <label>
                   First Name
-                  <input type='text' required />
+                  <input type='text' name='firstName' required />
                 </label>
                 <label>
                   Last Name
-                  <input type='text' required />
+                  <input type='text' name='lastName' required />
                 </label>
               </div>
               <label>
                 Email
-                <input type='email' required />
+                <input type='email' name='email' required />
               </label>
               <label>
                 Subject
-                <input type='text' required />
+                <input type='text' name='subject' required />
               </label>
               <label>
                 Message

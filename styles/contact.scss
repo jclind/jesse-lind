@@ -45,9 +45,30 @@
         .social-icons {
           display: flex;
           gap: toRem(20);
+          cursor: pointer;
           // margin-top: toRem(30);
           .icon {
+            position: relative;
             height: 20px;
+          }
+          .tooltiptext {
+            visibility: hidden;
+            width: 70px;
+            top: 125%;
+            left: 50%;
+            margin-left: -35px;
+            background-color: $secondary;
+            color: $primary-background;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+
+            /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+          }
+          :hover .tooltiptext {
+            visibility: visible;
           }
         }
       }
@@ -108,9 +129,6 @@
         img {
           width: 340px;
         }
-      }
-      .flex-box {
-        // width: fit-content;
       }
       .img-container {
         padding: 0;

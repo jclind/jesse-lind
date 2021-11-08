@@ -15,38 +15,49 @@ const contact = () => {
                 Interested in hiring me? Have a question? or just want to say
                 hi? Shoot me a message and I’ll reply asap!
               </p>
-              <div className='social-icons'>
-                <img
-                  src='/contact-instagram.svg'
-                  alt='instagram'
-                  className='icon'
-                />
-                <img
-                  src='/contact-twitter.svg'
-                  alt='twitter'
-                  className='icon'
-                />
-                <img
-                  src='/contact-linkedin.svg'
-                  alt='linkedin'
-                  className='icon'
-                />
-                <img src='/contact-github.svg' alt='github' className='icon' />
-                <img src='/contact-coffee.svg' alt='coffee' className='icon' />
-                <img
-                  src='/contact-discord.svg'
-                  alt='discord'
-                  className='icon'
-                />
+              <div className='contact-info'>
+                <div className='email'>
+                  <img src='/contact-mail.svg' alt='mail' />{' '}
+                  <span>Jesselindcs@gmail.com</span>
+                </div>
+                <div className='social-icons'>
+                  <img
+                    src='/contact-instagram.svg'
+                    alt='instagram'
+                    className='icon'
+                  />
+                  <img
+                    src='/contact-twitter.svg'
+                    alt='twitter'
+                    className='icon'
+                  />
+                  <img
+                    src='/contact-linkedin.svg'
+                    alt='linkedin'
+                    className='icon'
+                  />
+                  <img
+                    src='/contact-github.svg'
+                    alt='github'
+                    className='icon'
+                  />
+                  <img
+                    src='/contact-coffee.svg'
+                    alt='coffee'
+                    className='icon'
+                  />
+                  <img
+                    src='/contact-discord.svg'
+                    alt='discord'
+                    className='icon'
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div className='form-container'>
           <div className='form'>
-            <div className='email'>
-              <img src='/contact-mail.svg' alt='mail' /> Jesselindcs@gmail.com
-            </div>
             <form action=''>
               <div className='names'>
                 <label>

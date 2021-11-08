@@ -22,10 +22,34 @@
       .text {
         font-size: toRem(18);
       }
-      .social-icons {
+      .contact-info {
         display: flex;
+        // justify-content: center;
+
+        margin: 0 auto;
+        margin-top: toRem(25);
         gap: toRem(20);
-        margin-top: toRem(30);
+        // width: 100%;
+        .email {
+          display: flex;
+          align-items: center;
+          gap: toRem(10);
+          color: $secondary-text;
+          img {
+            height: 20px;
+          }
+          span {
+            display: none;
+          }
+        }
+        .social-icons {
+          display: flex;
+          gap: toRem(20);
+          // margin-top: toRem(30);
+          .icon {
+            height: 20px;
+          }
+        }
       }
     }
   }
@@ -40,15 +64,6 @@
       width: 90%;
       margin: 0 auto;
       padding: toRem(50) 0;
-
-      .email {
-        display: flex;
-        align-items: center;
-        gap: toRem(8);
-        font-size: toRem(14);
-        margin-bottom: toRem(30);
-        color: $secondary-text;
-      }
       form {
         .names {
           display: flex;
@@ -86,6 +101,9 @@
       justify-content: center;
       align-items: center;
       gap: toRem(80);
+      .info-inner {
+        display: flex;
+      }
       .img-container {
         img {
           width: 340px;
@@ -104,11 +122,6 @@
     }
     .form-container {
       .form {
-        .email {
-          justify-content: center;
-          font-size: toRem(18);
-          margin-bottom: toRem(35);
-        }
       }
     }
   }
@@ -135,16 +148,39 @@
       .content {
         max-width: 500px;
 
-        .social-icons {
+        .contact-info {
+          display: flex;
+          // flex-direction: column;
+          justify-content: center;
+          align-items: center;
           position: absolute;
           bottom: 2rem;
-          gap: toRem(30);
           left: 0;
           right: 0;
           margin: 0 auto;
-          width: fit-content;
-          .icon {
-            height: 25px;
+          gap: 4rem;
+          // width: 100%;
+          .email {
+            display: flex;
+            justify-content: flex-end;
+            font-size: toRem(18);
+            // margin-bottom: toRem(30);
+            gap: toRem(10);
+            padding: 0;
+            flex: 1;
+            color: $secondary-text;
+            span {
+              display: block;
+            }
+          }
+          .social-icons {
+            flex: 1;
+            padding: 0;
+            gap: toRem(30);
+            margin: 0;
+            .icon {
+              height: 20px;
+            }
           }
         }
       }

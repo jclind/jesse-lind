@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-nav {
+.nav {
   height: 2rem;
   width: 90%;
   max-width: 1200px;
@@ -8,9 +8,11 @@ nav {
   margin: 0 auto;
   margin-top: 2.25rem;
   cursor: pointer;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
-nav .nav-header {
+.nav .nav-header {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -24,24 +26,24 @@ nav .nav-header {
           align-items: center;
 }
 
-nav .nav-header .logo-container,
-nav .nav-header .hamburger-container {
+.nav .nav-header .logo-container,
+.nav .nav-header .hamburger-container {
   z-index: 15;
 }
 
-nav .nav-header .hamburger-container {
+.nav .nav-header .hamburger-container {
   color: #ffd082;
 }
 
-nav .nav-header .hamburger-container.show {
+.nav .nav-header .hamburger-container.show {
   color: #21243d;
 }
 
-nav .nav-links {
+.nav .nav-links {
   display: none;
 }
 
-nav .nav-links.show {
+.nav .nav-links.show {
   position: absolute;
   z-index: 10;
   top: 0;
@@ -67,15 +69,15 @@ nav .nav-links.show {
 }
 
 @media screen and (min-width: 768px) {
-  nav {
+  .nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  nav .nav-header .hamburger-container {
+  .nav .nav-header .hamburger-container {
     display: none;
   }
-  nav .nav-links {
+  .nav .nav-links {
     position: relative;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -96,7 +98,7 @@ nav .nav-links.show {
 }
 
 @media screen and (min-width: 1200px) {
-  nav .nav-links {
+  .nav .nav-links {
     gap: 3.75rem;
     font-size: 1.25rem;
   }

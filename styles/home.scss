@@ -14,11 +14,21 @@
       width: 75%;
       min-width: 325px;
       max-width: 375px;
+      h1 {
+        // opacity: 0;
+        // animation: fadeInUp 1s ease-out;
+        animation-delay: 1.2s;
+      }
       p {
+        // opacity: 0;
+        // animation: fadeInUp 1s ease-out 0.3s;
         font-weight: 400;
+        animation-delay: 1.8s;
+      }
+      .action-btn {
+        animation-delay: 2.8s;
       }
     }
-
     .logo {
       z-index: 2;
       position: absolute;

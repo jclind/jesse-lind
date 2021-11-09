@@ -8,8 +8,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@brightleaf/animate.scss": "^3.7.1",
+    "animate.css": "^4.1.1",
+    "animatewithsass": "^3.2.1",
     "hamburger-react": "^2.4.1",
     "jquery": "^3.6.0",
+    "lottie-web": "^5.8.1",
     "next": "12.0.2",
     "normalize.css": "^8.0.1",
     "react": "17.0.2",

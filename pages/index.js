@@ -13,13 +13,13 @@ const index = () => {
       <div className='page home-page'>
         <div className='container'>
           <div className='content'>
-            <h1>Hi, I&apos;m Jesse</h1>
-            <p>
+            <h1 className='fadeinup'>Hi, I&apos;m Jesse</h1>
+            <p className='fadeinup'>
               I create <span className='highlight'>clean</span> and{' '}
               <span className='highlight'>functional</span> websites you can
               count on.
             </p>
-            <button className='action-btn'>Let&apos;s Talk!</button>
+            <button className='action-btn fadeinup'>Let&apos;s Talk!</button>
           </div>
           <div className='logo'>
             <JLMainLogo />

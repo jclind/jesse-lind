@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,GAAG;CAQb;;AAPC,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAHrC,AAAA,KAAK,CAAC;IAIF,OAAO,EAAE,CAAC;IACV,MAAM,EAAE,KAAK;GAKhB;;;AAHC,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,MAAM;EAPtC,AAAA,KAAK,CAAC;IAQF,MAAM,EAAE,KAAK;GAEhB",
+    "sources": [
+        "jl-main-logo.scss"
+    ],
+    "names": [],
+    "file": "jl-main-logo.css"
+}

@@ -1,0 +1,11 @@
+.anim {
+  height: 200px;
+  opacity: 0.5;
+  @media screen and (min-width: 618px) {
+    opacity: 1;
+    height: 300px;
+  }
+  @media screen and (min-width: 1200px) {
+    height: 350px;
+  }
+}

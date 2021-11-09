@@ -15,7 +15,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav>
+    <nav className='fadeindown nav'>
       <div className='nav-header'>
         <div
           className='logo-container'

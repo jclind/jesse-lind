@@ -15,7 +15,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='fadeindown nav'>
+    <nav className='nav'>
       <div className='nav-header'>
         <div
           className='logo-container'
@@ -24,10 +24,14 @@ const Navbar = () => {
             handleClick()
           }}
         >
-          <NavLogo />
+          <NavLogo className='logo' />
         </div>
         <div
-          className={show ? 'hamburger-container show' : ' hamburger-container'}
+          className={
+            show
+              ? 'hamburger-container show fadeindown '
+              : ' hamburger-container fadeindown '
+          }
         >
           <Hamburger className='hamburger' toggled={show} toggle={setShow} />
         </div>

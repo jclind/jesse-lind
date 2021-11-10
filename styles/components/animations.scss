@@ -1,4 +1,7 @@
-.anim {
+@import '../vars.scss';
+@import '../functions.scss';
+
+.jl-logo-anim {
   height: 200px;
   opacity: 0.5;
   @media screen and (min-width: 618px) {
@@ -8,4 +11,8 @@
   @media screen and (min-width: 1200px) {
     height: 350px;
   }
+}
+.nav-logo-anim {
+  height: $nav-height + 0.25rem;
+  width: 145px;
 }

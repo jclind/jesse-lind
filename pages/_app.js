@@ -6,7 +6,7 @@ import '../styles/about.css'
 import '../styles/projects.css'
 import '../styles/components/project-item.css'
 import '../styles/contact.css'
-import '../styles/components/jl-main-logo.css'
+import '../styles/components/animations.css'
 import Layout from '../components/Layout'
 
 function MyApp({ Component, pageProps }) {

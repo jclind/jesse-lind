@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+.jl-logo-anim {
+  height: 200px;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 618px) {
+  .jl-logo-anim {
+    opacity: 1;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .jl-logo-anim {
+    height: 350px;
+  }
+}
+
+.nav-logo-anim {
+  height: 2.25rem;
+  width: 145px;
+}
+/*# sourceMappingURL=animations.css.map */

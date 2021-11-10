@@ -14,7 +14,7 @@ const JLMainLogo = () => {
   }, [])
   const animationContainer = useRef()
 
-  return <div className='anim' ref={animationContainer}></div>
+  return <div className='jl-logo-anim' ref={animationContainer}></div>
 }
 
 export default JLMainLogo

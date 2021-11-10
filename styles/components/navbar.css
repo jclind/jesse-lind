@@ -8,8 +8,6 @@
   margin: 0 auto;
   margin-top: 2.25rem;
   cursor: pointer;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
 }
 
 .nav .nav-header {
@@ -31,7 +29,13 @@
   z-index: 15;
 }
 
+.nav .nav-header .logo-container .logo {
+  height: 2rem;
+}
+
 .nav .nav-header .hamburger-container {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
   color: #ffd082;
 }
 

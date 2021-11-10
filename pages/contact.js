@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import Head from 'next/head'
 
 const contact = () => {
   const discordTag = 'Thinrin#4693'
@@ -14,6 +15,9 @@ const contact = () => {
 
   return (
     <>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+      </Head>
       <div className='page contact-page'>
         <div className='info'>
           <div className='info-inner'>

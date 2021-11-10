@@ -38,11 +38,11 @@
   }
 
   .nav-links {
-    display: none;
-  }
-  .nav-links.show {
+    // animation: fadeOutRightPage 0.5s ease-in-out;
+    transform: translate3d(100%, 0, 0);
     position: absolute;
     z-index: 10;
+    opacity: 0;
     top: 0;
     left: 0;
     display: flex;
@@ -56,6 +56,11 @@
     color: $primary-background;
     background: $secondary;
     cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .nav-links.show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 
   @media screen and (min-width: 768px) {
@@ -67,11 +72,17 @@
       }
     }
     .nav-links {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
       position: relative;
       display: flex !important;
       flex-direction: row;
+      justify-content: flex-end;
       align-items: center;
       gap: toRem(33);
+      height: $nav-height;
+      width: 100%;
+      background: none;
 
       font-size: toRem(18);
       padding: 0;

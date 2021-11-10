@@ -194,3 +194,45 @@ select:-webkit-autofill:focus {
   -ms-animation-fill-mode: forwards; /* IE 10+ */
   animation-fill-mode: forwards; /* When the spec is finished */
 }
+
+@keyframes fadeInRightPage {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  70% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+.fadeinrightpage {
+  opacity: 0;
+  animation: fadeInRightPage 0.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards; /* FF 5+ */
+  -o-animation-fill-mode: forwards; /* Not implemented yet */
+  -ms-animation-fill-mode: forwards; /* IE 10+ */
+  animation-fill-mode: forwards; /* When the spec is finished */
+}
+@keyframes fadeOutRightPage {
+  from {
+    transform: translate3d(0, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.fadeoutrightpage {
+  opacity: 1;
+  animation: fadeOutRightPage 0.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards; /* FF 5+ */
+  -o-animation-fill-mode: forwards; /* Not implemented yet */
+  -ms-animation-fill-mode: forwards; /* IE 10+ */
+  animation-fill-mode: forwards; /* When the spec is finished */
+}

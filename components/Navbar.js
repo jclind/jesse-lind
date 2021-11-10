@@ -37,17 +37,17 @@ const Navbar = () => {
         </div>
       </div>
       <div className={show ? 'nav-links show' : 'nav-links'}>
-        <div className='nav-link' onClick={handleClick}>
+        <div className='nav-link fadeindown' onClick={handleClick}>
           <Link href='/about' exact={true}>
             About
           </Link>
         </div>
-        <div className='nav-link' onClick={handleClick}>
+        <div className='nav-link fadeindown' onClick={handleClick}>
           <Link href='/projects' exact={true}>
             Projects
           </Link>
         </div>
-        <div className='nav-link' onClick={handleClick}>
+        <div className='nav-link fadeindown' onClick={handleClick}>
           <Link href='/contact' exact={true}>
             Contact
           </Link>

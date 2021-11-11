@@ -62,7 +62,7 @@ const icons = [
 ]
 
 const BackgroundIcons = () => {
-  // const router = useRouter()
+  const router = useRouter()
   const getRandomPoint = prevPoint => {
     // If a previous point is passed in, filter array to be points not on the same side as selected point
     if (prevPoint) {
@@ -109,7 +109,6 @@ const BackgroundIcons = () => {
     console.log('new item')
     const { first, second } = getTwoPoints()
     const id = '_' + uuidv4()
-    // const el = document.createElement('img')
     const el = document.createElement('img')
     el.setAttribute('id', id)
     el.setAttribute('class', 'item svg')
@@ -117,7 +116,6 @@ const BackgroundIcons = () => {
     if (document.querySelector('.background-icons-container')) {
       document.querySelector('.background-icons-container').appendChild(el)
     }
-    // el.style.filter = colors[randomNumber(0, colors.length)]
 
     // Random time between 15 and 35 seconds
     const randTime = randomNumber(15000, 35000)
@@ -149,34 +147,40 @@ const BackgroundIcons = () => {
       }
     }
   }
-  const router = useRouter()
+
+  // initialize timer variable for setTimeout clearing in useEffect later
+  let timer = null
+
+  const spawnLoop = () => {
+    // Get random time between 4 and 12 seconds to set next timeout for
+    const randTime = randomNumber(4000, 12000)
+    // Create element every random amount of time and call spawnLoop again for next element
+    timer = setTimeout(() => {
+      createEl()
+      spawnLoop()
+    }, randTime)
+  }
 
   useEffect(() => {
-    const spawnLoop = () => {
-      const randTime = randomNumber(1000, 1000)
-      let timer = setTimeout(() => {
-        createEl()
-        console.log(router.asPath)
-        // router.beforePopState(clearTimeout(spawnLoop))
-        if (router.asPath !== '/') {
-          console.log('gottem!')
-          return
-        } else {
-          spawnLoop()
-        }
-      }, randTime)
-    }
-    // createEl()
-    // setTimeout(() => {
-    // createEl()
-    // }, 1000)
-    // setTimeout(() => {
-    // createEl()
-    // }, 2000)
-    // spawnLoop()
+    // Remove setTimeout timer on page change to stop element creation
+    router.events.on('routeChangeStart', (url, { shallow }) => {
+      if (timer) {
+        clearTimeout(timer)
+      }
+    })
+
     spawnLoop()
-    // return clearTimeout(timer)
-  })
+
+    // Create initial elements for beginning sequence
+    createEl()
+    setTimeout(() => {
+      createEl()
+    }, 1000)
+    setTimeout(() => {
+      createEl()
+    }, 2000)
+    spawnLoop()
+  }, [])
 
   return <div className='background-icons-container'></div>
 }

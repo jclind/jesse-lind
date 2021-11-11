@@ -37,15 +37,6 @@
   transition: all 0.4s ease-in;
 }
 
-.project .img-container .overlay .visit-btn {
-  color: #21243d;
-  background: #ffd082;
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding: 15px 20px;
-  border-radius: 10px;
-}
-
 .project .img-container .overlay:hover {
   opacity: 1;
   cursor: pointer;
@@ -63,5 +54,14 @@
   color: #d6d6d6;
   font-size: 0.875rem;
   font-weight: bold;
+}
+
+.visit-btn {
+  color: #21243d;
+  background: #ffd082;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 15px 20px;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=project-item.css.map */

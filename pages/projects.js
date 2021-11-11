@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import ProjectItem from '../components/ProjectItem'
 import { projectData } from '../assets/data/projectData'
 
@@ -24,6 +25,18 @@ const projects = () => {
               </div>
             )
           })}
+        </div>
+        <div className='prompt'>
+          <h1>Let&#39;s Create Your Next Website</h1>
+          <p>
+            Want to create a personal website or have an idea for a business?{' '}
+            {/* <span className='contact-btn'> */}
+            {/* <Link href='/contact'>I&#39;d love to talk!</Link> */}
+            {/* </span> */}
+          </p>
+          <button className='action-btn'>I&#39;d love to talk!</button>
+          {/* <button className='visit-btn'>Contact Me</button> */}
+          {/* <h2>I&#39;d love to help you create your next website!</h2> */}
         </div>
       </div>
     </>

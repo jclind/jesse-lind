@@ -20,6 +20,34 @@
     }
   }
 
+  .prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $secondary-background;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: toRem(60);
+    bottom: 0;
+    padding: 2rem 0;
+
+    text-align: center;
+
+    h1 {
+      width: 90%;
+      color: $primary;
+      margin: 0 auto;
+    }
+    p {
+      width: 90%;
+      .contact-btn {
+        display: block;
+        color: $tertiary;
+        text-decoration: underline;
+      }
+    }
+  }
+
   @media screen and (min-width: 768px) {
     .projects-container {
       width: fit-content;
@@ -27,6 +55,9 @@
       margin-right: auto;
       grid-template-columns: 1fr 1fr;
       gap: toRem(60);
+    }
+    .prompt {
+      padding: 4rem 0;
     }
   }
   @media screen and (min-width: 1200px) {
@@ -37,6 +68,9 @@
       margin-top: toRem(60);
       grid-template-columns: 1fr 1fr 1fr;
       gap: toRem(90);
+    }
+    .prompt {
+      margin-top: toRem(100);
     }
   }
 }

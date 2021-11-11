@@ -26,15 +26,6 @@
       background: rgba(0, 0, 0, 0.8);
       opacity: 0;
       transition: all 0.4s ease-in;
-
-      .visit-btn {
-        color: $primary-background;
-        background: $secondary;
-        font-weight: bold;
-        font-size: toRem(24);
-        padding: 15px 20px;
-        border-radius: $border-radius;
-      }
     }
     .overlay:hover {
       opacity: 1;
@@ -54,4 +45,13 @@
     font-size: toRem(14);
     font-weight: bold;
   }
+}
+
+.visit-btn {
+  color: $primary-background;
+  background: $secondary;
+  font-weight: bold;
+  font-size: toRem(24);
+  padding: 15px 20px;
+  border-radius: $border-radius;
 }

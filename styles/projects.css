@@ -24,6 +24,42 @@
   padding-bottom: 1.5625rem;
 }
 
+.projects-page .prompt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #1b1e34;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 3.75rem;
+  bottom: 0;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.projects-page .prompt h1 {
+  width: 90%;
+  color: #ff7c7c;
+  margin: 0 auto;
+}
+
+.projects-page .prompt p {
+  width: 90%;
+}
+
+.projects-page .prompt p .contact-btn {
+  display: block;
+  color: #88e1f2;
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 768px) {
   .projects-page .projects-container {
     width: -webkit-fit-content;
@@ -34,6 +70,9 @@
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     gap: 3.75rem;
+  }
+  .projects-page .prompt {
+    padding: 4rem 0;
   }
 }
 
@@ -46,6 +85,9 @@
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     gap: 5.625rem;
+  }
+  .projects-page .prompt {
+    margin-top: 6.25rem;
   }
 }
 /*# sourceMappingURL=projects.css.map */

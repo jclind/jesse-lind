@@ -289,8 +289,8 @@
         -ms-flex: 1;
             flex: 1;
     color: #d6d6d6;
-    -webkit-animation-delay: 1.6s;
-            animation-delay: 1.6s;
+    -webkit-animation-delay: 1.4s;
+            animation-delay: 1.4s;
   }
   .contact-page .info .content .contact-info .email span {
     display: block;
@@ -305,8 +305,8 @@
     height: -moz-fit-content;
     height: fit-content;
     margin: 0;
-    -webkit-animation-delay: 1.6s;
-            animation-delay: 1.6s;
+    -webkit-animation-delay: 1.4s;
+            animation-delay: 1.4s;
   }
   .contact-page .info .content .contact-info .social-icons .icon {
     height: 20px;

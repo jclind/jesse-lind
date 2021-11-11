@@ -20,9 +20,7 @@ const index = () => {
               <span className='highlight'>functional</span> websites you can
               count on.
             </p>
-            <button className='action-btn fadeinup ad-1-2'>
-              Let&apos;s Talk!
-            </button>
+            <button className='action-btn fadeinup ad-1-2'>My Projects</button>
           </div>
           <div className='logo'>
             <JLMainLogo />

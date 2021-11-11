@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import JLMainLogo from '../components/images/JLMainLogo'
 // import BackgroundIcons from '../components/images/BackgroundIcons'
@@ -20,7 +21,9 @@ const index = () => {
               <span className='highlight'>functional</span> websites you can
               count on.
             </p>
-            <button className='action-btn fadeinup ad-1-2'>My Projects</button>
+            <button className='action-btn fadeinup ad-1-2'>
+              <Link href='/projects'>My Projects</Link>
+            </button>
           </div>
           <div className='logo'>
             <JLMainLogo />

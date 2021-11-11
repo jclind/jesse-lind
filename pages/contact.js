@@ -121,7 +121,13 @@ const contact = () => {
               </label>
               <label className='message fadeinup'>
                 Message
-                <textarea name='message' id='' cols='30' rows='10'></textarea>
+                <textarea
+                  name='message'
+                  id=''
+                  cols='30'
+                  rows='10'
+                  required
+                ></textarea>
               </label>
               <button type='submit' className='action-btn fadeinup' required>
                 Send

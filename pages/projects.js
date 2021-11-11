@@ -10,14 +10,16 @@ const projects = () => {
 
   useEffect(() => {
     // router.events.on('routeChangeComplete', (url, { shallow }) => {
-    //   document.body.scrollTop = document.documentElement.scrollTop = 0
     // })
     router.events.on('routeChangeComplete', () => {
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-      })
+      setTimeout(() => {
+        document.body.scrollTop = document.documentElement.scrollTop = 0
+      }, 200)
+      // window.scroll({
+      // top: 0,
+      // left: 0,
+      // behavior: 'smooth',
+      // })
     })
   })
 

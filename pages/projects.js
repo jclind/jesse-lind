@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import ProjectItem from '../components/ProjectItem'
 import { projectData } from '../assets/data/projectData'
 
 const projects = () => {
+  const router = useRouter()
+
+  useEffect(() => {
+    // router.events.on('routeChangeComplete', (url, { shallow }) => {
+    //   document.body.scrollTop = document.documentElement.scrollTop = 0
+    // })
+    router.events.on('routeChangeComplete', () => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      })
+    })
+  })
+
   return (
     <>
       <Head>
@@ -34,7 +50,9 @@ const projects = () => {
             {/* <Link href='/contact'>I&#39;d love to talk!</Link> */}
             {/* </span> */}
           </p>
-          <button className='action-btn'>I&#39;d love to talk!</button>
+          <button className='action-btn'>
+            <Link href='/contact'>I&#39;d love to talk!</Link>
+          </button>
           {/* <button className='visit-btn'>Contact Me</button> */}
           {/* <h2>I&#39;d love to help you create your next website!</h2> */}
         </div>

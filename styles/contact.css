@@ -22,10 +22,22 @@
   -o-object-fit: contain;
      object-fit: contain;
   width: 225px;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .contact-page .info .content .text {
   font-size: 1.125rem;
+}
+
+.contact-page .info .content h1 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.contact-page .info .content p {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .contact-page .info .content .contact-info {
@@ -46,6 +58,8 @@
           align-items: center;
   gap: 0.625rem;
   color: #d6d6d6;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .contact-page .info .content .contact-info .email img {
@@ -62,6 +76,8 @@
   display: flex;
   gap: 1.25rem;
   cursor: pointer;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .contact-page .info .content .contact-info .social-icons .icon {
@@ -110,12 +126,29 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 2.1875rem;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 .contact-page .form-container .form form .names label {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.contact-page .form-container .form form .email {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.contact-page .form-container .form form .subject {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.contact-page .form-container .form form .message {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 
 .contact-page .form-container .form form label {
@@ -132,11 +165,16 @@
 
 .contact-page .form-container .form form .action-btn {
   margin: 0;
-  opacity: 0.5;
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .contact-page .form-container .form form:valid .action-btn {
   opacity: 1;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
 }
 
 @media screen and (min-width: 768px) {
@@ -203,6 +241,8 @@
   }
   .contact-page .info .img-container img {
     width: 500px;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
   }
   .contact-page .info .content {
     max-width: 500px;
@@ -218,11 +258,21 @@
         -ms-flex-align: center;
             align-items: center;
     position: absolute;
-    bottom: 2rem;
+    bottom: 0;
+    padding-bottom: 2rem;
     left: 0;
     right: 0;
     margin: 0 auto;
     gap: 4rem;
+    overflow: hidden;
+  }
+  .contact-page .info .content .contact-info h1 {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+  .contact-page .info .content .contact-info p {
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
   }
   .contact-page .info .content .contact-info .email {
     display: -webkit-box;
@@ -238,6 +288,8 @@
         -ms-flex: 1;
             flex: 1;
     color: #d6d6d6;
+    -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s;
   }
   .contact-page .info .content .contact-info .email span {
     display: block;
@@ -248,7 +300,13 @@
             flex: 1;
     padding: 0;
     gap: 1.875rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     margin: 0;
+    -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s;
+    overflow: hidden;
   }
   .contact-page .info .content .contact-info .social-icons .icon {
     height: 20px;
@@ -270,10 +328,25 @@
     padding: 0;
     margin: 0;
   }
-  .contact-page .form-container .form .email {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+  .contact-page .form-container .form form .names {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+  .contact-page .form-container .form form .email {
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+  .contact-page .form-container .form form .subject {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  .contact-page .form-container .form form .message {
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+  }
+  .contact-page .form-container .form form .action-btn {
+    -webkit-animation-delay: 1.4s;
+            animation-delay: 1.4s;
   }
 }
 

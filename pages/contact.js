@@ -25,23 +25,23 @@ const contact = () => {
               <img
                 src='/contact-page-img.png'
                 alt='contact page'
-                className='fadeinup ad-0-4'
+                className='fadeinup'
               />
             </div>
             <div className='content'>
-              <h1 className='fadeinup ad-0-6'>Contact Me</h1>
-              <p className='text fadeinup ad-0-8'>
+              <h1 className='fadeinup'>Contact Me</h1>
+              <p className='text fadeinup'>
                 Interested in hiring me? Have a question? or just want to say
                 hi? Shoot me a message and I’ll reply asap!
               </p>
               <div className='contact-info'>
-                <div className='email fadeinup ad-1-0'>
+                <div className='email fadeinup'>
                   <a href='mailto:jesselindcs@gmail.com'>
                     <img src='/contact-mail.svg' alt='mail' />
                   </a>
                   <span>Jesselindcs@gmail.com</span>
                 </div>
-                <div className='social-icons fadeinup ad-1-0'>
+                <div className='social-icons fadeinup'>
                   <a
                     href='https://www.instagram.com/jclind02/'
                     target='_blank'
@@ -101,7 +101,7 @@ const contact = () => {
         <div className='form-container'>
           <div className='form'>
             <form action='https://formspree.io/f/xknklanj' method='POST'>
-              <div className='names fadeinup ad-1-2'>
+              <div className='names fadeinup'>
                 <label>
                   First Name
                   <input type='text' name='firstName' required />
@@ -111,23 +111,19 @@ const contact = () => {
                   <input type='text' name='lastName' required />
                 </label>
               </div>
-              <label className=' fadeinup ad-1-4'>
+              <label className='email fadeinup'>
                 Email
                 <input type='email' name='email' required />
               </label>
-              <label className='fadeinup ad-1-6'>
+              <label className='subject fadeinup'>
                 Subject
                 <input type='text' name='subject' required />
               </label>
-              <label className='fadeinup ad-1-8'>
+              <label className='message fadeinup'>
                 Message
                 <textarea name='message' id='' cols='30' rows='10'></textarea>
               </label>
-              <button
-                type='submit'
-                className='action-btn fadeinup ad-2-0'
-                required
-              >
+              <button type='submit' className='action-btn fadeinup' required>
                 Send
               </button>
             </form>

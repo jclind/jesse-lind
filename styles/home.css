@@ -21,20 +21,8 @@
   max-width: 375px;
 }
 
-.home-page .container .content h1 {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-}
-
 .home-page .container .content p {
   font-weight: 400;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-}
-
-.home-page .container .content .action-btn {
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
 }
 
 .home-page .container .logo {

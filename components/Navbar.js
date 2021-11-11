@@ -30,24 +30,24 @@ const Navbar = () => {
           className={
             show
               ? 'hamburger-container show fadeindown '
-              : ' hamburger-container fadeindown '
+              : ' hamburger-container fadeindown ad-0-2'
           }
         >
           <Hamburger className='hamburger' toggled={show} toggle={setShow} />
         </div>
       </div>
       <div className={show ? 'nav-links show' : 'nav-links'}>
-        <div className='nav-link fadeindown' onClick={handleClick}>
+        <div className='nav-link fadeindown ad-0-6' onClick={handleClick}>
           <Link href='/about' exact={true}>
             About
           </Link>
         </div>
-        <div className='nav-link fadeindown' onClick={handleClick}>
+        <div className='nav-link fadeindown ad-0-6' onClick={handleClick}>
           <Link href='/projects' exact={true}>
             Projects
           </Link>
         </div>
-        <div className='nav-link fadeindown' onClick={handleClick}>
+        <div className='nav-link fadeindown ad-0-6' onClick={handleClick}>
           <Link href='/contact' exact={true}>
             Contact
           </Link>

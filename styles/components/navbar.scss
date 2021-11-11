@@ -29,7 +29,6 @@
       }
     }
     .hamburger-container {
-      animation-delay: 0.8s;
       color: $secondary;
     }
     .hamburger-container.show {
@@ -57,9 +56,6 @@
     background: $secondary;
     cursor: pointer;
     transition: all 0.5s ease;
-    .nav-link {
-      animation-delay: 0.8s;
-    }
   }
   .nav-links.show {
     opacity: 1;

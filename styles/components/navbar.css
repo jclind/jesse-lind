@@ -34,8 +34,6 @@
 }
 
 .nav .nav-header .hamburger-container {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
   color: #ffd082;
 }
 
@@ -71,11 +69,6 @@
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-}
-
-.nav .nav-links .nav-link {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
 }
 
 .nav .nav-links.show {

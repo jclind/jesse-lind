@@ -10,7 +10,7 @@ const JLMainLogo = () => {
         animationData: animation,
         loop: false,
       })
-    }, 1000)
+    }, 800)
   }, [])
   const animationContainer = useRef()
 

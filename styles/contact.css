@@ -88,7 +88,7 @@
 .contact-page .info .content .contact-info .social-icons .tooltiptext {
   visibility: hidden;
   width: 70px;
-  top: -125%;
+  top: 125%;
   left: 50%;
   margin-left: -35px;
   background-color: #ffd082;
@@ -258,12 +258,14 @@
         -ms-flex-align: center;
             align-items: center;
     position: absolute;
-    bottom: 2rem;
+    bottom: 0;
+    padding-bottom: 2rem;
+    overflow: hidden;
+    padding-top: 4rem;
     left: 0;
     right: 0;
     margin: 0 auto;
     gap: 4rem;
-    max-height: 2rem;
   }
   .contact-page .info .content .contact-info h1 {
     -webkit-animation-delay: 0.6s;
@@ -305,7 +307,6 @@
     margin: 0;
     -webkit-animation-delay: 1.6s;
             animation-delay: 1.6s;
-    overflow: hidden;
   }
   .contact-page .info .content .contact-info .social-icons .icon {
     height: 20px;

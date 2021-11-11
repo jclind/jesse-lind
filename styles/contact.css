@@ -88,7 +88,7 @@
 .contact-page .info .content .contact-info .social-icons .tooltiptext {
   visibility: hidden;
   width: 70px;
-  top: 125%;
+  top: -125%;
   left: 50%;
   margin-left: -35px;
   background-color: #ffd082;
@@ -98,7 +98,7 @@
   border-radius: 6px;
   /* Position the tooltip text - see examples below! */
   position: absolute;
-  z-index: 1;
+  z-index: 5;
 }
 
 .contact-page .info .content .contact-info .social-icons :hover .tooltiptext {
@@ -258,13 +258,12 @@
         -ms-flex-align: center;
             align-items: center;
     position: absolute;
-    bottom: 0;
-    padding-bottom: 2rem;
+    bottom: 2rem;
     left: 0;
     right: 0;
     margin: 0 auto;
     gap: 4rem;
-    overflow: hidden;
+    max-height: 2rem;
   }
   .contact-page .info .content .contact-info h1 {
     -webkit-animation-delay: 0.6s;

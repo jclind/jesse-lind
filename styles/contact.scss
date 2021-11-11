@@ -65,7 +65,7 @@
           .tooltiptext {
             visibility: hidden;
             width: 70px;
-            top: 125%;
+            top: -125%;
             left: 50%;
             margin-left: -35px;
             background-color: $secondary;
@@ -76,7 +76,7 @@
 
             /* Position the tooltip text - see examples below! */
             position: absolute;
-            z-index: 1;
+            z-index: 5;
           }
           :hover .tooltiptext {
             visibility: visible;
@@ -197,13 +197,14 @@
           justify-content: center;
           align-items: center;
           position: absolute;
-          bottom: 0;
-          padding-bottom: 2rem;
+          bottom: 2rem;
+          // padding-top: 4rem;
+          // padding-bottom: 2rem;
           left: 0;
           right: 0;
           margin: 0 auto;
           gap: 4rem;
-          overflow: hidden;
+          max-height: 2rem;
           // width: 100%;
           h1 {
             animation-delay: 0.6s;

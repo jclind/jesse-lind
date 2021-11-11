@@ -10,11 +10,13 @@
 
 .about-page .about {
   max-width: 1200px;
-  border-bottom: 1px solid #ff7c7c;
   padding-bottom: 3.75rem;
 }
 
-.about-page .about .about-img {
+.about-page .about .about-img-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,6 +24,12 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 1.875rem auto;
+}
+
+.about-page .about .about-img-container .about-img {
+  width: 210px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .about-page .about .text {
@@ -33,7 +41,8 @@
 }
 
 .about-page .skills {
-  margin-top: 3.75rem;
+  border-top: 1px solid #ff7c7c;
+  padding-top: 3.75rem;
   padding-bottom: 7.5rem;
 }
 
@@ -126,14 +135,12 @@
             justify-content: space-between;
     padding-bottom: 5%;
   }
-  .about-page .about .about-img {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 280px;
-    height: 280px;
+  .about-page .about .about-img-container {
     -ms-flex-negative: 0;
         flex-shrink: 0;
+  }
+  .about-page .about .about-img-container .about-img {
+    width: 280px;
   }
   .about-page .about .text {
     max-width: 375px;
@@ -158,9 +165,8 @@
 }
 
 @media screen and (min-width: 816px) {
-  .about-page .about .about-img {
+  .about-page .about .about-img-container .about-img {
     width: 310px;
-    height: 310px;
   }
   .about-page .about .text {
     max-width: 400px;
@@ -171,9 +177,8 @@
   .about-page .about {
     height: calc(100vh - 2rem - 2.25rem);
   }
-  .about-page .about .about-img {
+  .about-page .about .about-img-container .about-img {
     width: 400px;
-    height: 400px;
   }
   .about-page .about .text {
     max-width: 500px;

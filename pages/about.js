@@ -1,8 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 
-import AboutPageImg from '../components/images/AboutPageImg'
-
 const about = () => {
   return (
     <>
@@ -11,33 +9,39 @@ const about = () => {
       </Head>
       <div className='page about-page'>
         <div className='about section'>
-          <div className='about-img'>
-            <AboutPageImg />
+          <div className='about-img-container'>
+            <img
+              src='/about-page-img.png'
+              alt='About Page'
+              className='about-img fadeinup ad-0-4'
+            />
           </div>
           <div className='about-content'>
-            <h1 className='title'>About Me</h1>
-            <p className='text'>
+            <h1 className='title fadeinup ad-0-6'>About Me</h1>
+            <p className='text fadeinup ad-0-7'>
               Hello! I’m Jesse, a 19 year old from Pittsburgh Pennsylvania. In
               2016, my brother callenged me to solve a couple html problems on
               FreeCodeCamp.org and the rest is history, I had found a grand new
               passion.
             </p>
-            <p className='text'>
+            <p className='text fadeinup ad-0-8'>
               Since that day I have been studying and learning all I can about
               everything from how computers work to what makes an incredible
               user experience on a website.
             </p>
-            <button className='action-btn'>View My Skills</button>
+            <button className='action-btn fadeinup ad-1-0'>
+              View My Skills
+            </button>
           </div>
         </div>
-        <div className='skills section'>
+        <div className='skills section fadeinup ad-1-4'>
           <h1 className='title'>Skills And Technologies</h1>
-          <p className='text'>
+          <p className='text '>
             I love creating beautiful websites with simple but functional UI for
             the best user experience possible. These are some of the languages
             and skills that help me to create with code:
           </p>
-          <div className='skills-container'>
+          <div className='skills-container '>
             <div className='skill-box'>
               <div className='icon-container'>
                 <img src='/about-languages-icon.svg' alt='language icon' />

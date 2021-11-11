@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { randomNumber } from '../util/randomNumber'
+import { useRouter } from 'next/router'
 
 const points = [
   { ctl: [-5, -5] },
@@ -61,6 +62,7 @@ const icons = [
 ]
 
 const BackgroundIcons = () => {
+  // const router = useRouter()
   const getRandomPoint = prevPoint => {
     // If a previous point is passed in, filter array to be points not on the same side as selected point
     if (prevPoint) {
@@ -104,6 +106,7 @@ const BackgroundIcons = () => {
     }
   }
   const createEl = () => {
+    console.log('new item')
     const { first, second } = getTwoPoints()
     const id = '_' + uuidv4()
     // const el = document.createElement('img')
@@ -146,24 +149,33 @@ const BackgroundIcons = () => {
       }
     }
   }
+  const router = useRouter()
 
   useEffect(() => {
     const spawnLoop = () => {
-      const randTime = randomNumber(3000, 10000)
-      setTimeout(() => {
+      const randTime = randomNumber(1000, 1000)
+      let timer = setTimeout(() => {
         createEl()
-        spawnLoop()
-        console.log(randTime)
+        console.log(router.asPath)
+        // router.beforePopState(clearTimeout(spawnLoop))
+        if (router.asPath !== '/') {
+          console.log('gottem!')
+          return
+        } else {
+          spawnLoop()
+        }
       }, randTime)
     }
-    createEl()
-    setTimeout(() => {
-      createEl()
-    }, 1000)
-    setTimeout(() => {
-      createEl()
-    }, 2000)
+    // createEl()
+    // setTimeout(() => {
+    // createEl()
+    // }, 1000)
+    // setTimeout(() => {
+    // createEl()
+    // }, 2000)
+    // spawnLoop()
     spawnLoop()
+    // return clearTimeout(timer)
   })
 
   return <div className='background-icons-container'></div>

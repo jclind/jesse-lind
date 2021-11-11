@@ -10,12 +10,17 @@
 
   .about {
     max-width: $max-width;
-    border-bottom: 1px solid $primary;
     padding-bottom: toRem(60);
-    .about-img {
+    .about-img-container {
+      width: fit-content;
       display: flex;
       justify-content: center;
       margin: toRem(30) auto;
+
+      .about-img {
+        width: 210px;
+        object-fit: contain;
+      }
     }
     .text {
       padding-bottom: toRem(10);
@@ -25,7 +30,8 @@
     }
   }
   .skills {
-    margin-top: toRem(60);
+    border-top: 1px solid $primary;
+    padding-top: toRem(60);
     padding-bottom: toRem(120);
     .text {
       color: $secondary-text;
@@ -85,11 +91,11 @@
       align-items: center;
       justify-content: space-between;
       padding-bottom: 5%;
-      .about-img {
-        justify-content: center;
-        width: 280px;
-        height: 280px;
+      .about-img-container {
         flex-shrink: 0;
+        .about-img {
+          width: 280px;
+        }
       }
       .text {
         max-width: 375px;
@@ -115,9 +121,10 @@
   }
   @media screen and (min-width: 816px) {
     .about {
-      .about-img {
-        width: 310px;
-        height: 310px;
+      .about-img-container {
+        .about-img {
+          width: 310px;
+        }
       }
       .text {
         max-width: 400px;
@@ -127,9 +134,10 @@
   @media screen and (min-width: 1200px) {
     .about {
       height: calc(100vh - #{$nav-height} - #{$nav-margin-height});
-      .about-img {
-        width: 400px;
-        height: 400px;
+      .about-img-container {
+        .about-img {
+          width: 400px;
+        }
       }
       .text {
         max-width: 500px;

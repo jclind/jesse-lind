@@ -10,12 +10,16 @@ const projects = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <div className='page projects-page'>
-        <h1>My Projects</h1>
+        <h1 className='fadeinup ad-0-8'>My Projects</h1>
         <div className='projects-container'>
           {projectData.map((project, index) => {
             const { path, name, desc, link } = project
             return (
-              <div className='project-item' key={index}>
+              <div
+                className='project-item fadeinup'
+                style={{ animationDelay: `${index / 5 + 1}s` }}
+                key={index}
+              >
                 <ProjectItem path={path} name={name} desc={desc} link={link} />
               </div>
             )

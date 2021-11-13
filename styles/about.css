@@ -14,9 +14,8 @@
 }
 
 .about-page .about .about-img-container {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 210px;
+  height: 210px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,12 +23,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 1.875rem auto;
-}
-
-.about-page .about .about-img-container .about-img {
-  width: 210px;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .about-page .about .text {
@@ -138,9 +131,8 @@
   .about-page .about .about-img-container {
     -ms-flex-negative: 0;
         flex-shrink: 0;
-  }
-  .about-page .about .about-img-container .about-img {
     width: 280px;
+    height: 280px;
   }
   .about-page .about .text {
     max-width: 375px;
@@ -165,8 +157,9 @@
 }
 
 @media screen and (min-width: 816px) {
-  .about-page .about .about-img-container .about-img {
+  .about-page .about .about-img-container {
     width: 310px;
+    height: 310px;
   }
   .about-page .about .text {
     max-width: 400px;
@@ -177,8 +170,9 @@
   .about-page .about {
     height: calc(100vh - 2rem - 2.25rem);
   }
-  .about-page .about .about-img-container .about-img {
+  .about-page .about .about-img-container {
     width: 400px;
+    height: 400px;
   }
   .about-page .about .text {
     max-width: 500px;

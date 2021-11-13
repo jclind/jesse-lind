@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 
-const contact = () => {
+const Contact = () => {
   const discordTag = 'Thinrin#4693'
   const discordTooltip = useRef()
 
@@ -21,11 +22,13 @@ const contact = () => {
       <div className='page contact-page'>
         <div className='info'>
           <div className='info-inner'>
-            <div className='img-container'>
-              <img
+            <div className='img-container fadeinup'>
+              <Image
                 src='/contact-page-img.png'
                 alt='contact page'
-                className='fadeinup'
+                width={500}
+                height={341}
+                objectFit='contain'
               />
             </div>
             <div className='content'>
@@ -37,7 +40,13 @@ const contact = () => {
               <div className='contact-info'>
                 <div className='email fadeinup'>
                   <a href='mailto:jesselindcs@gmail.com'>
-                    <img src='/contact-mail.svg' alt='mail' />
+                    <Image
+                      width={21}
+                      height={21}
+                      objectFit='contain'
+                      src='/contact-mail.svg'
+                      alt='mail'
+                    />
                   </a>
                   <span>Jesselindcs@gmail.com</span>
                 </div>
@@ -48,14 +57,26 @@ const contact = () => {
                     rel='noopener noreferrer'
                     className='icon'
                   >
-                    <img src='/contact-instagram.svg' alt='instagram' />
+                    <Image
+                      width={21}
+                      height={21}
+                      objectFit='contain'
+                      src='/contact-instagram.svg'
+                      alt='instagram'
+                    />
                   </a>
                   <a
                     href='https://twitter.com/jclind02'
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <img src='/contact-twitter.svg' alt='twitter' />
+                    <Image
+                      width={21}
+                      height={21}
+                      objectFit='contain'
+                      src='/contact-twitter.svg'
+                      alt='twitter'
+                    />
                   </a>
                   <a
                     href='https://www.linkedin.com/in/jesseclind/'
@@ -63,14 +84,26 @@ const contact = () => {
                     rel='noopener noreferrer'
                     className='icon'
                   >
-                    <img src='/contact-linkedin.svg' alt='linkedin' />
+                    <Image
+                      width={21}
+                      height={21}
+                      objectFit='contain'
+                      src='/contact-linkedin.svg'
+                      alt='linkedin'
+                    />
                   </a>
                   <a
                     href='https://github.com/jclind'
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <img src='/contact-github.svg' alt='github' />
+                    <Image
+                      width={21}
+                      height={21}
+                      objectFit='contain'
+                      src='/contact-github.svg'
+                      alt='github'
+                    />
                   </a>
                   <a
                     href='https://www.buymeacoffee.com/jesseclind'
@@ -78,7 +111,13 @@ const contact = () => {
                     rel='noopener noreferrer'
                     className='icon'
                   >
-                    <img src='/contact-coffee.svg' alt='coffee' />
+                    <Image
+                      width={21}
+                      height={21}
+                      objectFit='contain'
+                      src='/contact-coffee.svg'
+                      alt='coffee'
+                    />
                   </a>
                   <div
                     href=''
@@ -88,7 +127,13 @@ const contact = () => {
                     onClick={copyText}
                     onKeyPress={copyText}
                   >
-                    <img src='/contact-discord.svg' alt='discord' />
+                    <Image
+                      width={21}
+                      height={21}
+                      objectFit='contain'
+                      src='/contact-discord.svg'
+                      alt='discord'
+                    />
                     <span className='tooltiptext' ref={discordTooltip}>
                       Copy
                     </span>
@@ -140,4 +185,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

@@ -10,17 +10,13 @@
 }
 
 .contact-page .info .img-container {
+  position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   margin-top: 2.5rem;
   margin-bottom: 1.875rem;
-}
-
-.contact-page .info .img-container img {
-  -o-object-fit: contain;
-     object-fit: contain;
   width: 225px;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
@@ -189,14 +185,17 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 5rem;
   }
   .contact-page .info .info-inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2.5rem;
   }
-  .contact-page .info .img-container img {
+  .contact-page .info .img-container {
     width: 340px;
   }
   .contact-page .info .img-container {
@@ -238,11 +237,14 @@
   }
   .contact-page .info .img-container {
     margin-top: 3.125rem;
-  }
-  .contact-page .info .img-container img {
     width: 500px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
+    padding: 0;
+    margin: 0;
   }
   .contact-page .info .content {
     max-width: 500px;
@@ -291,6 +293,17 @@
     color: #d6d6d6;
     -webkit-animation-delay: 1.4s;
             animation-delay: 1.4s;
+  }
+  .contact-page .info .content .contact-info .email a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .contact-page .info .content .contact-info .email span {
     display: block;

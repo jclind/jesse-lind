@@ -1,7 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 
-const about = () => {
+const About = () => {
   return (
     <>
       <Head>
@@ -9,11 +10,13 @@ const about = () => {
       </Head>
       <div className='page about-page'>
         <div className='about section'>
-          <div className='about-img-container'>
-            <img
+          <div className='about-img-container fadeinup ad-0-4'>
+            <Image
               src='/about-page-img.png'
               alt='About Page'
-              className='about-img fadeinup ad-0-4'
+              width={400}
+              height={400}
+              objectFit='contain'
             />
           </div>
           <div className='about-content'>
@@ -44,7 +47,13 @@ const about = () => {
           <div className='skills-container '>
             <div className='skill-box'>
               <div className='icon-container'>
-                <img src='/about-languages-icon.svg' alt='language icon' />
+                <Image
+                  src='/about-languages-icon.svg'
+                  alt='language icon'
+                  width={35}
+                  height={35}
+                  objectFit='contain'
+                />
               </div>
               <h2 className='skill-title'>Languages / Software</h2>
               <div className='skill-items'>
@@ -84,7 +93,13 @@ const about = () => {
             </div>
             <div className='skill-box'>
               <div className='icon-container'>
-                <img src='/about-languages-icon.svg' alt='language icon' />
+                <Image
+                  src='/about-frameworks-icon.svg'
+                  alt='language icon'
+                  width={35}
+                  height={35}
+                  objectFit='contain'
+                />
               </div>
               <h2 className='skill-title'>Frameworks / Libraries</h2>
               <div className='skill-items'>
@@ -124,7 +139,13 @@ const about = () => {
             </div>
             <div className='skill-box'>
               <div className='icon-container'>
-                <img src='/about-languages-icon.svg' alt='language icon' />
+                <Image
+                  src='/about-database-icon.svg'
+                  alt='language icon'
+                  width={35}
+                  height={35}
+                  objectFit='contain'
+                />
               </div>
               <h2 className='skill-title'>CMS / Databases</h2>
               <div className='skill-items'>
@@ -161,4 +182,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About

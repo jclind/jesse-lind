@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import ProjectItem from '../components/ProjectItem'
 import { projectData } from '../assets/data/projectData'
 
-const projects = () => {
+const Projects = () => {
   const router = useRouter()
 
   useEffect(() => {
@@ -27,20 +27,13 @@ const projects = () => {
           {projectData.map((project, index) => {
             const { path, name, desc, link } = project
             return (
-              (
-                <div
-                  className='project-item fadeinup'
-                  style={{ animationDelay: `${index / 5 + 1}s` }}
-                  key={index}
-                >
-                  <ProjectItem
-                    path={path}
-                    name={name}
-                    desc={desc}
-                    link={link}
-                  />
-                </div>
-              ) + 0
+              <div
+                className='project-item fadeinup'
+                style={{ animationDelay: `${index / 5 + 1}s` }}
+                key={index}
+              >
+                <ProjectItem path={path} name={name} desc={desc} link={link} />
+              </div>
             )
           })}
         </div>
@@ -65,4 +58,4 @@ const projects = () => {
   )
 }
 
-export default projects
+export default Projects

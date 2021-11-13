@@ -12,15 +12,11 @@
     max-width: $max-width;
     padding-bottom: toRem(60);
     .about-img-container {
-      width: fit-content;
+      width: 210px;
+      height: 210px;
       display: flex;
       justify-content: center;
       margin: toRem(30) auto;
-
-      .about-img {
-        width: 210px;
-        object-fit: contain;
-      }
     }
     .text {
       padding-bottom: toRem(10);
@@ -93,9 +89,8 @@
       padding-bottom: 5%;
       .about-img-container {
         flex-shrink: 0;
-        .about-img {
-          width: 280px;
-        }
+        width: 280px;
+        height: 280px;
       }
       .text {
         max-width: 375px;
@@ -122,9 +117,8 @@
   @media screen and (min-width: 816px) {
     .about {
       .about-img-container {
-        .about-img {
-          width: 310px;
-        }
+        width: 310px;
+        height: 310px;
       }
       .text {
         max-width: 400px;
@@ -135,9 +129,8 @@
     .about {
       height: calc(100vh - #{$nav-height} - #{$nav-margin-height});
       .about-img-container {
-        .about-img {
-          width: 400px;
-        }
+        width: 400px;
+        height: 400px;
       }
       .text {
         max-width: 500px;

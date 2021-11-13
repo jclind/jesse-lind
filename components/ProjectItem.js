@@ -1,10 +1,16 @@
 import React from 'react'
-
+import Image from 'next/image'
 const ProjectItem = ({ path, name, desc, link }) => {
   return (
     <article className='project'>
       <div className='img-container'>
-        <img src={`${path}`} alt='name' />
+        <Image
+          src={`${path}`}
+          alt='name'
+          width={300}
+          height={350}
+          objectFit='contain'
+        />
         <div className='overlay'>
           <a
             href={link}

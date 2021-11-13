@@ -63,105 +63,105 @@ const icons = [
 
 const BackgroundIcons = () => {
   const router = useRouter()
-  const getRandomPoint = prevPoint => {
-    // If a previous point is passed in, filter array to be points not on the same side as selected point
-    if (prevPoint) {
-      // If the first letter is c (meaning a corner), get the last characters (the two letters of the adjacent sides)
-      const prevPointProp = Object.keys(prevPoint)[0]
-      const prevPointType =
-        prevPointProp.charAt(0) === 'c'
-          ? prevPointProp.substring(1, 3)
-          : prevPointProp.charAt(0)
-      // Create array of points that aren't on the same side
-      // Or aren't on adjacent side if one point is a corner
-      const newArr = points.filter(point => {
-        const currPointType =
-          Object.keys(point)[0].charAt(0) === 'c'
-            ? Object.keys(point)[0].substring(1, 3).split('')
-            : Object.keys(point)[0].substring(0, 1).split('')
-        const isSubstring = () => {
-          let bool = false
-          currPointType.map(curr => {
-            if (prevPointType.includes(curr)) {
-              bool = true
-            }
-          })
-          return bool
-        }
-        return !isSubstring()
-      })
-      // const currPoint = newArr[randomNumber(newArr.length)]
-      // return currPoint[Object.keys(currPoint)]
-      return newArr[randomNumber(0, newArr.length)]
-    }
-    // const currPoint = points[randomNumber(points.length)]
-    return points[randomNumber(0, points.length)]
-  }
-  const getTwoPoints = () => {
-    const first = getRandomPoint()
-    const second = getRandomPoint(first)
-    return {
-      first: first[Object.keys(first)],
-      second: second[Object.keys(second)],
-    }
-  }
-  const createEl = () => {
-    console.log('new item')
-    const { first, second } = getTwoPoints()
-    const id = '_' + uuidv4()
-    const el = document.createElement('img')
-    el.setAttribute('id', id)
-    el.setAttribute('class', 'item svg')
-    el.setAttribute('src', `${icons[randomNumber(0, icons.length)]}`)
-    if (document.querySelector('.background-icons-container')) {
-      document.querySelector('.background-icons-container').appendChild(el)
-    }
 
-    // Random time between 15 and 35 seconds
-    const randTime = randomNumber(15000, 35000)
-    // Random rotation degree between 0 and 520
-    const randRot = randomNumber(0, 520)
+  useEffect(() => {
+    const getRandomPoint = prevPoint => {
+      // If a previous point is passed in, filter array to be points not on the same side as selected point
+      if (prevPoint) {
+        // If the first letter is c (meaning a corner), get the last characters (the two letters of the adjacent sides)
+        const prevPointProp = Object.keys(prevPoint)[0]
+        const prevPointType =
+          prevPointProp.charAt(0) === 'c'
+            ? prevPointProp.substring(1, 3)
+            : prevPointProp.charAt(0)
+        // Create array of points that aren't on the same side
+        // Or aren't on adjacent side if one point is a corner
+        const newArr = points.filter(point => {
+          const currPointType =
+            Object.keys(point)[0].charAt(0) === 'c'
+              ? Object.keys(point)[0].substring(1, 3).split('')
+              : Object.keys(point)[0].substring(0, 1).split('')
+          const isSubstring = () => {
+            let bool = false
+            currPointType.map(curr => {
+              if (prevPointType.includes(curr)) {
+                bool = true
+              }
+            })
+            return bool
+          }
+          return !isSubstring()
+        })
+        // const currPoint = newArr[randomNumber(newArr.length)]
+        // return currPoint[Object.keys(currPoint)]
+        return newArr[randomNumber(0, newArr.length)]
+      }
+      // const currPoint = points[randomNumber(points.length)]
+      return points[randomNumber(0, points.length)]
+    }
+    const getTwoPoints = () => {
+      const first = getRandomPoint()
+      const second = getRandomPoint(first)
+      return {
+        first: first[Object.keys(first)],
+        second: second[Object.keys(second)],
+      }
+    }
+    const createEl = () => {
+      console.log('new item')
+      const { first, second } = getTwoPoints()
+      const id = '_' + uuidv4()
+      const el = document.createElement('img')
+      el.setAttribute('id', id)
+      el.setAttribute('class', 'item svg')
+      el.setAttribute('src', `${icons[randomNumber(0, icons.length)]}`)
+      if (document.querySelector('.background-icons-container')) {
+        document.querySelector('.background-icons-container').appendChild(el)
+      }
 
-    if (document.getElementById(`${id}`)) {
-      const animation = document.getElementById(`${id}`).animate(
-        [
+      // Random time between 15 and 35 seconds
+      const randTime = randomNumber(15000, 35000)
+      // Random rotation degree between 0 and 520
+      const randRot = randomNumber(0, 520)
+
+      if (document.getElementById(`${id}`)) {
+        const animation = document.getElementById(`${id}`).animate(
+          [
+            {
+              top: `${first[0]}%`,
+              left: `${first[1]}%`,
+              transform: `rotate(0deg)`,
+            },
+            {
+              top: `${second[0]}%`,
+              left: `${second[1]}%`,
+              transform: `rotate(${randRot}deg)`,
+            },
+          ],
           {
-            top: `${first[0]}%`,
-            left: `${first[1]}%`,
-            transform: `rotate(0deg)`,
-          },
-          {
-            top: `${second[0]}%`,
-            left: `${second[1]}%`,
-            transform: `rotate(${randRot}deg)`,
-          },
-        ],
-        {
-          duration: randTime,
-        }
-      )
-      animation.onfinish = function () {
-        if (el) {
-          el.remove()
+            duration: randTime,
+          }
+        )
+        animation.onfinish = function () {
+          if (el) {
+            el.remove()
+          }
         }
       }
     }
-  }
 
-  // initialize timer variable for setTimeout clearing in useEffect later
-  let timer = null
+    // initialize timer variable for setTimeout clearing in useEffect later
+    let timer = null
 
-  const spawnLoop = () => {
-    // Get random time between 4 and 12 seconds to set next timeout for
-    const randTime = randomNumber(4000, 12000)
-    // Create element every random amount of time and call spawnLoop again for next element
-    timer = setTimeout(() => {
-      createEl()
-      spawnLoop()
-    }, randTime)
-  }
-
-  useEffect(() => {
+    const spawnLoop = () => {
+      // Get random time between 4 and 12 seconds to set next timeout for
+      const randTime = randomNumber(4000, 12000)
+      // Create element every random amount of time and call spawnLoop again for next element
+      timer = setTimeout(() => {
+        createEl()
+        spawnLoop()
+      }, randTime)
+    }
     // Remove setTimeout timer on page change to stop element creation
     router.events.on('routeChangeStart', (url, { shallow }) => {
       if (timer) {
@@ -179,8 +179,9 @@ const BackgroundIcons = () => {
     setTimeout(() => {
       createEl()
     }, 2000)
-    spawnLoop()
-  }, [])
+
+    console.log('yooyyoo')
+  }, [router.events])
 
   return <div className='background-icons-container'></div>
 }

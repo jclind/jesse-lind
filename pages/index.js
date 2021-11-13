@@ -19,7 +19,7 @@ const Index = () => {
               <span className='highlight'>functional</span> websites you can
               count on.
             </p>
-            <Link href='/projects'>
+            <Link href='/projects' passHref={true}>
               <button className='action-btn fadeinup ad-1-2'>
                 My Projects
               </button>

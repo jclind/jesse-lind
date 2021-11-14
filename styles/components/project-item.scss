@@ -1,57 +1,57 @@
-@import '../vars.scss';
-@import '../functions.scss';
+@import '../util/vars.scss';
+@import '../util/functions.scss';
 
 .project {
-    width: fit-content;
-    margin: 0 auto;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 10px;
+
+  .img-container {
+    position: relative;
+    height: 350px;
     border-radius: 10px;
 
-    .img-container {
-        position: relative;
-        height: 350px;
-        border-radius: 10px;
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      left: 0;
+      top: 0;
 
-        .overlay {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            box-sizing: border-box;
-            left: 0;
-            top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transition: all 0.4s ease-in;
+    }
+    .overlay:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            opacity: 0;
-            transition: all 0.4s ease-in;
-        }
-        .overlay:hover {
-            opacity: 1;
-            cursor: pointer;
-        }
-    }
-
-    h3 {
-        text-transform: capitalize;
-        margin: 0;
-        padding: 0;
-        margin-top: toRem(8);
-        padding-bottom: toRem(2);
-    }
-    .text {
-        color: $secondary-text;
-        font-size: toRem(14);
-        font-weight: bold;
-    }
+  h3 {
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    margin-top: toRem(8);
+    padding-bottom: toRem(2);
+  }
+  .text {
+    color: $secondary-text;
+    font-size: toRem(14);
+    font-weight: bold;
+  }
 }
 
 .visit-btn {
-    color: $primary-background;
-    background: $secondary;
-    font-weight: bold;
-    font-size: toRem(24);
-    padding: 15px 20px;
-    border-radius: $border-radius;
+  color: $primary-background;
+  background: $secondary;
+  font-weight: bold;
+  font-size: toRem(24);
+  padding: 15px 20px;
+  border-radius: $border-radius;
 }

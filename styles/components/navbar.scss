@@ -1,97 +1,97 @@
-@import '../vars.scss';
-@import '../functions.scss';
+@import '../util/vars.scss';
+@import '../util/functions.scss';
 
 .nav {
-    height: $nav-height;
-    width: $nav-width;
-    max-width: $max-width;
-    background: none;
-    z-index: -1;
-    // background: blue;
-    margin: 0 auto;
-    margin-top: $nav-margin-height;
+  height: $nav-height;
+  width: $nav-width;
+  max-width: $max-width;
+  background: none;
+  z-index: -1;
+  // background: blue;
+  margin: 0 auto;
+  margin-top: $nav-margin-height;
+
+  .nav-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-container,
+    .hamburger-container {
+      cursor: pointer;
+      z-index: 15;
+    }
+    .logo-container {
+      .logo {
+        height: $nav-height;
+      }
+    }
+    .hamburger-container {
+      color: $secondary;
+    }
+    .hamburger-container.show {
+      color: $primary-background;
+    }
+  }
+
+  .nav-links {
+    // animation: fadeOutRightPage 0.5s ease-in-out;
+    transform: translate3d(100%, 0, 0);
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: toRem(65);
+    flex-direction: column;
+    align-items: center;
+    padding-top: $nav-height + $nav-margin-height + $px-100;
+    height: 100vh;
+    width: 100%;
+    font-size: toRem(24);
+    color: $primary-background;
+    background: $secondary;
+    transition: all 0.5s ease;
+  }
+  .nav-links.show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
 
     .nav-header {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .logo-container,
-        .hamburger-container {
-            cursor: pointer;
-            z-index: 15;
-        }
-        .logo-container {
-            .logo {
-                height: $nav-height;
-            }
-        }
-        .hamburger-container {
-            color: $secondary;
-        }
-        .hamburger-container.show {
-            color: $primary-background;
-        }
+      .hamburger-container {
+        display: none;
+      }
     }
-
     .nav-links {
-        // animation: fadeOutRightPage 0.5s ease-in-out;
-        transform: translate3d(100%, 0, 0);
-        position: absolute;
-        z-index: 10;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        display: flex;
-        gap: toRem(65);
-        flex-direction: column;
-        align-items: center;
-        padding-top: $nav-height + $nav-margin-height + $px-100;
-        height: 100vh;
-        width: 100%;
-        font-size: toRem(24);
-        color: $primary-background;
-        background: $secondary;
-        transition: all 0.5s ease;
-    }
-    .nav-links.show {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      position: relative;
+      display: flex !important;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: toRem(33);
+      height: $nav-height;
+      width: 100%;
+      background: none;
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-
-        .nav-header {
-            .hamburger-container {
-                display: none;
-            }
-        }
-        .nav-links {
-            opacity: 1;
-            transform: translate3d(0, 0, 0);
-            position: relative;
-            display: flex !important;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
-            gap: toRem(33);
-            height: $nav-height;
-            width: 100%;
-            background: none;
-
-            font-size: toRem(18);
-            padding: 0;
-            margin: 0;
-            color: $secondary;
-        }
+      font-size: toRem(18);
+      padding: 0;
+      margin: 0;
+      color: $secondary;
     }
-    @media screen and (min-width: 1200px) {
-        .nav-links {
-            gap: toRem(60);
-            font-size: toRem(20);
-        }
+  }
+  @media screen and (min-width: 1200px) {
+    .nav-links {
+      gap: toRem(60);
+      font-size: toRem(20);
     }
+  }
 }

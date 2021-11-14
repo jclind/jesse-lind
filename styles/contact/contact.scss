@@ -1,5 +1,5 @@
-@import './vars.scss';
-@import './functions.scss';
+@import '../util/vars.scss';
+@import '../util/functions.scss';
 
 .contact-page {
   padding-top: $nav-height + $nav-margin-height;

@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 import 'normalize.css'
 import '../styles/globals.css'
 import '../styles/components/navbar.css'
@@ -11,33 +13,52 @@ import '../styles/404/404.css'
 import Layout from '../components/Layout'
 
 import { AnimatePresence, motion } from 'framer-motion'
+import BeatLoader from 'react-spinners/BarLoader'
 
 function MyApp({ Component, pageProps, router }) {
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 8000)
+  }, [])
+
   return (
-    <Layout>
-      <AnimatePresence>
-        <motion.div
-          key={router.route}
-          initial='pageInitial'
-          animate='pageAnimate'
-          exit='pageExit'
-          variants={{
-            pageInitial: {
-              opacity: 0,
-            },
-            pageAnimate: {
-              opacity: 1,
-            },
-            pageExit: {
-              opacity: 0,
-            },
-          }}
-          transition={{ duration: 0.2 }}
-        >
-          <Component {...pageProps} />
-        </motion.div>
-      </AnimatePresence>
-    </Layout>
+    <>
+      {loading ? (
+        <div className='loader'>
+          {/* <BarLoader color={'#FF7C7C'} loading={loading} size={30} /> */}
+          <BeatLoader />
+        </div>
+      ) : (
+        <Layout>
+          <AnimatePresence>
+            <motion.div
+              key={router.route}
+              initial='pageInitial'
+              animate='pageAnimate'
+              exit='pageExit'
+              variants={{
+                pageInitial: {
+                  opacity: 0,
+                },
+                pageAnimate: {
+                  opacity: 1,
+                },
+                pageExit: {
+                  opacity: 0,
+                },
+              }}
+              transition={{ duration: 0.2 }}
+            >
+              <Component {...pageProps} />
+            </motion.div>
+          </AnimatePresence>
+        </Layout>
+      )}
+    </>
   )
 }
 

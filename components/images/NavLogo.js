@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import Lottie from 'lottie-web'
-import animation from '../../animations/jl-nav-logo-animation.json'
+import animation from '../../assets/animations/jl-nav-logo-animation.json'
 
 const NavLogo = () => {
   const animationContainer = useRef()

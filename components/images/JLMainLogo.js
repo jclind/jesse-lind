@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import Lottie from 'lottie-web'
-import animation from '../../animations/jl-logo-animation.json'
+import animation from '../../assets/animations/jl-logo-animation.json'
 
 const JLMainLogo = () => {
   useEffect(() => {

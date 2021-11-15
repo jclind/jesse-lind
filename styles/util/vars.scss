@@ -28,3 +28,7 @@ $border-radius: 10px;
 $font: 'Montserrat', sans-serif;
 
 $title-content-padding: toRem(20);
+
+:export {
+  primary: $primary;
+}

@@ -10,10 +10,13 @@ import '../styles/components/project-item.css'
 import '../styles/contact/contact.css'
 import '../styles/util/animations.css'
 import '../styles/404/404.css'
+import '../styles/loading-page.css'
+
+import colors from '../styles/util/vars.scss'
 import Layout from '../components/Layout'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import BeatLoader from 'react-spinners/BarLoader'
+import BarLoader from 'react-spinners/BarLoader'
 
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(false)
@@ -22,15 +25,13 @@ function MyApp({ Component, pageProps, router }) {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 8000)
+    }, 18000)
   }, [])
-
   return (
     <>
       {loading ? (
         <div className='loader'>
-          {/* <BarLoader color={'#FF7C7C'} loading={loading} size={30} /> */}
-          <BeatLoader />
+          <BarLoader color={'#ff7c7c'} size={20} />
         </div>
       ) : (
         <Layout>

@@ -1,10 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import JLMainLogo from '../components/images/JLMainLogo'
 import BackgroundIcons from '../components/BackgroundIcons'
 
-const Index = () => {
+const Index = ({ jlMainLogo }) => {
     return (
         <>
             <Head>
@@ -28,9 +27,7 @@ const Index = () => {
                             </button>
                         </Link>
                     </div>
-                    <div className='logo'>
-                        <JLMainLogo />
-                    </div>
+                    <div className='logo'>{jlMainLogo}</div>
                     <BackgroundIcons />
                 </div>
             </div>

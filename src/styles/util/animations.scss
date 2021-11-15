@@ -2,78 +2,81 @@
 @import './functions.scss';
 
 .jl-logo-anim {
-  height: 200px;
-  opacity: 0.5;
-  @media screen and (min-width: 618px) {
-    opacity: 1;
-    height: 300px;
-  }
-  @media screen and (min-width: 1200px) {
-    height: 350px;
-  }
+    height: 200px;
+    width: 200px;
+    opacity: 0.5;
+    @media screen and (min-width: 618px) {
+        opacity: 1;
+        height: 300px;
+        width: 300px;
+    }
+    @media screen and (min-width: 1200px) {
+        height: 350px;
+        width: 350px;
+    }
 }
 .nav-logo-anim {
-  height: $nav-height + 0.25rem;
-  width: 145px;
+    height: $nav-height + 0.25rem;
+    width: 145px;
 }
 
 .ad-0-1 {
-  animation-delay: 0.1s;
+    animation-delay: 0.1s;
 }
 .ad-0-2 {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 .ad-0-3 {
-  animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 .ad-0-4 {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 .ad-0-5 {
-  animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 .ad-0-6 {
-  animation-delay: 0.6s;
+    animation-delay: 0.6s;
 }
 .ad-0-7 {
-  animation-delay: 0.7s;
+    animation-delay: 0.7s;
 }
 .ad-0-8 {
-  animation-delay: 0.8s;
+    animation-delay: 0.8s;
 }
 .ad-0-9 {
-  animation-delay: 0.9s;
+    animation-delay: 0.9s;
 }
 .ad-1-0 {
-  animation-delay: 1s;
+    animation-delay: 1s;
 }
 .ad-1-2 {
-  animation-delay: 1.2s;
+    animation-delay: 1.2s;
 }
 .ad-1-4 {
-  animation-delay: 1.4s;
+    animation-delay: 1.4s;
 }
 .ad-1-6 {
-  animation-delay: 1.6s;
+    animation-delay: 1.6s;
 }
 .ad-1-8 {
-  animation-delay: 1.8s;
+    animation-delay: 1.8s;
 }
 .ad-2-0 {
-  animation-delay: 2s;
+    animation-delay: 2s;
 }
 .ad-2-2 {
-  animation-delay: 2.2s;
+    animation-delay: 2.2s;
 }
 .ad-2-4 {
-  animation-delay: 2.4s;
+    animation-delay: 2.4s;
 }
 .ad-2-6 {
-  animation-delay: 2.6s;
+    animation-delay: 2.6s;
 }
 .ad-2-8 {
-  animation-delay: 2.8s;
+    animation-delay: 2.8s;
 }
 .ad-3 {
-  animation-delay: 3s;
+    animation-delay: 3s;
 }

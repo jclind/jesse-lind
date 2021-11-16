@@ -37,11 +37,6 @@ const points = [
   { l6: [30, -5] },
   { l7: [20, -5] },
 ]
-// const colors = [
-//   'brightness(0) saturate(100%) invert(96%) sepia(4%) saturate(7343%) hue-rotate(162deg) brightness(96%) contrast(98%)',
-//   'brightness(0) saturate(100%) invert(87%) sepia(6%) saturate(3450%) hue-rotate(331deg) brightness(104%) contrast(101%)',
-//   'brightness(0) saturate(100%) invert(73%) sepia(99%) saturate(2662%) hue-rotate(311deg) brightness(103%) contrast(136%)',
-// ]
 const icons = [
   '/background-icons/branch-icon.svg',
   '/background-icons/bug-icon.svg',
@@ -92,11 +87,8 @@ const BackgroundIcons = () => {
           }
           return !isSubstring()
         })
-        // const currPoint = newArr[randomNumber(newArr.length)]
-        // return currPoint[Object.keys(currPoint)]
         return newArr[randomNumber(0, newArr.length)]
       }
-      // const currPoint = points[randomNumber(points.length)]
       return points[randomNumber(0, points.length)]
     }
     const getTwoPoints = () => {

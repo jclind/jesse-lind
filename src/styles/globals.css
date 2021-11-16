@@ -1,12 +1,10 @@
 @use 'sass:math';
 @use 'sass:math';
 body {
-  padding: 0;
-  margin: 0;
+  z-index: -1;
+  width: 100%;
   color: #ffffff;
   background: #21243d;
-  width: 100%;
-  z-index: -1;
 }
 
 html,
@@ -16,8 +14,10 @@ body {
   height: 100%;
 }
 
-#__next {
-  background: rgba(0, 0, 0, 0);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -25,18 +25,12 @@ a {
   text-decoration: none;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
 h1,
 h2 {
   padding: 0;
+  padding-bottom: 1.25rem;
   margin: 0;
   font-weight: 500;
-  padding-bottom: 1.25rem;
 }
 
 h1 {
@@ -61,10 +55,10 @@ h3 {
 p {
   padding: 0;
   margin: 0;
+  max-width: 600px;
+  line-height: 150%;
   font-size: 1.125rem;
   color: #d6d6d6;
-  line-height: 150%;
-  max-width: 600px;
 }
 
 label {
@@ -79,13 +73,13 @@ label {
 
 input,
 textarea {
-  outline: none;
+  padding: 0.3125rem;
   border: none;
-  background: #21243d;
   border-radius: 10px;
+  outline: none;
+  background: #21243d;
   color: white;
   font-size: 0.875rem;
-  padding: 0.3125rem;
 }
 
 input {
@@ -100,20 +94,20 @@ button {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-  outline: none;
   border: none;
-  cursor: pointer;
+  outline: none;
   color: inherit;
+  cursor: pointer;
 }
 
 .action-btn {
-  color: #21243d;
-  background: #ffd082;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 1.125rem;
   padding: 15px 20px;
   margin-top: 2.1875rem;
+  border-radius: 10px;
+  background: #ffd082;
+  color: #21243d;
+  font-weight: bold;
+  font-size: 1.125rem;
 }
 
 @media screen and (min-width: 1200px) {

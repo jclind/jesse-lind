@@ -8,7 +8,6 @@ import '../styles/components/project-item.css'
 import '../styles/contact/contact.css'
 import '../styles/util/animations.css'
 import '../styles/404/404.css'
-import '../styles/loading-page.css'
 
 import Layout from '../components/Layout'
 

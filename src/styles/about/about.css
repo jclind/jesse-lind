@@ -5,8 +5,8 @@
 }
 
 .about-page p {
-  line-height: 150%;
   max-width: 600px;
+  line-height: 150%;
 }
 
 .about-page .about {
@@ -15,14 +15,14 @@
 }
 
 .about-page .about .about-img-container {
-  width: 210px;
-  height: 210px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 210px;
+  height: 210px;
   margin: 1.875rem auto;
 }
 
@@ -35,9 +35,9 @@
 }
 
 .about-page .skills {
-  border-top: 1px solid #ff7c7c;
   padding-top: 3.75rem;
   padding-bottom: 7.5rem;
+  border-top: 1px solid #ff7c7c;
 }
 
 .about-page .skills .text {
@@ -47,9 +47,9 @@
 .about-page .skills .skills-container {
   display: -ms-grid;
   display: grid;
+  justify-items: center;
   gap: 1.25rem;
   margin-top: 3.125rem;
-  justify-items: center;
 }
 
 .about-page .skills .skills-container .skill-box {
@@ -63,10 +63,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 10px;
-  padding: 2.8125rem 5%;
-  max-width: 500px;
   width: 100%;
+  max-width: 500px;
+  padding: 2.8125rem 5%;
+  border-radius: 10px;
   background: #1b1e34;
 }
 
@@ -82,9 +82,9 @@
           align-items: center;
   height: 120px;
   width: 120px;
+  margin-bottom: 3.125rem;
   border-radius: 50%;
   background: #131524;
-  margin-bottom: 3.125rem;
 }
 
 .about-page .skills .skills-container .skill-box .skill-title {
@@ -95,11 +95,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 0.9375rem;
   font-size: 0.875rem;
 }
@@ -113,7 +113,6 @@
 
 @media screen and (min-width: 768px) {
   .about-page .about {
-    height: calc(100vh - 2rem - 2.25rem - 10%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -121,19 +120,20 @@
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: calc(100vh - 2rem - 2.25rem - 10%);
     padding-bottom: 5%;
   }
   .about-page .about .about-img-container {
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    width: 280px;
     height: 280px;
+    width: 280px;
   }
   .about-page .about .text {
     max-width: 375px;
@@ -145,8 +145,8 @@
             flex: 3;
   }
   .about-page .skills {
-    margin-top: 0;
     padding-top: 10%;
+    margin-top: 0;
     text-align: center;
   }
   .about-page .skills .skills-container .skill-box {
@@ -159,8 +159,8 @@
 
 @media screen and (min-width: 816px) {
   .about-page .about .about-img-container {
-    width: 310px;
     height: 310px;
+    width: 310px;
   }
   .about-page .about .text {
     max-width: 400px;
@@ -172,8 +172,8 @@
     height: calc(100vh - 2rem - 2.25rem);
   }
   .about-page .about .about-img-container {
-    width: 400px;
     height: 400px;
+    width: 400px;
   }
   .about-page .about .text {
     max-width: 500px;
@@ -186,10 +186,10 @@
     max-width: 80%;
   }
   .about-page .skills .skills-container {
-    margin-top: 6.25rem;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     gap: 1.875rem;
+    margin-top: 6.25rem;
   }
 }
 /*# sourceMappingURL=about.css.map */

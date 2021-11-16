@@ -16,10 +16,6 @@
 
 .project .img-container .overlay {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   left: 0;
   top: 0;
   display: -webkit-box;
@@ -31,6 +27,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.8);
   opacity: 0;
@@ -44,11 +44,11 @@
 }
 
 .project h3 {
-  text-transform: capitalize;
-  margin: 0;
   padding: 0;
-  margin-top: 0.5rem;
   padding-bottom: 0.125rem;
+  margin: 0;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
 }
 
 .project .text {
@@ -58,11 +58,11 @@
 }
 
 .visit-btn {
-  color: #21243d;
-  background: #ffd082;
-  font-weight: bold;
-  font-size: 1.5rem;
   padding: 15px 20px;
   border-radius: 10px;
+  background: #ffd082;
+  color: #21243d;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=project-item.css.map */

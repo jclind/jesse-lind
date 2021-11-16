@@ -2,92 +2,89 @@
 @import './util/functions.scss';
 
 body {
-  padding: 0;
-  margin: 0;
-  color: $white;
-  background: $primary-background;
-  width: 100%;
-  z-index: -1;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: $white !important;
+  background: $primary-background !important;
+  width: 100% !important;
+  z-index: -1 !important;
 }
 html,
 body {
-  position: relative;
-  overflow-x: hidden;
-  height: 100%;
+  position: relative !important;
+  overflow-x: hidden !important;
+  height: 100% !important;
 }
 #__next {
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0) !important;
 }
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 * {
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 h1,
 h2 {
-  padding: 0;
-  margin: 0;
-  font-weight: 500;
-  padding-bottom: $title-content-padding;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: 500 !important;
+  padding-bottom: $title-content-padding !important;
 }
 
 h1 {
-  font-size: toRem(86) !important;
+  font-size: toRem(36) !important;
   @media screen and (min-width: 1200px) {
-    font-size: toRem(88) !important;
+    font-size: toRem(48) !important;
   }
 }
 
 h2 {
-  font-size: toRem(24);
+  font-size: toRem(24) !important;
 }
 h3 {
-  font-size: toRem(20);
-  font-weight: bold;
+  font-size: toRem(20) !important;
+  font-weight: bold !important;
 }
 p {
-  padding: 0;
-  margin: 0;
-  font-size: toRem(18);
-  color: $secondary-text;
-  @media screen and (min-width: 1200px) {
-    // font-size: toRem(20);
-  }
-  line-height: 150%;
-  max-width: 600px;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: toRem(18) !important;
+  color: $secondary-text !important;
+  line-height: 150% !important;
+  max-width: 600px !important;
 }
 
 label {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
 }
 input,
 textarea {
-  outline: none;
-  border: none;
-  background: $primary-background;
-  border-radius: $border-radius;
-  color: white;
-  font-size: toRem(14);
-  padding: toRem(5);
+  outline: none !important;
+  border: none !important;
+  background: $primary-background !important;
+  border-radius: $border-radius !important;
+  color: white !important;
+  font-size: toRem(14) !important;
+  padding: toRem(5) !important;
 }
 input {
-  height: 45px;
+  height: 45px !important;
 }
 
 button {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  color: inherit;
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  outline: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  color: inherit !important;
 }
 .action-btn {
   color: $primary-background;

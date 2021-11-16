@@ -1,109 +1,109 @@
 @use 'sass:math';
 @use 'sass:math';
 body {
-  padding: 0;
-  margin: 0;
-  color: #ffffff;
-  background: #21243d;
-  width: 100%;
-  z-index: -1;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  background: #21243d !important;
+  width: 100% !important;
+  z-index: -1 !important;
 }
 
 html,
 body {
-  position: relative;
-  overflow-x: hidden;
-  height: 100%;
+  position: relative !important;
+  overflow-x: hidden !important;
+  height: 100% !important;
 }
 
 #__next {
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0) !important;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 h1,
 h2 {
-  padding: 0;
-  margin: 0;
-  font-weight: 500;
-  padding-bottom: 1.25rem;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: 500 !important;
+  padding-bottom: 1.25rem !important;
 }
 
 h1 {
-  font-size: 5.375rem !important;
+  font-size: 2.25rem !important;
 }
 
 @media screen and (min-width: 1200px) {
   h1 {
-    font-size: 5.5rem !important;
+    font-size: 3rem !important;
   }
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
 }
 
 h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.25rem !important;
+  font-weight: bold !important;
 }
 
 p {
-  padding: 0;
-  margin: 0;
-  font-size: 1.125rem;
-  color: #d6d6d6;
-  line-height: 150%;
-  max-width: 600px;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 1.125rem !important;
+  color: #d6d6d6 !important;
+  line-height: 150% !important;
+  max-width: 600px !important;
 }
 
 label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
 }
 
 input,
 textarea {
-  outline: none;
-  border: none;
-  background: #21243d;
-  border-radius: 10px;
-  color: white;
-  font-size: 0.875rem;
-  padding: 0.3125rem;
+  outline: none !important;
+  border: none !important;
+  background: #21243d !important;
+  border-radius: 10px !important;
+  color: white !important;
+  font-size: 0.875rem !important;
+  padding: 0.3125rem !important;
 }
 
 input {
-  height: 45px;
+  height: 45px !important;
 }
 
 button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  color: inherit;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  margin: 0 !important;
+  outline: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  color: inherit !important;
 }
 
 .action-btn {

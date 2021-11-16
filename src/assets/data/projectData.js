@@ -3,7 +3,7 @@ export const projectData = [
     path: '/projects-page/project-1.png',
     name: 'Jesse Lind Photography',
     desc: 'Photography portfolio website.',
-    link: 'https://jesse-lind-photography.netlify.app/',
+    link: 'https://jesselindphotography.netlify.app/',
   },
   {
     path: '/projects-page/project-2.png',

@@ -12,7 +12,7 @@ const About = () => {
         <div className='about section'>
           <div className='about-img-container fadeinup ad-0-4'>
             <Image
-              src='/about-page-img.png'
+              src='/about-page/about-img.png'
               alt='About Page'
               width={400}
               height={400}
@@ -48,7 +48,7 @@ const About = () => {
             <div className='skill-box'>
               <div className='icon-container'>
                 <Image
-                  src='/about-languages-icon.svg'
+                  src='/about-page/languages.svg'
                   alt='language icon'
                   width={35}
                   height={35}
@@ -94,7 +94,7 @@ const About = () => {
             <div className='skill-box'>
               <div className='icon-container'>
                 <Image
-                  src='/about-frameworks-icon.svg'
+                  src='/about-page/frameworks.svg'
                   alt='language icon'
                   width={35}
                   height={35}
@@ -140,7 +140,7 @@ const About = () => {
             <div className='skill-box'>
               <div className='icon-container'>
                 <Image
-                  src='/about-database-icon.svg'
+                  src='/about-page/database.svg'
                   alt='language icon'
                   width={35}
                   height={35}

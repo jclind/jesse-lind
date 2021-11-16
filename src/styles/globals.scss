@@ -2,89 +2,92 @@
 @import './util/functions.scss';
 
 body {
-  padding: 0 !important;
-  margin: 0 !important;
-  color: $white !important;
-  background: $primary-background !important;
-  width: 100% !important;
-  z-index: -1 !important;
+  padding: 0;
+  margin: 0;
+  color: $white;
+  background: $primary-background;
+  width: 100%;
+  z-index: -1;
 }
 html,
 body {
-  position: relative !important;
-  overflow-x: hidden !important;
-  height: 100% !important;
+  position: relative;
+  overflow-x: hidden;
+  height: 100%;
 }
 #__next {
-  background: rgba(0, 0, 0, 0) !important;
+  background: rgba(0, 0, 0, 0);
 }
 a {
-  color: inherit !important;
-  text-decoration: none !important;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-  box-sizing: border-box !important;
-  font-family: 'Montserrat', sans-serif !important;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1,
 h2 {
-  padding: 0 !important;
-  margin: 0 !important;
-  font-weight: 500 !important;
-  padding-bottom: $title-content-padding !important;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  padding-bottom: $title-content-padding;
 }
 
 h1 {
-  font-size: toRem(36) !important;
+  font-size: toRem(36);
   @media screen and (min-width: 1200px) {
     font-size: toRem(48) !important;
   }
 }
 
 h2 {
-  font-size: toRem(24) !important;
+  font-size: toRem(24);
 }
 h3 {
-  font-size: toRem(20) !important;
-  font-weight: bold !important;
+  font-size: toRem(20);
+  font-weight: bold;
 }
 p {
-  padding: 0 !important;
-  margin: 0 !important;
-  font-size: toRem(18) !important;
-  color: $secondary-text !important;
-  line-height: 150% !important;
-  max-width: 600px !important;
+  padding: 0;
+  margin: 0;
+  font-size: toRem(18);
+  color: $secondary-text;
+  @media screen and (min-width: 1200px) {
+    // font-size: toRem(20);
+  }
+  line-height: 150%;
+  max-width: 600px;
 }
 
 label {
-  display: flex !important;
-  flex-direction: column !important;
+  display: flex;
+  flex-direction: column;
 }
 input,
 textarea {
-  outline: none !important;
-  border: none !important;
-  background: $primary-background !important;
-  border-radius: $border-radius !important;
-  color: white !important;
-  font-size: toRem(14) !important;
-  padding: toRem(5) !important;
+  outline: none;
+  border: none;
+  background: $primary-background;
+  border-radius: $border-radius;
+  color: white;
+  font-size: toRem(14);
+  padding: toRem(5);
 }
 input {
-  height: 45px !important;
+  height: 45px;
 }
 
 button {
-  display: flex !important;
-  align-items: center !important;
-  margin: 0 !important;
-  outline: none !important;
-  border: none !important;
-  cursor: pointer !important;
-  color: inherit !important;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
 }
 .action-btn {
   color: $primary-background;

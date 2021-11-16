@@ -1,9 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @use 'sass:math';
-:export {
-  primary: #ff7c7c;
-}
-
 @use 'sass:math';
 .loader {
   display: -webkit-box;

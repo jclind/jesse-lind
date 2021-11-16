@@ -37,9 +37,9 @@ h2 {
 }
 
 h1 {
-  font-size: toRem(36);
+  font-size: toRem(86) !important;
   @media screen and (min-width: 1200px) {
-    font-size: toRem(48);
+    font-size: toRem(88) !important;
   }
 }
 

@@ -40,12 +40,12 @@ h2 {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 5.375rem !important;
 }
 
 @media screen and (min-width: 1200px) {
   h1 {
-    font-size: 3rem;
+    font-size: 5.5rem !important;
   }
 }
 

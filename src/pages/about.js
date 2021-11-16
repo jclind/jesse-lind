@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
 const About = () => {
+  const skillsRef = useRef()
+  const scrollIntoView = () => {
+    skillsRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
   return (
     <>
       <Head>
@@ -32,12 +36,15 @@ const About = () => {
               everything from how computers work to what makes an incredible
               user experience on a website.
             </p>
-            <button className='action-btn fadeinup ad-1-0'>
+            <button
+              className='action-btn fadeinup ad-1-0'
+              onClick={scrollIntoView}
+            >
               View My Skills
             </button>
           </div>
         </div>
-        <div className='skills section fadeinup ad-1-4'>
+        <div className='skills section fadeinup ad-1-4' ref={skillsRef}>
           <h1 className='title'>Skills And Technologies</h1>
           <p className='text '>
             I love creating beautiful websites with simple but functional UI for

@@ -24,7 +24,7 @@ const Contact = () => {
           <div className='info-inner'>
             <div className='img-container fadeinup'>
               <Image
-                src='/contact-page-img.png'
+                src='/contact-page/contact-img.png'
                 alt='contact page'
                 width={500}
                 height={341}
@@ -44,7 +44,7 @@ const Contact = () => {
                       width={21}
                       height={21}
                       objectFit='contain'
-                      src='/contact-mail.svg'
+                      src='/contact-page/mail.svg'
                       alt='mail'
                     />
                   </a>
@@ -61,7 +61,7 @@ const Contact = () => {
                       width={21}
                       height={21}
                       objectFit='contain'
-                      src='/contact-instagram.svg'
+                      src='/contact-page/instagram.svg'
                       alt='instagram'
                     />
                   </a>
@@ -74,7 +74,7 @@ const Contact = () => {
                       width={21}
                       height={21}
                       objectFit='contain'
-                      src='/contact-twitter.svg'
+                      src='/contact-page/twitter.svg'
                       alt='twitter'
                     />
                   </a>
@@ -88,7 +88,7 @@ const Contact = () => {
                       width={21}
                       height={21}
                       objectFit='contain'
-                      src='/contact-linkedin.svg'
+                      src='/contact-page/linkedin.svg'
                       alt='linkedin'
                     />
                   </a>
@@ -101,7 +101,7 @@ const Contact = () => {
                       width={21}
                       height={21}
                       objectFit='contain'
-                      src='/contact-github.svg'
+                      src='/contact-page/github.svg'
                       alt='github'
                     />
                   </a>
@@ -115,7 +115,7 @@ const Contact = () => {
                       width={21}
                       height={21}
                       objectFit='contain'
-                      src='/contact-coffee.svg'
+                      src='/contact-page/coffee.svg'
                       alt='coffee'
                     />
                   </a>
@@ -131,7 +131,7 @@ const Contact = () => {
                       width={21}
                       height={21}
                       objectFit='contain'
-                      src='/contact-discord.svg'
+                      src='/contact-page/discord.svg'
                       alt='discord'
                     />
                     <span className='tooltiptext' ref={discordTooltip}>

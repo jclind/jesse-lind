@@ -1,10 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import JLMainLogo from '../components/images/JLMainLogo'
 import BackgroundIcons from '../components/BackgroundIcons'
+import JLMainLogo from '../components/images/JLMainLogo'
 
-const Index = () => {
+const Index = ({ jlMainLogo }) => {
   return (
     <>
       <Head>

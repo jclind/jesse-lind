@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@use 'sass:math';
+:export {
+  primary: #ff7c7c;
+}
+
+@use 'sass:math';
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100vh - 2rem - 2.25rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/*# sourceMappingURL=loading-page.css.map */

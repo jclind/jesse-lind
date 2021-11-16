@@ -1,0 +1,246 @@
+@import './util/vars.scss';
+@import './util/functions.scss';
+
+body {
+    padding: 0;
+    margin: 0;
+    color: $white;
+    background: $primary-background;
+    width: 100%;
+    z-index: -1;
+}
+html,
+body {
+    position: relative;
+    overflow-x: hidden;
+    height: 100%;
+}
+#__next {
+    background: rgba(0, 0, 0, 0);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    padding-bottom: $title-content-padding;
+}
+
+h1 {
+    font-size: toRem(36);
+    @media screen and (min-width: 1200px) {
+        font-size: toRem(48);
+    }
+}
+
+h2 {
+    font-size: toRem(24);
+}
+h3 {
+    font-size: toRem(20);
+    font-weight: bold;
+}
+p {
+    padding: 0;
+    margin: 0;
+    font-size: toRem(18);
+    color: $secondary-text;
+    @media screen and (min-width: 1200px) {
+        // font-size: toRem(20);
+    }
+    line-height: 150%;
+    max-width: 600px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+input,
+textarea {
+    outline: none;
+    border: none;
+    background: $primary-background;
+    border-radius: $border-radius;
+    color: white;
+    font-size: toRem(14);
+    padding: toRem(5);
+}
+input {
+    height: 45px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+}
+.action-btn {
+    color: $primary-background;
+    background: $secondary;
+
+    border-radius: $border-radius;
+
+    font-weight: bold;
+    font-size: toRem(18);
+    padding: 15px 20px;
+
+    margin-top: toRem(35);
+    @media screen and (min-width: 1200px) {
+        font-size: toRem(24);
+        // padding: 15px 20px;
+    }
+}
+
+.page {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+.container {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    // padding-top: $nav-height + $nav-margin-height;
+}
+.section {
+    width: 90%;
+    margin: 0 auto;
+}
+.highlight {
+    color: $primary;
+    font-weight: bold;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px $primary-background inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+.fadeinup {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards; /* FF 5+ */
+    -o-animation-fill-mode: forwards; /* Not implemented yet */
+    -ms-animation-fill-mode: forwards; /* IE 10+ */
+    animation-fill-mode: forwards; /* When the spec is finished */
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translate3d(0, -40px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeInDown {
+    from {
+        transform: translate3d(0, -40px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+.fadeindown {
+    opacity: 0;
+    animation: fadeInDown 1s ease-out;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards; /* FF 5+ */
+    -o-animation-fill-mode: forwards; /* Not implemented yet */
+    -ms-animation-fill-mode: forwards; /* IE 10+ */
+    animation-fill-mode: forwards; /* When the spec is finished */
+}
+
+@keyframes fadeInRightPage {
+    from {
+        transform: translate3d(100%, 0, 0);
+    }
+    70% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+.fadeinrightpage {
+    opacity: 0;
+    animation: fadeInRightPage 0.5s ease-in-out;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards; /* FF 5+ */
+    -o-animation-fill-mode: forwards; /* Not implemented yet */
+    -ms-animation-fill-mode: forwards; /* IE 10+ */
+    animation-fill-mode: forwards; /* When the spec is finished */
+}
+@keyframes fadeOutRightPage {
+    from {
+        transform: translate3d(0, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+.fadeoutrightpage {
+    opacity: 1;
+    animation: fadeOutRightPage 0.5s ease-in-out;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards; /* FF 5+ */
+    -o-animation-fill-mode: forwards; /* Not implemented yet */
+    -ms-animation-fill-mode: forwards; /* IE 10+ */
+    animation-fill-mode: forwards; /* When the spec is finished */
+}

@@ -1,5 +1,4 @@
 @import './functions.scss';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 $primary: #ff7c7c;
 $secondary: #ffd082;
@@ -28,3 +27,7 @@ $border-radius: 10px;
 $font: 'Montserrat', sans-serif;
 
 $title-content-padding: toRem(20);
+
+:export {
+  primary: $primary;
+}

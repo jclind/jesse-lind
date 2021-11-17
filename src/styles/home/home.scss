@@ -6,8 +6,9 @@
   height: 100%;
   .container {
     position: relative;
-    height: calc(100vh - #{$nav-height} - #{$nav-margin-height});
+    height: 100%;
     display: flex;
+    padding-bottom: $nav-height + $nav-margin-height;
     align-items: center;
     max-width: $max-width;
 

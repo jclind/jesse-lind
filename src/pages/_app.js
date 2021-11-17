@@ -18,7 +18,7 @@ import Loading from '../components/Loading'
 import { AnimatePresence, motion } from 'framer-motion'
 
 function MyApp({ Component, pageProps, router }) {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     console.log('first load of website')

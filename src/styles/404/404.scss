@@ -6,16 +6,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   color: white;
+
   h1 {
-    color: $primary;
-    font-size: toRem(160);
-    border-bottom: 1px solid white;
     padding: 0;
     margin: 1rem;
+    border-bottom: 1px solid white;
+
+    color: $primary;
+    font-size: toRem(160);
   }
   h2 {
-    font-size: toRem(40);
     margin-bottom: 4rem;
+    font-size: toRem(40);
   }
 }

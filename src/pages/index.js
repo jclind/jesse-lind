@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import BackgroundIcons from '../components/BackgroundIcons'
 import JLMainLogo from '../components/images/JLMainLogo'
+import Footer from '../components/Footer'
 
 const Index = ({ jlMainLogo }) => {
   return (
@@ -28,7 +29,10 @@ const Index = ({ jlMainLogo }) => {
           <div className='logo'>
             <JLMainLogo />
           </div>
-          <BackgroundIcons />
+        </div>
+        <BackgroundIcons />
+        <div className='footer-container fadeinup ad-1-6'>
+          <Footer />
         </div>
       </div>
     </>

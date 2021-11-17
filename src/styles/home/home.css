@@ -2,23 +2,24 @@
 @use 'sass:math';
 .home-page {
   overflow: hidden;
+  height: 100%;
 }
 
 .home-page .container {
-  max-width: 1200px;
-  overflow: hidden;
+  position: relative;
+  height: calc(100vh - 2rem - 2.25rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1200px;
 }
 
 .home-page .container .content {
   z-index: 5;
   width: 75%;
-  min-width: 325px;
   max-width: 375px;
 }
 
@@ -27,26 +28,36 @@
 }
 
 .home-page .container .logo {
-  z-index: 2;
   position: absolute;
+  z-index: 2;
   left: 50%;
   opacity: 0.9;
 }
 
-.home-page .container .background-icons {
-  overflow: hidden;
+.home-page .background-icons {
   position: absolute;
   left: 0;
   right: 0;
-  width: 85%;
+  overflow: hidden;
   height: 100%;
+  width: 85%;
   margin: 0 auto;
   margin-top: 2rem;
 }
 
-.home-page .container .background-icons .icons {
-  width: 100%;
+.home-page .background-icons .icons {
   height: 100%;
+  width: 100%;
+}
+
+.home-page .footer-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
 }
 
 @media screen and (min-width: 618px) {
@@ -91,8 +102,8 @@
     font-size: 1.25rem;
   }
   .home-page .logo {
-    z-index: 5;
     position: relative !important;
+    z-index: 5;
     left: 0 !important;
     opacity: 1 !important;
   }
@@ -104,7 +115,6 @@
   left: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 .item {
@@ -112,5 +122,18 @@
   height: 20px;
   width: 20px;
   opacity: 0.5;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  pointer-events: none;
 }
 /*# sourceMappingURL=home.css.map */

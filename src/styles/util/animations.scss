@@ -4,11 +4,14 @@
 .jl-logo-anim {
   height: 200px;
   width: 200px;
+
   opacity: 0.5;
+
   @media screen and (min-width: 618px) {
-    opacity: 1;
     height: 300px;
     width: 300px;
+
+    opacity: 1;
   }
   @media screen and (min-width: 1200px) {
     height: 350px;

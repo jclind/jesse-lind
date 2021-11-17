@@ -8,9 +8,9 @@
 
 @media screen and (min-width: 618px) {
   .jl-logo-anim {
-    opacity: 1;
     height: 300px;
     width: 300px;
+    opacity: 1;
   }
 }
 

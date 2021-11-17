@@ -2,20 +2,19 @@
 @import '../util/functions.scss';
 
 .about-page {
-  padding-top: $nav-height + $nav-margin-height;
   p {
-    line-height: 150%;
     max-width: 600px;
+    line-height: 150%;
   }
-
   .about {
     max-width: $max-width;
     padding-bottom: toRem(60);
+
     .about-img-container {
-      width: 210px;
-      height: 210px;
       display: flex;
       justify-content: center;
+      width: 210px;
+      height: 210px;
       margin: toRem(30) auto;
     }
     .text {
@@ -26,26 +25,28 @@
     }
   }
   .skills {
-    border-top: 1px solid $primary;
     padding-top: toRem(60);
     padding-bottom: toRem(120);
+    border-top: 1px solid $primary;
+
     .text {
       color: $secondary-text;
     }
     .skills-container {
       display: grid;
+      justify-items: center;
       gap: toRem(20);
       margin-top: toRem(50);
-      justify-items: center;
+
       .skill-box {
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        border-radius: 10px;
-        padding: toRem(45) 5%;
-        max-width: 500px;
         width: 100%;
+        max-width: 500px;
+        padding: toRem(45) 5%;
+        border-radius: 10px;
+
         background: $secondary-background;
 
         .icon-container {
@@ -54,23 +55,26 @@
           align-items: center;
           height: 120px;
           width: 120px;
-          border-radius: 50%;
-          background: $tertiary-background;
           margin-bottom: toRem(50);
-        }
+          border-radius: 50%;
 
+          background: $tertiary-background;
+        }
         .skill-title {
           padding-bottom: toRem(30);
         }
         .skill-items {
           display: flex;
-          justify-content: center;
           flex-wrap: wrap;
+          justify-content: center;
           gap: toRem(15);
+
           font-size: toRem(14);
+
           .skill-item {
             padding: 10px 20px;
             border-radius: 20px;
+
             background: $tertiary-background;
             color: $secondary-text;
           }
@@ -81,16 +85,17 @@
 
   @media screen and (min-width: 768px) {
     .about {
-      height: calc(100vh - #{$nav-height} - #{$nav-margin-height} - 10%);
       display: flex;
       flex-direction: row-reverse;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      height: calc(100vh - #{$nav-height} - #{$nav-margin-height} - 10%);
       padding-bottom: 5%;
+
       .about-img-container {
         flex-shrink: 0;
-        width: 280px;
         height: 280px;
+        width: 280px;
       }
       .text {
         max-width: 375px;
@@ -101,14 +106,15 @@
       }
     }
     .skills {
-      margin-top: 0;
       padding-top: 10%;
+      margin-top: 0;
+      text-align: center;
+
       .skills-container {
         .skill-box {
           padding-bottom: toRem(60);
         }
       }
-      text-align: center;
       .text {
         margin: 0 auto;
       }
@@ -117,8 +123,8 @@
   @media screen and (min-width: 816px) {
     .about {
       .about-img-container {
-        width: 310px;
         height: 310px;
+        width: 310px;
       }
       .text {
         max-width: 400px;
@@ -128,9 +134,10 @@
   @media screen and (min-width: 1200px) {
     .about {
       height: calc(100vh - #{$nav-height} - #{$nav-margin-height});
+
       .about-img-container {
-        width: 400px;
         height: 400px;
+        width: 400px;
       }
       .text {
         max-width: 500px;
@@ -139,13 +146,14 @@
     }
     .skills {
       max-width: $max-width;
+
       .text {
         max-width: 80%;
       }
       .skills-container {
-        margin-top: toRem(100);
         grid-template-columns: 1fr 1fr 1fr;
         gap: toRem(30);
+        margin-top: toRem(100);
       }
     }
   }

@@ -1,0 +1,23 @@
+@import '../../util/vars.scss';
+@import '../../util/functions.scss';
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  p {
+    font-size: toRem(14);
+    color: $quaternary-text;
+    a {
+      text-decoration: underline;
+    }
+    a:hover {
+      color: $secondary-text;
+    }
+
+    @media screen and (min-width: 768px) {
+      color: $tertiary-text;
+    }
+  }
+}

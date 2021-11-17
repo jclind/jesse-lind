@@ -2,42 +2,47 @@
 @import './util/functions.scss';
 
 body {
-  padding: 0;
-  margin: 0;
+  position: relative;
+  z-index: -1;
+  width: 100%;
   color: $white;
   background: $primary-background;
-  width: 100%;
-  z-index: -1;
 }
 html,
 body {
-  position: relative;
+  // position: relative;
   overflow-x: hidden;
+  // overflow: hidden;
   height: 100%;
 }
+html {
+  overflow-y: hidden;
+}
 #__next {
-  background: rgba(0, 0, 0, 0);
+  height: 100%;
 }
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 h1,
 h2 {
   padding: 0;
-  margin: 0;
-  font-weight: 500;
   padding-bottom: $title-content-padding;
+  margin: 0;
+
+  font-weight: 500;
 }
 
 h1 {
   font-size: toRem(36);
+
   @media screen and (min-width: 1200px) {
     font-size: toRem(48) !important;
   }
@@ -50,31 +55,33 @@ h3 {
   font-size: toRem(20);
   font-weight: bold;
 }
+
 p {
   padding: 0;
   margin: 0;
+  max-width: 600px;
+
+  line-height: 150%;
+
   font-size: toRem(18);
   color: $secondary-text;
-  @media screen and (min-width: 1200px) {
-    // font-size: toRem(20);
-  }
-  line-height: 150%;
-  max-width: 600px;
 }
 
 label {
   display: flex;
   flex-direction: column;
 }
+
 input,
 textarea {
-  outline: none;
+  padding: toRem(5);
   border: none;
-  background: $primary-background;
   border-radius: $border-radius;
+  outline: none;
+
+  background: $primary-background;
   color: white;
   font-size: toRem(14);
-  padding: toRem(15) toRem(10);
 }
 input {
   height: 45px;
@@ -84,42 +91,43 @@ button {
   display: flex;
   align-items: center;
   margin: 0;
-  outline: none;
   border: none;
-  cursor: pointer;
+  outline: none;
+
   color: inherit;
+
+  cursor: pointer;
 }
 .action-btn {
-  color: $primary-background;
-  background: $secondary;
-
+  padding: 15px 20px;
+  margin-top: toRem(35);
   border-radius: $border-radius;
 
+  background: $secondary;
+  color: $primary-background;
   font-weight: bold;
   font-size: toRem(18);
-  padding: 15px 20px;
 
-  margin-top: toRem(35);
   @media screen and (min-width: 1200px) {
     font-size: toRem(24);
-    // padding: 15px 20px;
   }
 }
 
 .page {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  padding-top: $nav-margin-height + $nav-height;
+  // position: absolute;
+  // z-index: -1;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // height: 100%;
+  // width: 100%;
 }
 .container {
   height: 100%;
   width: 90%;
   margin: 0 auto;
-  // padding-top: $nav-height + $nav-margin-height;
 }
 .section {
   width: 90%;

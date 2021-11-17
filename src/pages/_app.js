@@ -1,5 +1,3 @@
-import { useState, useEffect, useRef } from 'react'
-
 import 'normalize.css'
 import '../styles/globals.css'
 import '../styles/components/navbar.css'
@@ -10,23 +8,13 @@ import '../styles/components/project-item.css'
 import '../styles/contact/contact.css'
 import '../styles/util/animations.css'
 import '../styles/404/404.css'
-import '../styles/loading-page.css'
+import '../styles/components/footer/footer.css'
 
 import Layout from '../components/Layout'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import BarLoader from 'react-spinners/BarLoader'
 
 function MyApp({ Component, pageProps, router }) {
-  useEffect(() => {
-    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
-      window.location = 'microsoft-edge:' + window.location
-      setTimeout(function () {
-        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547'
-      }, 1)
-    }
-  }, [])
-
   return (
     <>
       <Layout>
@@ -38,6 +26,7 @@ function MyApp({ Component, pageProps, router }) {
             exit='pageExit'
             variants={{
               pageInitial: {
+                height: '100%',
                 opacity: 0,
               },
               pageAnimate: {

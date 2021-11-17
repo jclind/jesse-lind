@@ -5,27 +5,28 @@
 }
 
 .projects-page h1 {
-  text-align: center;
   margin: 0;
   margin-top: 2.5rem;
+  text-align: center;
 }
 
 .projects-page .projects-container {
-  margin-top: 1.875rem;
   display: -ms-grid;
   display: grid;
   gap: 1.5625rem;
+  margin-top: 1.875rem;
 }
 
 .projects-page .projects-container .project-item {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
   padding-bottom: 1.5625rem;
+  margin: 0 auto;
 }
 
 .projects-page .prompt {
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,19 +37,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #1b1e34;
   width: 100%;
+  padding: 2rem 0;
   margin: 0 auto;
   margin-top: 3.75rem;
-  bottom: 0;
-  padding: 2rem 0;
+  background: #1b1e34;
   text-align: center;
 }
 
 .projects-page .prompt h1 {
   width: 90%;
-  color: #ff7c7c;
   margin: 0 auto;
+  color: #ff7c7c;
 }
 
 .projects-page .prompt p {
@@ -62,21 +62,21 @@
 }
 
 .projects-page .prompt .visit-btn {
-  font-size: 1.25rem;
   padding: 0.9375rem 1.25rem;
   margin-top: 2.1875rem;
+  font-size: 1.25rem;
 }
 
 @media screen and (min-width: 768px) {
   .projects-page .projects-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 3.75rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    gap: 3.75rem;
   }
   .projects-page .prompt {
     padding: 4rem 0;
@@ -88,10 +88,10 @@
     margin-top: 3.75rem;
   }
   .projects-page .projects-container {
-    margin-top: 3.75rem;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     gap: 5.625rem;
+    margin-top: 3.75rem;
   }
   .projects-page .prompt {
     margin-top: 6.25rem;

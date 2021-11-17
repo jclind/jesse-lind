@@ -8,23 +8,26 @@
 
   .img-container {
     position: relative;
+
     height: 350px;
     border-radius: 10px;
 
     .overlay {
       position: absolute;
-      height: 100%;
-      width: 100%;
-      box-sizing: border-box;
       left: 0;
       top: 0;
 
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
       border-radius: 10px;
+
       background: rgba(0, 0, 0, 0.8);
       opacity: 0;
+
       transition: all 0.4s ease-in;
     }
     .overlay:hover {
@@ -34,11 +37,12 @@
   }
 
   h3 {
-    text-transform: capitalize;
-    margin: 0;
     padding: 0;
-    margin-top: toRem(8);
     padding-bottom: toRem(2);
+    margin: 0;
+    margin-top: toRem(8);
+
+    text-transform: capitalize;
   }
   .text {
     color: $secondary-text;
@@ -48,10 +52,11 @@
 }
 
 .visit-btn {
-  color: $primary-background;
-  background: $secondary;
-  font-weight: bold;
-  font-size: toRem(24);
   padding: 15px 20px;
   border-radius: $border-radius;
+
+  background: $secondary;
+  color: $primary-background;
+  font-weight: bold;
+  font-size: toRem(24);
 }

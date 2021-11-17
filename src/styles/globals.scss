@@ -252,3 +252,21 @@ select:-webkit-autofill:focus {
   -ms-animation-fill-mode: forwards; /* IE 10+ */
   animation-fill-mode: forwards; /* When the spec is finished */
 }
+
+.app,
+.layout {
+  height: 100%;
+  width: 100%;
+}
+.app.loading {
+  .layout {
+    display: none;
+  }
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+}

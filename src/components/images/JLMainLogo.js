@@ -13,9 +13,6 @@ const JLMainLogo = () => {
           loop: false,
         })
       }, 800)
-      animationContainer.current.addEventListener('click', () => {
-        console.log('loaded!')
-      })
     }
   }, [])
 

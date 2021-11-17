@@ -2,19 +2,25 @@
 @import './util/functions.scss';
 
 body {
+  position: relative;
   z-index: -1;
   width: 100%;
-
   color: $white;
   background: $primary-background;
 }
 html,
 body {
-  position: relative;
+  // position: relative;
   overflow-x: hidden;
+  // overflow: hidden;
   height: 100%;
 }
-
+html {
+  overflow-y: hidden;
+}
+#__next {
+  height: 100%;
+}
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
@@ -108,13 +114,15 @@ button {
 }
 
 .page {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  padding-top: $nav-margin-height + $nav-height;
+  // position: absolute;
+  // z-index: -1;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // height: 100%;
+  // width: 100%;
 }
 .container {
   height: 100%;

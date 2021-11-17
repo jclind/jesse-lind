@@ -1,12 +1,14 @@
 @use 'sass:math';
 @use 'sass:math';
 .nav {
-  z-index: -1;
+  position: absolute;
+  top: 2.25rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
   height: 2rem;
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 2.25rem;
   background: none;
 }
 
@@ -43,7 +45,7 @@
 }
 
 .nav .nav-links {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;

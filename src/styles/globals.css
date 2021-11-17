@@ -1,6 +1,7 @@
 @use 'sass:math';
 @use 'sass:math';
 body {
+  position: relative;
   z-index: -1;
   width: 100%;
   color: #ffffff;
@@ -9,8 +10,15 @@ body {
 
 html,
 body {
-  position: relative;
   overflow-x: hidden;
+  height: 100%;
+}
+
+html {
+  overflow-y: hidden;
+}
+
+#__next {
   height: 100%;
 }
 
@@ -117,13 +125,8 @@ button {
 }
 
 .page {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  padding-top: 4.25rem;
 }
 
 .container {

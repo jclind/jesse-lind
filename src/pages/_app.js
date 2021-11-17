@@ -8,6 +8,7 @@ import '../styles/components/project-item.css'
 import '../styles/contact/contact.css'
 import '../styles/util/animations.css'
 import '../styles/404/404.css'
+import '../styles/components/footer/footer.css'
 
 import Layout from '../components/Layout'
 
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps, router }) {
             exit='pageExit'
             variants={{
               pageInitial: {
+                height: '100%',
                 opacity: 0,
               },
               pageAnimate: {

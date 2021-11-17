@@ -2,13 +2,16 @@
 @import '../util/functions.scss';
 
 .nav {
-  z-index: -1;
+  position: absolute;
+  top: $nav-margin-height;
+  margin: 0 auto;
+  // padding-top: ;
+  left: 0;
+  right: 0;
 
   height: $nav-height;
   width: $nav-width;
   max-width: $max-width;
-  margin: 0 auto;
-  margin-top: $nav-margin-height;
 
   background: none;
 
@@ -39,7 +42,7 @@
   }
 
   .nav-links {
-    position: absolute;
+    position: fixed;
     z-index: 10;
     top: 0;
     left: 0;

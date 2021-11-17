@@ -2,7 +2,6 @@
 @use 'sass:math';
 .contact-page {
   min-height: 970px;
-  padding-top: 4.25rem;
 }
 
 .contact-page .info {

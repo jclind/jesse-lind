@@ -2,10 +2,12 @@
 @use 'sass:math';
 .home-page {
   overflow: hidden;
+  height: 100%;
 }
 
 .home-page .container {
-  overflow: hidden;
+  position: relative;
+  height: calc(100vh - 2rem - 2.25rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,7 +34,7 @@
   opacity: 0.9;
 }
 
-.home-page .container .background-icons {
+.home-page .background-icons {
   position: absolute;
   left: 0;
   right: 0;
@@ -43,9 +45,19 @@
   margin-top: 2rem;
 }
 
-.home-page .container .background-icons .icons {
+.home-page .background-icons .icons {
   height: 100%;
   width: 100%;
+}
+
+.home-page .footer-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
 }
 
 @media screen and (min-width: 618px) {
@@ -101,7 +113,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  overflow: hidden;
   height: 100%;
   width: 100%;
 }
@@ -111,5 +122,18 @@
   height: 20px;
   width: 20px;
   opacity: 0.5;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  pointer-events: none;
 }
 /*# sourceMappingURL=home.css.map */

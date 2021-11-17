@@ -14,6 +14,7 @@ const JLMainLogo = () => {
         })
       }, 800)
     }
+    console.log('HELLO FROM JLMAINLOGO')
   }, [])
 
   return <div className='jl-logo-anim' ref={animationContainer}></div>

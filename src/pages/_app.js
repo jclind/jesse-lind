@@ -1,3 +1,5 @@
+import { useState, useEffect, createContext } from 'react'
+
 import 'normalize.css'
 import '../styles/globals.css'
 import '../styles/components/navbar.css'
@@ -11,38 +13,67 @@ import '../styles/404/404.css'
 import '../styles/components/footer/footer.css'
 
 import Layout from '../components/Layout'
+import Loading from '../components/Loading'
 
 import { AnimatePresence, motion } from 'framer-motion'
 
+import { LoadingContext } from '../contexts/LoadingContext'
+
 function MyApp({ Component, pageProps, router }) {
+  // Always loading if refresh on page other than home page
+  const [loading, setLoading] = useState(true)
+  const [navLoading, setNavLoading] = useState(true)
+  const [logoLoading, setLogoLoading] = useState(true)
+
+  useEffect(() => {
+    // setTimeout(() => {
+    //   setLoading(false)
+    // }, 4000)
+    console.log('first load of website')
+  }, [])
+
+  useEffect(() => {
+    const currRouteName = router.pathname
+    if (router.pathname !== '/' || (!navLoading && !logoLoading)) {
+      setTimeout(() => {
+        setLoading(false)
+      }, 1000)
+    }
+  }, [navLoading, logoLoading])
+
   return (
-    <>
-      <Layout>
-        <AnimatePresence>
-          <motion.div
-            key={router.route}
-            initial='pageInitial'
-            animate='pageAnimate'
-            exit='pageExit'
-            variants={{
-              pageInitial: {
-                height: '100%',
-                opacity: 0,
-              },
-              pageAnimate: {
-                opacity: 1,
-              },
-              pageExit: {
-                opacity: 0,
-              },
-            }}
-            transition={{ duration: 0.2 }}
-          >
-            <Component {...pageProps} />
-          </motion.div>
-        </AnimatePresence>
-      </Layout>
-    </>
+    <div className={loading ? 'app loading' : 'app'}>
+      <LoadingContext.Provider
+        value={{ setNavLoading, setLogoLoading, loading }}
+      >
+        <Layout>
+          <AnimatePresence>
+            <motion.div
+              key={router.route}
+              initial='pageInitial'
+              animate='pageAnimate'
+              exit='pageExit'
+              variants={{
+                pageInitial: {
+                  height: '100%',
+                  opacity: 0,
+                },
+                pageAnimate: {
+                  opacity: 1,
+                },
+                pageExit: {
+                  opacity: 0,
+                },
+              }}
+              transition={{ duration: 0.2 }}
+            >
+              <Component {...pageProps} />
+            </motion.div>
+          </AnimatePresence>
+        </Layout>
+      </LoadingContext.Provider>
+      <Loading />
+    </div>
   )
 }
 

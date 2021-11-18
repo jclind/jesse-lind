@@ -89,7 +89,7 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
-      height: calc(100vh - #{$nav-height} - #{$nav-margin-height} - 10%);
+      height: calc(100vh - #{$nav-height} - #{$nav-margin-height});
       padding-bottom: 5%;
 
       .about-img-container {
@@ -133,8 +133,6 @@
   }
   @media screen and (min-width: 1200px) {
     .about {
-      height: calc(100vh - #{$nav-height} - #{$nav-margin-height});
-
       .about-img-container {
         height: 400px;
         width: 400px;

@@ -316,4 +316,41 @@ select:-webkit-autofill:focus {
   animation-fill-mode: forwards;
   /* When the spec is finished */
 }
+
+.app,
+.layout {
+  height: 100%;
+  width: 100%;
+}
+
+.app.loading .layout {
+  display: none;
+}
+
+.app.loading .loader {
+  opacity: 1;
+  z-index: 10;
+}
+
+.app .loader {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #21243d;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
 /*# sourceMappingURL=globals.css.map */

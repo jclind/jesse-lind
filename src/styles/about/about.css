@@ -122,7 +122,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: calc(100vh - 2rem - 2.25rem - 10%);
+    height: calc(100vh - 2rem - 2.25rem);
     padding-bottom: 5%;
   }
   .about-page .about .about-img-container {
@@ -164,9 +164,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .about-page .about {
-    height: calc(100vh - 2rem - 2.25rem);
-  }
   .about-page .about .about-img-container {
     height: 400px;
     width: 400px;

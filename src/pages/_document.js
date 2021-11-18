@@ -1,7 +1,14 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
+  constructor() {
+    super()
+    this.state = {
+      loading: true,
+    }
+  }
   render() {
+    console.log('this work')
     return (
       <Html>
         <Head>
@@ -11,7 +18,7 @@ class MyDocument extends Document {
             rel='stylesheet'
           ></link>
         </Head>
-        <body>
+        <body className='loading'>
           <Main />
           <NextScript />
         </body>

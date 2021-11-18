@@ -263,10 +263,20 @@ select:-webkit-autofill:focus {
     display: none;
   }
   .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    opacity: 1;
   }
+}
+.app .loader {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: $primary-background;
+  opacity: 0;
+  transition: opacity 0.2s linear;
 }

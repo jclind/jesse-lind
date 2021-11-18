@@ -20,15 +20,33 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { LoadingContext } from '../contexts/LoadingContext'
 
 function MyApp({ Component, pageProps, router }) {
+  // Always loading if refresh on page other than home page
   const [loading, setLoading] = useState(true)
+  const [navLoading, setNavLoading] = useState(true)
+  const [logoLoading, setLogoLoading] = useState(true)
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 4000)
     console.log('first load of website')
   }, [])
 
+  useEffect(() => {
+    const currRouteName = router.pathname
+    if (router.pathname !== '/' || (!navLoading && !logoLoading)) {
+      setTimeout(() => {
+        setLoading(false)
+      }, 500)
+    }
+  }, [navLoading, logoLoading])
+
   return (
     <div className={loading ? 'app loading' : 'app'}>
-      <LoadingContext.Provider value={{ setLoading }}>
+      <Loading />
+      <LoadingContext.Provider
+        value={{ setNavLoading, setLogoLoading, loading }}
+      >
         <Layout>
           <AnimatePresence>
             <motion.div
@@ -55,7 +73,6 @@ function MyApp({ Component, pageProps, router }) {
           </AnimatePresence>
         </Layout>
       </LoadingContext.Provider>
-      <Loading />
     </div>
   )
 }

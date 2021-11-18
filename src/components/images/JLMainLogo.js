@@ -9,7 +9,11 @@ const JLMainLogo = () => {
   const animationContainer = useRef()
   useEffect(() => {
     if (animationContainer && animationContainer.current) {
-      context.setLoading(false)
+      context.setLogoLoading(false)
+    }
+  }, [])
+  useEffect(() => {
+    if (!context.loading) {
       setTimeout(() => {
         Lottie.loadAnimation({
           container: animationContainer.current,
@@ -18,8 +22,7 @@ const JLMainLogo = () => {
         })
       }, 800)
     }
-    console.log('HELLO FROM JLMAINLOGO')
-  }, [])
+  }, [context.loading])
 
   return <div className='jl-logo-anim' ref={animationContainer}></div>
 }

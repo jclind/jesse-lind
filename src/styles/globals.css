@@ -328,6 +328,14 @@ select:-webkit-autofill:focus {
 }
 
 .app.loading .loader {
+  opacity: 1;
+}
+
+.app .loader {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,5 +347,9 @@ select:-webkit-autofill:focus {
           align-items: center;
   height: 100%;
   width: 100%;
+  background: #21243d;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
 }
 /*# sourceMappingURL=globals.css.map */

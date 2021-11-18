@@ -21,8 +21,10 @@ const About = () => {
               width={400}
               height={400}
               objectFit='contain'
-              placeholder='blur'
-              onLoad={console.log('LOADED NOW!!!')}
+              // placeholder='blur'
+              onLoadingComplete={() => {
+                console.log('LOADED NOW!!!')
+              }}
             />
           </div>
           <div className='about-content'>

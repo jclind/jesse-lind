@@ -26,9 +26,9 @@ function MyApp({ Component, pageProps, router }) {
   const [logoLoading, setLogoLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 4000)
+    // setTimeout(() => {
+    //   setLoading(false)
+    // }, 4000)
     console.log('first load of website')
   }, [])
 
@@ -43,7 +43,6 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <div className={loading ? 'app loading' : 'app'}>
-      <Loading />
       <LoadingContext.Provider
         value={{ setNavLoading, setLogoLoading, loading }}
       >
@@ -73,6 +72,7 @@ function MyApp({ Component, pageProps, router }) {
           </AnimatePresence>
         </Layout>
       </LoadingContext.Provider>
+      <Loading />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createContext } from 'react'
 
 import 'normalize.css'
 import '../styles/globals.css'
@@ -17,8 +17,10 @@ import Loading from '../components/Loading'
 
 import { AnimatePresence, motion } from 'framer-motion'
 
+import { LoadingContext } from '../contexts/LoadingContext'
+
 function MyApp({ Component, pageProps, router }) {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     console.log('first load of website')
@@ -26,31 +28,33 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <div className={loading ? 'app loading' : 'app'}>
-      <Layout>
-        <AnimatePresence>
-          <motion.div
-            key={router.route}
-            initial='pageInitial'
-            animate='pageAnimate'
-            exit='pageExit'
-            variants={{
-              pageInitial: {
-                height: '100%',
-                opacity: 0,
-              },
-              pageAnimate: {
-                opacity: 1,
-              },
-              pageExit: {
-                opacity: 0,
-              },
-            }}
-            transition={{ duration: 0.2 }}
-          >
-            <Component {...pageProps} />
-          </motion.div>
-        </AnimatePresence>
-      </Layout>
+      <LoadingContext.Provider value={{ setLoading }}>
+        <Layout>
+          <AnimatePresence>
+            <motion.div
+              key={router.route}
+              initial='pageInitial'
+              animate='pageAnimate'
+              exit='pageExit'
+              variants={{
+                pageInitial: {
+                  height: '100%',
+                  opacity: 0,
+                },
+                pageAnimate: {
+                  opacity: 1,
+                },
+                pageExit: {
+                  opacity: 0,
+                },
+              }}
+              transition={{ duration: 0.2 }}
+            >
+              <Component {...pageProps} />
+            </motion.div>
+          </AnimatePresence>
+        </Layout>
+      </LoadingContext.Provider>
       <Loading />
     </div>
   )

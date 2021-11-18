@@ -1,11 +1,15 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useContext } from 'react'
 import Lottie from 'lottie-web'
 import animation from '../../assets/animations/jl-logo-animation.json'
+import { LoadingContext } from '../../contexts/LoadingContext'
 
 const JLMainLogo = () => {
+  const context = useContext(LoadingContext)
+
   const animationContainer = useRef()
   useEffect(() => {
     if (animationContainer && animationContainer.current) {
+      // context.setLoading(false)
       setTimeout(() => {
         Lottie.loadAnimation({
           container: animationContainer.current,

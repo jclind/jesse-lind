@@ -23,6 +23,7 @@ import { route } from 'next/dist/server/router'
 function MyApp({ Component, pageProps, router }) {
   // Always loading if refresh on page other than home page
   const [loading, setLoading] = useState(true)
+  const [routerLoading, setRouterLoading] = useState(false)
   const [navLoading, setNavLoading] = useState(true)
   const [logoLoading, setLogoLoading] = useState(true)
 
@@ -31,10 +32,12 @@ function MyApp({ Component, pageProps, router }) {
     //   setLoading(false)
     // }, 4000)
     router.events.on('routeChangeStart', () => {
-      setLoading(true)
+      setRouterLoading(true)
     })
     router.events.on('routeChangeComplete', () => {
-      setLoading(false)
+      setTimeout(() => {
+        setRouterLoading(false)
+      }, 500)
     })
     console.log('first load of website')
   }, [])
@@ -74,7 +77,12 @@ function MyApp({ Component, pageProps, router }) {
               }}
               transition={{ duration: 0.2 }}
             >
-              <Component {...pageProps} />
+              <div
+                className={routerLoading ? 'page-body loading' : 'page-body'}
+              >
+                {routerLoading ? <Loading /> : null}
+                <Component {...pageProps} />
+              </div>
             </motion.div>
           </AnimatePresence>
         </Layout>

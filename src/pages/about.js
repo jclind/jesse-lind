@@ -21,6 +21,7 @@ const About = () => {
               width={400}
               height={400}
               objectFit='contain'
+              onLoad={console.log('LOADED NOW!!!')}
             />
           </div>
           <div className='about-content'>

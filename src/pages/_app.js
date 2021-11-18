@@ -31,8 +31,9 @@ function MyApp({ Component, pageProps, router }) {
     // setTimeout(() => {
     //   setLoading(false)
     // }, 4000)
-    router.events.on('routeChangeStart', () => {
+    router.events.on('routeChangeStart', url => {
       setRouterLoading(true)
+      console.log(url)
     })
     router.events.on('routeChangeComplete', () => {
       setTimeout(() => {

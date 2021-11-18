@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps, router }) {
     if (router.pathname !== '/' || (!navLoading && !logoLoading)) {
       setTimeout(() => {
         setLoading(false)
-      }, 500)
+      }, 1000)
     }
   }, [navLoading, logoLoading])
 

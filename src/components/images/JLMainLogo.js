@@ -9,7 +9,7 @@ const JLMainLogo = () => {
   const animationContainer = useRef()
   useEffect(() => {
     if (animationContainer && animationContainer.current) {
-      // context.setLoading(false)
+      context.setLoading(false)
       setTimeout(() => {
         Lottie.loadAnimation({
           container: animationContainer.current,

@@ -18,6 +18,7 @@ import Loading from '../components/Loading'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import { LoadingContext } from '../contexts/LoadingContext'
+import { route } from 'next/dist/server/router'
 
 function MyApp({ Component, pageProps, router }) {
   // Always loading if refresh on page other than home page
@@ -29,6 +30,12 @@ function MyApp({ Component, pageProps, router }) {
     // setTimeout(() => {
     //   setLoading(false)
     // }, 4000)
+    router.events.on('routeChangeStart', () => {
+      setLoading(true)
+    })
+    router.events.on('routeChangeComplete', () => {
+      setLoading(false)
+    })
     console.log('first load of website')
   }, [])
 

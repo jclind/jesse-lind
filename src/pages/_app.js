@@ -35,11 +35,11 @@ function MyApp({ Component, pageProps, router }) {
       setRouterLoading(true)
       console.log(url)
     })
-    router.events.on('routeChangeComplete', () => {
-      setTimeout(() => {
-        setRouterLoading(false)
-      }, 500)
-    })
+    // router.events.on('routeChangeComplete', () => {
+    //   setTimeout(() => {
+    //     setRouterLoading(false)
+    //   }, 500)
+    // })
     console.log('first load of website')
   }, [])
 
@@ -55,7 +55,13 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <div className={loading ? 'app loading' : 'app'}>
       <LoadingContext.Provider
-        value={{ setNavLoading, setLogoLoading, loading }}
+        value={{
+          setNavLoading,
+          setLogoLoading,
+          setRouterLoading,
+          routerLoading,
+          loading,
+        }}
       >
         <Layout>
           <AnimatePresence>

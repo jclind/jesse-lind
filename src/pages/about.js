@@ -1,12 +1,17 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import { LoadingContext } from '../contexts/LoadingContext'
 
 const About = () => {
+  const context = useContext(LoadingContext)
+
   const skillsRef = useRef()
+
   const scrollIntoView = () => {
     skillsRef.current.scrollIntoView({ behavior: 'smooth' })
   }
+
   return (
     <>
       <Head>
@@ -24,6 +29,7 @@ const About = () => {
               // placeholder='blur'
               onLoadingComplete={() => {
                 console.log('LOADED NOW!!!')
+                context.setRouterLoading(false)
               }}
             />
           </div>

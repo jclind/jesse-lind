@@ -40,7 +40,6 @@ function MyApp({ Component, pageProps, router }) {
         setRouterLoading(false)
       }, 500)
     })
-    console.log('first load of website')
   }, [])
 
   useEffect(() => {

@@ -35,11 +35,11 @@ function MyApp({ Component, pageProps, router }) {
       setRouterLoading(true)
       console.log(url)
     })
-    // router.events.on('routeChangeComplete', () => {
-    //   setTimeout(() => {
-    //     setRouterLoading(false)
-    //   }, 500)
-    // })
+    router.events.on('routeChangeComplete', () => {
+      setTimeout(() => {
+        setRouterLoading(false)
+      }, 500)
+    })
     console.log('first load of website')
   }, [])
 

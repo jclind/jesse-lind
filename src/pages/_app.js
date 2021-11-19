@@ -22,7 +22,7 @@ import { route } from 'next/dist/server/router'
 
 function MyApp({ Component, pageProps, router }) {
   // Always loading if refresh on page other than home page
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [routerLoading, setRouterLoading] = useState(false)
   const [navLoading, setNavLoading] = useState(true)
   const [logoLoading, setLogoLoading] = useState(true)

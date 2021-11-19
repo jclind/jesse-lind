@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react'
+import React, { useRef, useEffect, useContext } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import { LoadingContext } from '../contexts/LoadingContext'
@@ -7,6 +7,19 @@ const About = () => {
   const context = useContext(LoadingContext)
 
   const skillsRef = useRef()
+  useEffect(() => {
+    // if (aboutImage.current.complete) {
+    // aboutImage.onLoad(console.log('LOADED!!!'))
+    if (document.querySelector('.about-img-container img').complete) {
+      console.log('bruh 1')
+    } else {
+      console.log('nah')
+    }
+    // } else {
+    // console.log('NOT QUITE YET!')
+    // aboutImage.current.addEventListener('load', console.log('Now Loaded!'))
+    // }
+  }, [])
 
   const scrollIntoView = () => {
     skillsRef.current.scrollIntoView({ behavior: 'smooth' })
@@ -30,10 +43,8 @@ const About = () => {
               width={400}
               height={400}
               objectFit='contain'
-              placeholder='blur'
-              blurDataURL={
-                'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
-              }
+              // placeholder='blur'
+              // blurDataURL={`data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==`}
               // onLoadingComplete={() => {
               //   console.log('Loading in About!')
               //   handleLoad()

@@ -31,6 +31,9 @@ const About = () => {
               height={400}
               objectFit='contain'
               placeholder='blur'
+              blurDataURL={
+                'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+              }
               // onLoadingComplete={() => {
               //   console.log('Loading in About!')
               //   handleLoad()

@@ -31,7 +31,7 @@ const About = () => {
               height={400}
               objectFit='contain'
               // placeholder='blur'
-              onLoad={e => {
+              onLoadingComplete={e => {
                 console.log('Loading in About!')
                 e.target.src.indexOf('data:image/gif;base64') < 0 &&
                   handleLoad()

@@ -1,11 +1,8 @@
 import React, { useRef, useEffect, useContext } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import { LoadingContext } from '../contexts/LoadingContext'
 
 const About = () => {
-  const context = useContext(LoadingContext)
-
   const skillsRef = useRef()
 
   const scrollIntoView = () => {

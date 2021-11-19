@@ -18,10 +18,12 @@ import Loading from '../components/Loading'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import { LoadingContext } from '../contexts/LoadingContext'
+import { route } from 'next/dist/server/router'
 
 function MyApp({ Component, pageProps, router }) {
   // Always loading if refresh on page other than home page
   const [loading, setLoading] = useState(true)
+  const [routerLoading, setRouterLoading] = useState(false)
   const [navLoading, setNavLoading] = useState(true)
   const [logoLoading, setLogoLoading] = useState(true)
 
@@ -29,7 +31,15 @@ function MyApp({ Component, pageProps, router }) {
     // setTimeout(() => {
     //   setLoading(false)
     // }, 4000)
-    console.log('first load of website')
+    router.events.on('routeChangeStart', url => {
+      setRouterLoading(true)
+      console.log(url)
+    })
+    router.events.on('routeChangeComplete', () => {
+      setTimeout(() => {
+        setRouterLoading(false)
+      }, 500)
+    })
   }, [])
 
   useEffect(() => {
@@ -44,7 +54,13 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <div className={loading ? 'app loading' : 'app'}>
       <LoadingContext.Provider
-        value={{ setNavLoading, setLogoLoading, loading }}
+        value={{
+          setNavLoading,
+          setLogoLoading,
+          setRouterLoading,
+          routerLoading,
+          loading,
+        }}
       >
         <Layout>
           <AnimatePresence>
@@ -67,7 +83,12 @@ function MyApp({ Component, pageProps, router }) {
               }}
               transition={{ duration: 0.2 }}
             >
-              <Component {...pageProps} />
+              <div
+                className={routerLoading ? 'page-body loading' : 'page-body'}
+              >
+                {routerLoading ? <Loading /> : null}
+                <Component {...pageProps} />
+              </div>
             </motion.div>
           </AnimatePresence>
         </Layout>

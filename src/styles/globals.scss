@@ -267,8 +267,10 @@ select:-webkit-autofill:focus {
     z-index: 10;
   }
 }
-.app .loader {
+.app .loader,
+.page-body .loader {
   position: absolute;
+  overflow: hidden;
   z-index: -1;
   top: 0;
   left: 0;
@@ -278,6 +280,23 @@ select:-webkit-autofill:focus {
   height: 100%;
   width: 100%;
   background: $primary-background;
+  // background: red;
   opacity: 0;
   transition: opacity 0.2s linear;
+}
+
+.page-body.loading {
+  overflow: hidden;
+  .page {
+    display: none;
+    overflow: none;
+  }
+  .loader {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+.page-body {
+  height: 100%;
+  width: 100%;
 }

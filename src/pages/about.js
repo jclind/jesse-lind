@@ -27,7 +27,7 @@ const About = () => {
               height={400}
               objectFit='contain'
               // placeholder='blur'
-              onLoad={() => {
+              onLoadingComplete={() => {
                 console.log('LOADED NOW!!!')
                 context.setRouterLoading(false)
               }}

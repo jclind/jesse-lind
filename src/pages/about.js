@@ -30,12 +30,11 @@ const About = () => {
               width={400}
               height={400}
               objectFit='contain'
-              // placeholder='blur'
-              onLoadingComplete={e => {
-                console.log('Loading in About!')
-                e.target.src.indexOf('data:image/gif;base64') < 0 &&
-                  handleLoad()
-              }}
+              placeholder='blur'
+              // onLoadingComplete={() => {
+              //   console.log('Loading in About!')
+              //   handleLoad()
+              // }}
             />
           </div>
           <div className='about-content'>

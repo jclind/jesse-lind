@@ -12,6 +12,10 @@ const About = () => {
     skillsRef.current.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const handleLoad = () => {
+    context.setRouterLoading(false)
+  }
+
   return (
     <>
       <Head>
@@ -27,9 +31,10 @@ const About = () => {
               height={400}
               objectFit='contain'
               // placeholder='blur'
-              onLoadingComplete={() => {
-                console.log('LOADED NOW!!!')
-                context.setRouterLoading(false)
+              onLoad={e => {
+                console.log('Loading in About!')
+                e.target.src.indexOf('data:image/gif;base64') < 0 &&
+                  handleLoad()
               }}
             />
           </div>

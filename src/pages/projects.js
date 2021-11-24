@@ -20,6 +20,7 @@ const Projects = () => {
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <title>Projects | Jesse Lind</title>
       </Head>
       <div className='page projects-page'>
         <h1 className='fadeinup ad-0-8'>My Projects</h1>

@@ -18,6 +18,7 @@ const Contact = () => {
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <title>Contact | Jesse Lind</title>
       </Head>
       <div className='page contact-page'>
         <div className='info'>

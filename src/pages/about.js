@@ -13,6 +13,7 @@ const About = () => {
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <title>About | Jesse Lind</title>
       </Head>
       <div className='page about-page'>
         <div className='about section'>

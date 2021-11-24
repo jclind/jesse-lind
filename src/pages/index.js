@@ -10,6 +10,7 @@ const Index = ({ jlMainLogo }) => {
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <title>Home | Jesse Lind</title>
       </Head>
       <div className='page home-page'>
         <div className='container'>

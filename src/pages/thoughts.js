@@ -1,7 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import { createClient } from 'contentful'
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import BlogPost from '../components/BlogPost'
+// import '../styles/thoughts/thoughts.css'
 
 export async function getStaticProps() {
   const client = createClient({
@@ -33,21 +34,19 @@ const Thoughts = ({ posts }) => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Projects | Jesse Lind</title>
       </Head>
-      <div className='page'>
-        {posts &&
-          posts.map(post => {
-            const content = documentToHtmlString(post.fields.content)
-            return (
-              <article key={post.sys.id}>
-                <h2>{post.fields.title}</h2>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: content,
-                  }}
-                />
-              </article>
-            )
-          })}
+      <div className='thoughts-page'>
+        <div className='header'>
+          <h1 className='title'>Thoughts</h1>
+          <div className='content'>
+            A collection of my ideas, interested, and experiences.
+          </div>
+        </div>
+        <div className='posts'>
+          {posts &&
+            posts.map(post => {
+              return <BlogPost post={post} key={post.sys.id} />
+            })}
+        </div>
       </div>
     </>
   )

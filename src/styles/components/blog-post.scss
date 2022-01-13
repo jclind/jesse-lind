@@ -1,0 +1,47 @@
+@import '../util/vars.scss';
+
+.blog-post {
+  display: flex;
+  // background: red;
+  .imposter {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 4rem;
+    height: 100%;
+    // background: lightcoral;
+    .div-t {
+      height: 3rem;
+      width: 1px;
+      background: $border-color;
+    }
+    .date {
+      margin: 0 auto;
+      width: 5ch;
+      text-align: center;
+      padding: 0.5rem 0;
+      font-weight: 500;
+      font-size: toRem(18);
+      color: $border-color;
+    }
+    .div-b {
+      flex: 1;
+      width: 1px;
+      background: $border-color;
+    }
+  }
+  .post-content {
+    // padding-top: 3.5rem;
+    padding-left: 4rem;
+    .title {
+      font-size: toRem(32);
+      font-weight: 500;
+      padding-bottom: 2rem;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 @import '../util/vars.scss';
 
 .blog-post {
+  max-width: 800px;
+  width: 60%;
   display: flex;
   // background: red;
   .divider {
@@ -34,6 +36,7 @@
   .post-content {
     // padding-top: 3.5rem;
     padding-left: 4rem;
+    width: 100%;
     .title {
       margin-top: 4.5rem;
       display: flex;
@@ -65,5 +68,8 @@
   }
   .save {
     color: $green;
+  }
+  .book {
+    color: $red;
   }
 }

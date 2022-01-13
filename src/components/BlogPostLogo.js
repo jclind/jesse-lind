@@ -2,7 +2,7 @@ import React from 'react'
 
 import { MdOutlineWavingHand } from 'react-icons/md'
 import { AiOutlineHeart, AiOutlineEdit } from 'react-icons/ai'
-import { BsCodeSquare, BsBookmark } from 'react-icons/bs'
+import { BsCodeSquare, BsBookmark, BsBook } from 'react-icons/bs'
 
 const BlogPostLogo = ({ type }) => {
   console.log(type)
@@ -11,14 +11,14 @@ const BlogPostLogo = ({ type }) => {
       return <AiOutlineHeart className='love' />
     case 'init':
       return <MdOutlineWavingHand className='init' />
-    case 'edit':
-      return <AiOutlineEdit className='edit' />
     case 'code':
       return <BsCodeSquare className='code' />
     case 'save':
       return <BsBookmark className='save' />
+    case 'book':
+      return <BsBook className='book' />
   }
-  return <div className='blog-post-logo'>basdf</div>
+  return <AiOutlineEdit className='edit' />
 }
 
 export default BlogPostLogo

@@ -1,5 +1,7 @@
 @use 'sass:math';
 .blog-post {
+  max-width: 800px;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,6 +50,7 @@
 
 .blog-post .post-content {
   padding-left: 4rem;
+  width: 100%;
 }
 
 .blog-post .post-content .title {
@@ -95,5 +98,9 @@
 
 .blog-post-logo .save {
   color: #90ee90;
+}
+
+.blog-post-logo .book {
+  color: #c85c5c;
 }
 /*# sourceMappingURL=blog-post.css.map */

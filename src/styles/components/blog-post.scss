@@ -36,6 +36,7 @@
   .post-content {
     // padding-top: 3.5rem;
     padding-left: 4rem;
+    padding-bottom: 2rem;
     width: 100%;
     .title {
       margin-top: 4.5rem;
@@ -45,6 +46,14 @@
       font-size: toRem(32);
       font-weight: 700;
       padding-bottom: 2rem;
+    }
+    .rich-content {
+      margin-bottom: 2rem;
+    }
+    .post-link {
+      color: $border-color;
+      text-decoration: underline;
+      font-weight: bold;
     }
   }
 }
@@ -72,4 +81,12 @@
   .book {
     color: $red;
   }
+}
+
+.blog-img {
+  object-fit: contain;
+  width: 100%;
+}
+.blog-paragraph {
+  padding-bottom: 1rem;
 }

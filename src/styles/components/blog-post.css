@@ -50,6 +50,7 @@
 
 .blog-post .post-content {
   padding-left: 4rem;
+  padding-bottom: 2rem;
   width: 100%;
 }
 
@@ -65,6 +66,16 @@
   font-size: 2rem;
   font-weight: 700;
   padding-bottom: 2rem;
+}
+
+.blog-post .post-content .rich-content {
+  margin-bottom: 2rem;
+}
+
+.blog-post .post-content .post-link {
+  color: #90919e;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .blog-post-logo {
@@ -102,5 +113,15 @@
 
 .blog-post-logo .book {
   color: #c85c5c;
+}
+
+.blog-img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+.blog-paragraph {
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=blog-post.css.map */

@@ -2,12 +2,11 @@ import React from 'react'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 // import '../styles/components/blog-post.css'
 import { formatDate } from '../util/formatDate'
-import { AiOutlineHeart } from 'react-icons/ai'
+import BlogPostLogo from './BlogPostLogo'
 
-const BlogPost = ({ post }) => {
-  console.log(post)
-  const content = documentToHtmlString(post.fields.content)
-  const date = formatDate(new Date(post.sys.createdAt))
+const BlogPost = ({ post: { fields, sys } }) => {
+  const content = documentToHtmlString(fields.content)
+  const date = formatDate(new Date(sys.createdAt))
 
   return (
     <article className='blog-post'>
@@ -17,7 +16,12 @@ const BlogPost = ({ post }) => {
         <div className='div-b'></div>
       </div>
       <div className='post-content'>
-        <div className='title'>{post.fields.title}</div>
+        <div className='title'>
+          <div className='blog-post-logo'>
+            <BlogPostLogo type={fields.postType} />
+          </div>
+          {fields.title}
+        </div>
         <div
           dangerouslySetInnerHTML={{
             __html: content,

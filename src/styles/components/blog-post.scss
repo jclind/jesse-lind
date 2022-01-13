@@ -3,26 +3,21 @@
 .blog-post {
   display: flex;
   // background: red;
-  .imposter {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
   .divider {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 4rem;
-    height: 100%;
     // background: lightcoral;
     .div-t {
-      height: 3rem;
+      height: 4rem;
       width: 1px;
       background: $border-color;
     }
     .date {
       margin: 0 auto;
       width: 5ch;
+      height: fit-content;
       text-align: center;
       padding: 0.5rem 0;
       font-weight: 500;
@@ -31,6 +26,7 @@
     }
     .div-b {
       flex: 1;
+      // height: 100%;
       width: 1px;
       background: $border-color;
     }
@@ -39,9 +35,35 @@
     // padding-top: 3.5rem;
     padding-left: 4rem;
     .title {
+      margin-top: 4.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       font-size: toRem(32);
-      font-weight: 500;
+      font-weight: 700;
       padding-bottom: 2rem;
     }
+  }
+}
+
+.blog-post-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: toRem(30);
+  .love {
+    color: $primary;
+  }
+  .init {
+    color: $secondary;
+  }
+  .edit {
+    color: $tertiary;
+  }
+  .code {
+    color: $purple;
+  }
+  .save {
+    color: $green;
   }
 }

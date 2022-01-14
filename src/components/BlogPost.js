@@ -1,10 +1,13 @@
 import React from 'react'
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
 // import '../styles/components/blog-post.css'
 import { formatDate } from '../util/formatDate'
 import BlogPostLogo from './BlogPostLogo'
-import { BLOCKS, MARKS } from '@contentful/rich-text-types'
+import { BLOCKS } from '@contentful/rich-text-types'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { wordCounter } from '../util/wordCounter'
+import { trimLink } from '../util/trimLink'
+import { AiOutlineLink } from 'react-icons/ai'
 
 const renderOption = {
   renderNode: {
@@ -20,23 +23,21 @@ const renderOption = {
       <p className='blog-paragraph'>{children}</p>
     ),
   },
-}
-
-const trimLink = url => {
-  const urlTrim = url.replace(/(^\w+:|^)\/\//, '')
-  const result = urlTrim.split('/')[0]
-  return result
+  renderText: text =>
+    text.split('\n').flatMap((text, i) => [i > 0 && <br />, text]),
 }
 
 const BlogPost = ({ post: { fields, sys } }) => {
-  const content = documentToHtmlString(fields.content)
+  const richContent = documentToReactComponents(fields.content, renderOption)
+  const plainText = documentToPlainTextString(fields.content)
+  const wordCount = wordCounter(plainText)
+  console.log(plainText, wordCount)
   const link = fields.link ? fields.link : null
   const date = formatDate(new Date(sys.createdAt))
-  console.log(content)
   return (
     <article className='blog-post'>
       <div className='divider'>
-        <div className='div-t'></div>
+        {/* <div className='div-t'></div> */}
         <div className='date'>{date}</div>
         <div className='div-b'></div>
       </div>
@@ -47,19 +48,21 @@ const BlogPost = ({ post: { fields, sys } }) => {
           </div>
           {fields.title}
         </div>
-        <div className='rich-content'>
-          {documentToReactComponents(fields.content, renderOption)}
-        </div>
+        <div className='rich-content'>{richContent}</div>
         {link && (
-          <a
-            href={link}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='post-link'
-          >
-            {trimLink(link)}
-          </a>
+          <div className='post-link-container'>
+            <AiOutlineLink className='link-icon' />
+            <a
+              href={link}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='post-link'
+            >
+              {trimLink(link)}
+            </a>
+          </div>
         )}
+        <div className='word-count'>{`${wordCount} words`}</div>
       </div>
     </article>
   )

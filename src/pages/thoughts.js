@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import { createClient } from 'contentful'
 import BlogPost from '../components/BlogPost'
@@ -27,6 +27,7 @@ export async function getStaticProps() {
 }
 
 const Thoughts = ({ posts }) => {
+  const [currYear, setCurrYear] = useState('')
   console.log(posts)
   return (
     <>

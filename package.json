@@ -11,6 +11,7 @@
     "dependencies": {
         "@brightleaf/animate.scss": "^3.7.1",
         "@contentful/rich-text-html-renderer": "^15.11.1",
+        "@contentful/rich-text-plain-text-renderer": "^15.11.1",
         "@contentful/rich-text-react-renderer": "^15.11.1",
         "@contentful/rich-text-types": "^15.11.1",
         "animate.css": "^4.1.1",

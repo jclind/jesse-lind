@@ -31,7 +31,6 @@ const BlogPost = ({ post: { fields, sys } }) => {
   const richContent = documentToReactComponents(fields.content, renderOption)
   const plainText = documentToPlainTextString(fields.content)
   const wordCount = wordCounter(plainText)
-  console.log(plainText, wordCount)
   const link = fields.link ? fields.link : null
   const date = formatDate(new Date(sys.createdAt))
   return (

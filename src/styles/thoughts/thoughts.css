@@ -33,7 +33,6 @@
 }
 
 .thoughts-page .posts {
-  padding-top: 4rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,5 +45,22 @@
       -ms-flex-align: center;
           align-items: center;
   background: #1b1e34;
+}
+
+.thoughts-page .posts .date-divider {
+  padding: 2rem 0;
+  width: 90%;
+  font-size: 1.125rem;
+  margin: 4rem auto;
+  text-align: center;
+  border-top: 1px solid #90919e;
+  border-bottom: 1px solid #90919e;
+}
+
+@media screen and (min-width: 768px) {
+  .thoughts-page .posts .date-divider {
+    max-width: 800px;
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=thoughts.css.map */

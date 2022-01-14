@@ -5,7 +5,6 @@ import { AiOutlineHeart, AiOutlineEdit } from 'react-icons/ai'
 import { BsCodeSquare, BsBookmark, BsBook } from 'react-icons/bs'
 
 const BlogPostLogo = ({ type }) => {
-  console.log(type)
   switch (type) {
     case 'love':
       return <AiOutlineHeart className='love' />

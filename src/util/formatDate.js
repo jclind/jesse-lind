@@ -1,4 +1,12 @@
 export const formatDate = date => {
+  const month = numToShortMonth(date.getMonth())
+  const day = date.getDate()
+  const year = date.getFullYear()
+
+  return `${month} ${day} ${year}`
+}
+
+export const numToShortMonth = month => {
   const shortMonths = [
     'Jan',
     'Feb',
@@ -14,9 +22,24 @@ export const formatDate = date => {
     'Dec',
   ]
 
-  const month = shortMonths[date.getMonth()]
-  const day = date.getDate()
-  const year = date.getFullYear()
+  return shortMonths[month]
+}
 
-  return `${month} ${day} ${year}`
+export const numToLongMonth = month => {
+  const longMonths = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ]
+
+  return longMonths[month]
 }

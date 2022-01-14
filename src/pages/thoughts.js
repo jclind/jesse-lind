@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import { createClient } from 'contentful'
 import BlogPost from '../components/BlogPost'
-// import '../styles/thoughts/thoughts.css'
+import { numToLongMonth } from '../util/formatDate'
 
 export async function getStaticProps() {
   const client = createClient({
@@ -10,7 +10,7 @@ export async function getStaticProps() {
     accessToken: process.env.CF_DELIVERY_ACCESS_TOKEN,
   })
 
-  const res = await client.getEntries({ order: '- sys.createdAt' })
+  const res = await client.getEntries({ order: '-sys.createdAt' })
   if (res.items) {
     return {
       props: {
@@ -27,8 +27,6 @@ export async function getStaticProps() {
 }
 
 const Thoughts = ({ posts }) => {
-  const [currYear, setCurrYear] = useState('')
-  console.log(posts)
   return (
     <>
       <Head>
@@ -43,12 +41,43 @@ const Thoughts = ({ posts }) => {
           </div>
         </div>
         <div className='posts'>
-          {posts &&
-            posts.map(post => {
-              const date = post.sys.createdAt
-              console.log(new Date(date))
-              return <BlogPost post={post} key={post.sys.id} />
-            })}
+          {posts
+            ? posts.map((post, idx) => {
+                const lastPost = posts[idx - 1]
+
+                const currPostDate = new Date(post.sys.createdAt)
+                const currPostYear = currPostDate.getFullYear()
+                const currPostMonth = currPostDate.getMonth()
+
+                const lastPostDate = lastPost
+                  ? new Date(lastPost.sys.createdAt)
+                  : null
+                const lastPostYear = lastPostDate
+                  ? lastPostDate.getFullYear()
+                  : null
+                const lastPostMonth = lastPostDate
+                  ? lastPostDate.getMonth()
+                  : null
+
+                return (
+                  <React.Fragment key={post.sys.id}>
+                    {!(
+                      currPostYear === lastPostYear &&
+                      currPostMonth === lastPostMonth
+                    ) ? (
+                      <>
+                        <div className='date-divider'>
+                          {`${numToLongMonth(currPostMonth)} ${currPostYear}`}
+                        </div>
+                        <BlogPost post={post} />
+                      </>
+                    ) : (
+                      <BlogPost post={post} />
+                    )}
+                  </React.Fragment>
+                )
+              })
+            : 'Posts Loading'}
         </div>
       </div>
     </>

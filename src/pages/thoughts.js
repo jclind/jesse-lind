@@ -10,7 +10,7 @@ export async function getStaticProps() {
     accessToken: process.env.CF_DELIVERY_ACCESS_TOKEN,
   })
 
-  const res = await client.getEntries()
+  const res = await client.getEntries({ order: '- sys.createdAt' })
   if (res.items) {
     return {
       props: {
@@ -45,6 +45,8 @@ const Thoughts = ({ posts }) => {
         <div className='posts'>
           {posts &&
             posts.map(post => {
+              const date = post.sys.createdAt
+              console.log(new Date(date))
               return <BlogPost post={post} key={post.sys.id} />
             })}
         </div>

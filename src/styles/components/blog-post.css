@@ -52,7 +52,7 @@
 .blog-post .post-content {
   padding-left: 1rem;
   padding-bottom: 2rem;
-  width: 100%;
+  min-width: 80%;
 }
 
 .blog-post .post-content .title {
@@ -102,6 +102,8 @@
   padding-bottom: 1rem;
   line-height: 2rem;
   font-weight: 500;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .blog-post .post-content .word-count {

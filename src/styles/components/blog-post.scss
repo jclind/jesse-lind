@@ -38,7 +38,7 @@
     // padding-top: 3.5rem;
     padding-left: 1rem;
     padding-bottom: 2rem;
-    width: 100%;
+    min-width: 80%;
     .title {
       // margin-top: 3.5rem;
       align-items: center;
@@ -75,6 +75,8 @@
       padding-bottom: 1rem;
       line-height: 2rem;
       font-weight: 500;
+      width: 100%;
+      word-wrap: break-word;
     }
     .word-count {
       color: $muted-text;

@@ -11,7 +11,7 @@ const JLMainLogo = () => {
     if (animationContainer && animationContainer.current) {
       context.setLogoLoading(false)
     }
-  }, [])
+  }, [context])
   useEffect(() => {
     if (!context.loading) {
       setTimeout(() => {

@@ -9,7 +9,7 @@ const NavLogo = () => {
 
   useEffect(() => {
     context.setNavLoading(false)
-  }, [])
+  }, [context])
   useEffect(() => {
     if (!context.loading) {
       setTimeout(() => {

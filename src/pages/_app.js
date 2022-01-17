@@ -11,6 +11,8 @@ import '../styles/contact/contact.css'
 import '../styles/util/animations.css'
 import '../styles/404/404.css'
 import '../styles/components/footer/footer.css'
+import '../styles/components/blog-post.css'
+import '../styles/thoughts/thoughts.css'
 
 import Layout from '../components/Layout'
 import Loading from '../components/Loading'
@@ -32,7 +34,7 @@ function MyApp({ Component, pageProps, router }) {
         setLoading(false)
       }, 1000)
     }
-  }, [navLoading, logoLoading])
+  }, [navLoading, logoLoading, router.pathname])
 
   return (
     <div className={loading ? 'app loading' : 'app'}>

@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps, router }) {
         setLoading(false)
       }, 1000)
     }
-  }, [navLoading, logoLoading])
+  }, [navLoading, logoLoading, router.pathname])
 
   return (
     <div className={loading ? 'app loading' : 'app'}>

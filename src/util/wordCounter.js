@@ -1,4 +1,7 @@
 export const wordCounter = text => {
-  let wordCount = text.match(/(\w+)/g).length
-  return wordCount
+  if (text) {
+    let wordCount = text.match(/(\w+)/g).length
+    return wordCount
+  }
+  return 0
 }

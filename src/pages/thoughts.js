@@ -11,6 +11,7 @@ export async function getStaticProps() {
     accessToken: process.env.CF_DELIVERY_ACCESS_TOKEN,
   })
 
+  // Get entries sorting by date, newest to latest
   const res = await client.getEntries({ order: '-sys.createdAt' })
   if (res.items) {
     return {

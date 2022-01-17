@@ -8,15 +8,27 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { wordCounter } from '../util/wordCounter'
 import { trimLink } from '../util/trimLink'
 import { AiOutlineLink } from 'react-icons/ai'
+import Image from 'next/image'
 
 const renderOption = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: node => {
+      const data = node.data.target.fields.file
+      const height = data.details.image.height
+      const width = data.details.image.width
+
       return (
-        <img
-          src={`https:${node.data.target.fields.file.url}`}
-          className='blog-img'
-        />
+        <div className='img-container'>
+          <Image
+            src={`https:${data.url}`}
+            alt={''}
+            layout='responsive'
+            height={height}
+            width={width}
+            objectFit='contain'
+            className='blog-img'
+          />
+        </div>
       )
     },
     [BLOCKS.PARAGRAPH]: (node, children) => (

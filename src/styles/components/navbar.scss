@@ -5,11 +5,12 @@
   position: absolute;
   top: $nav-margin-height;
   margin: 0 auto;
-  // padding-top: ;
+  top: 0;
+  padding-top: 2.25rem;
   left: 0;
   right: 0;
 
-  height: $nav-height;
+  height: $nav-height + 2.25rem;
   width: $nav-width;
   max-width: $max-width;
 

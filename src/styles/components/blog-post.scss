@@ -12,11 +12,6 @@
     align-items: center;
     width: 4rem;
     // background: lightcoral;
-    .div-t {
-      height: 3rem;
-      width: 1px;
-      background: $border-color;
-    }
     .date {
       margin: 0 auto;
       width: 5ch;
@@ -25,13 +20,12 @@
       padding: 0.5rem 0;
       font-weight: 500;
       font-size: toRem(16);
-      color: $border-color;
+      color: $muted-text;
     }
     .div-b {
       flex: 1;
-      // height: 100%;
-      width: 1px;
-      background: $border-color;
+      width: 2px;
+      background: $muted-border;
     }
   }
   .post-content {
@@ -69,9 +63,12 @@
     .blog-img {
       object-fit: contain;
       width: 100%;
+      max-width: 600px;
     }
     .blog-paragraph {
       font-size: toRem(16);
+      padding: 0;
+      margin: 0;
       padding-bottom: 1rem;
       line-height: 2rem;
       font-weight: 500;
@@ -118,17 +115,9 @@
     width: 60%;
     display: flex;
     .divider {
-      .div-t {
-      }
       .date {
         font-size: toRem(18);
         color: $border-color;
-      }
-      .div-b {
-        flex: 1;
-        // height: 100%;
-        width: 1px;
-        background: $border-color;
       }
     }
     .post-content {

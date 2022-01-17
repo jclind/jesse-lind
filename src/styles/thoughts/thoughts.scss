@@ -28,6 +28,7 @@
     flex-direction: column;
     align-items: center;
     background: $secondary-background;
+    padding-bottom: 4rem;
     .date-divider {
       padding: 2rem 0;
       width: 90%;
@@ -35,12 +36,24 @@
       margin: 4rem auto;
 
       text-align: center;
-      border-top: 1px solid $border-color;
-      border-bottom: 1px solid $border-color;
+      border-top: 2px solid $muted-border;
+      border-bottom: 2px solid $muted-border;
 
       @media screen and (min-width: 768px) {
         max-width: 800px;
         width: 60%;
+      }
+    }
+    .back-to-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 6rem 0 0 0;
+      background: none;
+      color: $secondary-text;
+      @media screen and (min-width: 768px) {
+        margin: 6rem 0 2rem 0;
       }
     }
   }

@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Head from 'next/head'
 import { createClient } from 'contentful'
 import BlogPost from '../components/BlogPost'
 import { numToLongMonth } from '../util/formatDate'
+import { AiOutlineArrowUp } from 'react-icons/ai'
 
 export async function getStaticProps() {
   const client = createClient({
@@ -24,6 +25,13 @@ export async function getStaticProps() {
       },
     }
   }
+}
+
+const scrollToTop = () => {
+  console.log('yop')
+  document.querySelector('nav').scrollIntoView({
+    behavior: 'smooth',
+  })
 }
 
 const Thoughts = ({ posts }) => {
@@ -78,6 +86,10 @@ const Thoughts = ({ posts }) => {
                 )
               })
             : 'Posts Loading'}
+          <button className='back-to-top btn' onClick={scrollToTop}>
+            <AiOutlineArrowUp />
+            Back To Top
+          </button>
         </div>
       </div>
     </>

@@ -48,6 +48,11 @@ const Navbar = () => {
           </Link>
         </div>
         <div className='nav-link fadeindown ad-0-6' onClick={handleClick}>
+          <Link href='/thoughts' exact={true}>
+            Thoughts
+          </Link>
+        </div>
+        <div className='nav-link fadeindown ad-0-6' onClick={handleClick}>
           <Link href='/contact' exact={true}>
             Contact
           </Link>

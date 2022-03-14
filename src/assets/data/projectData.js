@@ -1,5 +1,11 @@
 export const projectData = [
   {
+    path: '/projects-page/project-4.png',
+    name: 'Prepify',
+    desc: 'Recipes for meal prep.',
+    link: 'https://prepify.netlify.app/',
+  },
+  {
     path: '/projects-page/project-1.png',
     name: 'Jesse Lind Photography',
     desc: 'Photography portfolio website.',

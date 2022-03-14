@@ -14,6 +14,10 @@
   border-radius: 10px;
 }
 
+.project .img-container img {
+  border-radius: 10px;
+}
+
 .project .img-container .overlay {
   position: absolute;
   left: 0;

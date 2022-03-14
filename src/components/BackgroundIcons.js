@@ -100,7 +100,6 @@ const BackgroundIcons = () => {
       }
     }
     const createEl = () => {
-      console.log('new item')
       const { first, second } = getTwoPoints()
       const id = '_' + uuidv4()
       const el = document.createElement('img')
@@ -171,8 +170,6 @@ const BackgroundIcons = () => {
     setTimeout(() => {
       createEl()
     }, 2000)
-
-    console.log('yooyyoo')
   }, [router.events])
 
   return <div className='background-icons-container'></div>

@@ -9,6 +9,7 @@ const ProjectItem = ({ path, name, desc, link }) => {
           alt='name'
           width={300}
           height={350}
+          quality={90}
           objectFit='contain'
         />
         <div className='overlay'>

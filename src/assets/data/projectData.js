@@ -12,6 +12,12 @@ export const projectData = [
     link: 'https://jesselindphotography.netlify.app/',
   },
   {
+    path: '/projects-page/project-5.png',
+    name: 'DoLorem',
+    desc: 'Lorem Ipsum generator.',
+    link: 'https://dolorem.netlify.app/',
+  },
+  {
     path: '/projects-page/project-2.png',
     name: 'Personal Time Tracker',
     desc: 'Time management application.',

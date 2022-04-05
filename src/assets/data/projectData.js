@@ -18,6 +18,12 @@ export const projectData = [
     link: 'https://dolorem.netlify.app/',
   },
   {
+    path: '/projects-page/project-6.png',
+    name: 'Tridle',
+    desc: 'Three letter Wordle variation.',
+    link: 'https://tridle.netlify.app/',
+  },
+  {
     path: '/projects-page/project-2.png',
     name: 'Personal Time Tracker',
     desc: 'Time management application.',

@@ -9,6 +9,22 @@ const About = () => {
     skillsRef.current.scrollIntoView({ behavior: 'smooth' })
   }
 
+  // From https://stackoverflow.com/questions/4060004/calculate-age-given-the-birth-date-in-the-format-yyyymmdd
+  const getAge = date => {
+    const today = new Date()
+    const birthDate = new Date(date)
+    let age = today.getFullYear() - birthDate.getFullYear()
+    const month = today.getMonth() - birthDate.getMonth()
+
+    // If this month is less than the birthMonth,
+    // Or if this month is equal to the birthMonth and the day is less than the birth day,
+    // Decrease age by one
+    if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+      age--
+    }
+    return age
+  }
+
   return (
     <>
       <Head>
@@ -29,7 +45,7 @@ const About = () => {
           <div className='about-content'>
             <h1 className='title fadeinup ad-0-6'>About Me</h1>
             <p className='text fadeinup ad-0-7'>
-              Hello! I’m Jesse, a 19 year old from Pittsburgh Pennsylvania. In
+              Hello! I’m Jesse, a {getAge('2002-03-28')} year old from Pittsburgh Pennsylvania. In
               2016, my brother callenged me to solve a couple html problems on
               FreeCodeCamp.org and the rest is history, I had found a grand new
               passion.

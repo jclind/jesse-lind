@@ -8,7 +8,6 @@ class MyDocument extends Document {
     }
   }
   render() {
-    console.log('this work')
     return (
       <Html>
         <Head>

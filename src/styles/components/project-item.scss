@@ -2,64 +2,107 @@
 @import '../util/functions.scss';
 
 .project {
-  width: fit-content;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  max-width: $max-width;
+  width: 90vw !important;
   margin: 0 auto;
-  border-radius: 10px;
 
   .img-container {
     position: relative;
-
     height: 350px;
-    border-radius: 10px;
+    width: 550px;
+  }
+  .text-content {
+    width: 550px;
 
-    img {
-      border-radius: 10px;
+    .title {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 1rem;
+      font-size: 1.6rem;
     }
-    .overlay {
-      position: absolute;
-      left: 0;
-      top: 0;
-
+    p.description {
+      font-size: 1rem;
+      max-width: 400px;
+    }
+    .skills {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-      box-sizing: border-box;
-      border-radius: 10px;
-
-      background: rgba(0, 0, 0, 0.8);
-      opacity: 0;
-
-      transition: all 0.4s ease-in;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      .skill {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: $tertiary-text;
+      }
     }
-    .overlay:hover {
-      opacity: 1;
-      cursor: pointer;
+    .visit-btn {
+      background: $secondary;
+      margin-top: 2rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: $border-radius;
+      color: $primary-background;
+      font-weight: 600;
+      font-size: 1.1rem;
     }
-  }
-
-  h3 {
-    padding: 0;
-    padding-bottom: toRem(2);
-    margin: 0;
-    margin-top: toRem(8);
-
-    text-transform: capitalize;
-  }
-  .text {
-    color: $secondary-text;
-    font-size: toRem(14);
-    font-weight: bold;
   }
 }
+//   .img-container {
+//     position: relative;
 
-.visit-btn {
-  padding: 15px 20px;
-  border-radius: $border-radius;
+//     height: 350px;
+//     border-radius: 10px;
 
-  background: $secondary;
-  color: $primary-background;
-  font-weight: bold;
-  font-size: toRem(24);
-}
+//     img {
+//       border-radius: 10px;
+//     }
+//     .overlay {
+//       position: absolute;
+//       left: 0;
+//       top: 0;
+
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       height: 100%;
+//       width: 100%;
+//       box-sizing: border-box;
+//       border-radius: 10px;
+
+//       background: rgba(0, 0, 0, 0.8);
+//       opacity: 0;
+
+//       transition: all 0.4s ease-in;
+//     }
+//     .overlay:hover {
+//       opacity: 1;
+//       cursor: pointer;
+//     }
+//   }
+
+//   h3 {
+//     padding: 0;
+//     padding-bottom: toRem(2);
+//     margin: 0;
+//     margin-top: toRem(8);
+
+//     text-transform: capitalize;
+//   }
+//   .text {
+//     color: $secondary-text;
+//     font-size: toRem(14);
+//     font-weight: bold;
+//   }
+// }
+
+// .visit-btn {
+//   padding: 15px 20px;
+//   border-radius: $border-radius;
+
+//   background: $secondary;
+//   color: $primary-background;
+//   font-weight: bold;
+//   font-size: toRem(24);
+// }

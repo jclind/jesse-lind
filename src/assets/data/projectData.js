@@ -34,7 +34,7 @@ export const projectData = [
   {
     path: '/projects-page/lind-designs.png',
     name: 'Lind Designs',
-    desc: 'The official website for the Lind Designs company',
+    desc: 'The official website for the Lind Designs company.',
     skills: ['Next.js', 'React.js', 'Sass'],
     link: 'http://linddesigns.com/',
     id: 6,
@@ -42,7 +42,7 @@ export const projectData = [
   {
     path: '/projects-page/dolorem.png',
     name: 'DoLorem',
-    desc: 'Simple and quick lorem ipsum generator',
+    desc: 'Simple and quick lorem ipsum generator.',
     skills: ['React.js', 'Sass'],
     link: 'https://dolorem.netlify.app/',
     id: 3,

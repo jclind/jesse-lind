@@ -7,11 +7,12 @@
   justify-content: center;
   align-items: center;
   max-width: $max-width;
-  width: 90vw !important;
+  width: 90vw;
   margin: 0 auto;
 
   .img-container {
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -51,61 +52,53 @@
       font-size: 1.1rem;
     }
   }
+
+  @media screen and (max-width: 1200px) {
+    .img-container {
+      height: 300px;
+      width: 450px;
+    }
+    .text-content {
+      width: 450px;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .img-container {
+      height: 270px;
+      width: 400px;
+    }
+    .text-content {
+      width: 400px;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .img-container {
+      height: 250px;
+      width: 350px;
+    }
+    .text-content {
+      width: 350px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin-bottom: 2rem;
+
+    .img-container {
+      height: 240px;
+      width: 100%;
+    }
+    .text-content {
+      width: 100%;
+      .title {
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .img-container {
+      height: 215px;
+    }
+  }
 }
-//   .img-container {
-//     position: relative;
-
-//     height: 350px;
-//     border-radius: 10px;
-
-//     img {
-//       border-radius: 10px;
-//     }
-//     .overlay {
-//       position: absolute;
-//       left: 0;
-//       top: 0;
-
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       height: 100%;
-//       width: 100%;
-//       box-sizing: border-box;
-//       border-radius: 10px;
-
-//       background: rgba(0, 0, 0, 0.8);
-//       opacity: 0;
-
-//       transition: all 0.4s ease-in;
-//     }
-//     .overlay:hover {
-//       opacity: 1;
-//       cursor: pointer;
-//     }
-//   }
-
-//   h3 {
-//     padding: 0;
-//     padding-bottom: toRem(2);
-//     margin: 0;
-//     margin-top: toRem(8);
-
-//     text-transform: capitalize;
-//   }
-//   .text {
-//     color: $secondary-text;
-//     font-size: toRem(14);
-//     font-weight: bold;
-//   }
-// }
-
-// .visit-btn {
-//   padding: 15px 20px;
-//   border-radius: $border-radius;
-
-//   background: $secondary;
-//   color: $primary-background;
-//   font-weight: bold;
-//   font-size: toRem(24);
-// }

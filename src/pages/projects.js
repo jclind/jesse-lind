@@ -43,19 +43,6 @@ const Projects = () => {
               </div>
             )
           })}
-
-          {/* {projectData.map((project, index) => {
-            const { path, name, desc, link } = project
-            return (
-              <div
-                className='project-item fadeinup'
-                style={{ animationDelay: `${index / 5 + 1}s` }}
-                key={index}
-              >
-                <ProjectItem path={path} name={name} desc={desc} link={link} />
-              </div>
-            )
-          })} */}
         </div>
         <div className='prompt'>
           <h1 className='fadeinup ad-1-6'>

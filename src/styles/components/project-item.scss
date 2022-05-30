@@ -2,64 +2,103 @@
 @import '../util/functions.scss';
 
 .project {
-  width: fit-content;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  max-width: $max-width;
+  width: 90vw;
   margin: 0 auto;
-  border-radius: 10px;
 
   .img-container {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
     position: relative;
-
     height: 350px;
-    border-radius: 10px;
+    width: 550px;
+  }
+  .text-content {
+    width: 550px;
 
-    img {
-      border-radius: 10px;
+    .title {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 1rem;
+      font-size: 1.6rem;
     }
-    .overlay {
-      position: absolute;
-      left: 0;
-      top: 0;
-
+    p.description {
+      font-size: 1rem;
+      max-width: 400px;
+    }
+    .skills {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      .skill {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: $tertiary-text;
+      }
+    }
+    .visit-btn {
+      background: $secondary;
+      margin-top: 2rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: $border-radius;
+      color: $primary-background;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .img-container {
+      height: 300px;
+      width: 450px;
+    }
+    .text-content {
+      width: 450px;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .img-container {
+      height: 270px;
+      width: 400px;
+    }
+    .text-content {
+      width: 400px;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .img-container {
+      height: 250px;
+      width: 350px;
+    }
+    .text-content {
+      width: 350px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin-bottom: 2rem;
+
+    .img-container {
+      height: 240px;
       width: 100%;
-      box-sizing: border-box;
-      border-radius: 10px;
-
-      background: rgba(0, 0, 0, 0.8);
-      opacity: 0;
-
-      transition: all 0.4s ease-in;
     }
-    .overlay:hover {
-      opacity: 1;
-      cursor: pointer;
+    .text-content {
+      width: 100%;
+      .title {
+      }
     }
   }
-
-  h3 {
-    padding: 0;
-    padding-bottom: toRem(2);
-    margin: 0;
-    margin-top: toRem(8);
-
-    text-transform: capitalize;
+  @media screen and (max-width: 400px) {
+    .img-container {
+      height: 215px;
+    }
   }
-  .text {
-    color: $secondary-text;
-    font-size: toRem(14);
-    font-weight: bold;
-  }
-}
-
-.visit-btn {
-  padding: 15px 20px;
-  border-radius: $border-radius;
-
-  background: $secondary;
-  color: $primary-background;
-  font-weight: bold;
-  font-size: toRem(24);
 }

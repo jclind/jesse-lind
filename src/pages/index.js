@@ -5,21 +5,7 @@ import BackgroundIcons from '../components/BackgroundIcons'
 import JLMainLogo from '../components/images/JLMainLogo'
 import Footer from '../components/Footer'
 
-const Index = ({ jlMainLogo }) => {
-  // useEffect(() => {
-  //   let stylesArray = [
-  //     'background-image: url(https://ux.christmas//static/teaser-1-95bcc16151dc1d561bd79ede903e9e7c.jpg)',
-  //     'background-size: cover',
-  //     'color: #fff',
-  //     'padding: 10px 20px',
-  //     'line-height: 35px',
-  //     'width : 70px',
-  //     'height : 70px',
-  //     'border : 5px solid black',
-  //   ].join(';')
-  //   console.log('%c 生命 > 死, 力 > 弱, 旅 > 先', stylesArray)
-  // }, [])
-
+const Index = () => {
   return (
     <>
       <Head>

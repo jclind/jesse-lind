@@ -26,14 +26,20 @@ const Projects = () => {
         <h1 className='fadeinup ad-0-8'>My Projects</h1>
         <div className='projects-container'>
           {projectData.map((project, index) => {
-            const { path, name, desc, link } = project
+            const { path, name, desc, skills, link, id } = project
             return (
               <div
                 className='project-item fadeinup'
                 style={{ animationDelay: `${index / 5 + 1}s` }}
-                key={index}
+                key={id}
               >
-                <ProjectItem path={path} name={name} desc={desc} link={link} />
+                <ProjectItem
+                  path={path}
+                  name={name}
+                  desc={desc}
+                  link={link}
+                  skills={skills}
+                />
               </div>
             )
           })}
@@ -45,7 +51,7 @@ const Projects = () => {
           <p className='fadeinup ad-1-8'>
             Want to create a personal website or have an idea for a business?{' '}
           </p>
-          <button className='visit-btn fadeinup ad-2-0'>
+          <button className='contact-btn fadeinup ad-2-0'>
             <Link href='/contact'>I&#39;d love to talk!</Link>
           </button>
         </div>

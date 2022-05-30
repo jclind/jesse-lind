@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+
 const ProjectItem = ({ path, name, desc, skills, link }) => {
   return (
     <article className='project'>
@@ -11,6 +12,7 @@ const ProjectItem = ({ path, name, desc, skills, link }) => {
           // height={350}
           quality={100}
           objectFit='cover'
+          objectPosition='center'
           layout='fill'
         />
       </div>
@@ -26,7 +28,9 @@ const ProjectItem = ({ path, name, desc, skills, link }) => {
             )
           })}
         </div>
-        <button className='visit-btn'>Visit Site</button>
+        <a href={link} target='_blank' rel='noopener noreferrer'>
+          <button className='visit-btn'>Visit Site</button>
+        </a>
       </div>
     </article>
   )

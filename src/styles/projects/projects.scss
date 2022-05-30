@@ -55,11 +55,15 @@
         text-decoration: underline;
       }
     }
-    .visit-btn {
+    .contact-btn {
       padding: toRem(15) toRem(20);
       margin-top: toRem(35);
 
       font-size: toRem(20);
+      background: $secondary;
+      color: $primary-background;
+      font-weight: 600;
+      border-radius: $border-radius;
     }
   }
 

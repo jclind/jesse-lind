@@ -64,7 +64,7 @@ const Projects = () => {
           <p className='fadeinup ad-1-8'>
             Want to create a personal website or have an idea for a business?{' '}
           </p>
-          <button className='visit-btn fadeinup ad-2-0'>
+          <button className='contact-btn fadeinup ad-2-0'>
             <Link href='/contact'>I&#39;d love to talk!</Link>
           </button>
         </div>

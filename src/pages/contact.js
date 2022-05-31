@@ -35,7 +35,7 @@ const Contact = () => {
             <div className='content'>
               <h1 className='fadeinup'>Contact Me</h1>
               <p className='text fadeinup'>
-                Interested in hiring me? Have a question? or just want to say
+                Interested in hiring me? Have a question? Or just want to say
                 hi? Shoot me a message and I’ll reply asap!
               </p>
               <div className='contact-info'>

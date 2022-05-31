@@ -46,7 +46,7 @@ const Thoughts = ({ posts }) => {
         <div className='header'>
           <h1 className='title'>Thoughts</h1>
           <div className='content'>
-            A collection of my ideas, interested, and experiences.
+            A collection of my ideas, interests, and experiences.
           </div>
         </div>
         <div className='posts'>

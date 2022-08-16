@@ -1,9 +1,12 @@
 @import '../util/vars.scss';
 
 .blog-post {
+  position: relative;
   max-width: 800px;
   width: 90%;
   display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
   margin-right: 1rem;
   // background: red;
   .divider {
@@ -11,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     width: 4rem;
-    // background: lightcoral;
+
     .date {
       margin: 0 auto;
       width: 5ch;
@@ -19,7 +22,7 @@
       text-align: center;
       padding: 0.5rem 0;
       font-weight: 500;
-      font-size: toRem(16);
+      font-size: 1rem;
       color: $muted-text;
     }
     .div-b {
@@ -27,18 +30,30 @@
       width: 2px;
       background: $muted-border;
     }
+
+    @media screen and (max-width: 768px) {
+      width: 2rem;
+
+      .date {
+        margin-top: 2rem;
+        width: 4ch;
+
+        font-size: 0.7rem;
+      }
+    }
   }
   .post-content {
     // padding-top: 3.5rem;
     padding-left: 1rem;
     padding-bottom: 2rem;
-    min-width: 80%;
+    width: 90%;
+    // min-width: 90%;
     .title {
       // margin-top: 3.5rem;
       align-items: center;
       display: flex;
       gap: 1rem;
-      font-size: toRem(32);
+      font-size: 1.7rem;
       font-weight: 700;
       padding-bottom: 2rem;
     }
@@ -66,7 +81,7 @@
       max-width: 600px;
     }
     .blog-paragraph {
-      font-size: toRem(16);
+      font-size: 1rem;
       padding: 0;
       margin: 0;
       padding-bottom: 1rem;
@@ -80,6 +95,35 @@
       font-weight: 500;
       padding: 2rem 0 2rem 0;
     }
+  }
+
+  h6 {
+    background: $tertiary-background;
+    border-left: 2px solid $tertiary;
+    // white-space: pre-line;
+    white-space: pre-wrap;
+    color: $secondary-text;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 0.9rem !important;
+    font-weight: 400;
+    line-height: 1.6;
+    width: 100%;
+    margin: 0.5rem 0 1.5rem;
+    max-width: 600px;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+  }
+  p code {
+    background: $primary-background;
+    font-size: 0.9rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  @media screen and (max-width: 768px) {
   }
 }
 
@@ -107,12 +151,18 @@
   .book {
     color: $red;
   }
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .blog-post {
     max-width: 800px;
-    width: 60%;
+    width: 80%;
     display: flex;
     .divider {
       .date {
@@ -128,7 +178,7 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        font-size: toRem(32);
+        font-size: 2rem;
         font-weight: 700;
         padding-bottom: 2rem;
       }

@@ -46,15 +46,18 @@ const About = () => {
           <div className='about-content'>
             <h1 className='title fadeinup ad-0-6'>About Me</h1>
             <p className='text fadeinup ad-0-7'>
-              Hello! I&apos;m Jesse, a {getAge('2002-03-28')} year old from
-              Pittsburgh Pennsylvania. In 2016, my brother callenged me to solve
-              a couple html problems on FreeCodeCamp.org and the rest is
-              history, I had found a grand new passion.
+              Hello! My name is Jesse and I am a {getAge('2002-03-28')} year old
+              from Pittsburgh, Pennsylvania. My journey in the world of web
+              development began in 2016 when my brother challenged me to solve a
+              couple of HTML problems on FreeCodeCamp.org. Little did I know,
+              that challenge would ignite a grand new passion within me.
             </p>
             <p className='text fadeinup ad-0-8'>
-              Since that day I have been studying and learning about everything
-              from how computers work to what makes an incredible user
-              experience on a website.
+              Since then I dedicated myself to mastering all aspects of web
+              development, from the inner workings of computers to exceptional
+              user experience design. My constant drive to improve and stay
+              updated with the latest technology led me to pursue a career in
+              this field.
             </p>
             <button
               className='action-btn fadeinup ad-1-0'

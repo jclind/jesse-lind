@@ -1,5 +1,13 @@
 export const projectData = [
   {
+    path: '/projects-page/bitworkout.png',
+    name: 'BitWorkout',
+    desc: 'A gamified RPG like workout app to give added motivation to exercice. Users can earn coins/experience, purchase items with their rewards, create their own workouts, trackl their progress and much more.',
+    skills: ['React.js', 'Cypress.io', 'Chart.js', 'Sass', 'Firebase'],
+    link: 'https://bitworkout.netlify.app/',
+    id: 8,
+  },
+  {
     path: '/projects-page/prepify.png',
     name: 'Prepify',
     desc: 'A user-friendly recipe website focused on meal prep and saving money while cooking.',

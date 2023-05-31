@@ -32,6 +32,10 @@
     .text {
       color: $secondary-text;
     }
+    .title {
+      font-size: toRem(36);
+      padding-bottom: 20px;
+    }
     .skills-container {
       display: grid;
       justify-items: center;
@@ -61,7 +65,11 @@
           background: $tertiary-background;
         }
         .skill-title {
+          margin: 0;
+          padding: 0;
           padding-bottom: toRem(30);
+          font-size: toRem(24);
+          font-weight: 500;
         }
         .skill-items {
           display: flex;

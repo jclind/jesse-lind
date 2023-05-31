@@ -22,7 +22,9 @@ const NavLogo = () => {
     }
   }, [context.loading])
 
-  return <div className='nav-logo-anim' ref={animationContainer}></div>
+  return (
+    <div className='nav-logo-anim' ref={animationContainer} tabIndex={0}></div>
+  )
 }
 
 export default NavLogo

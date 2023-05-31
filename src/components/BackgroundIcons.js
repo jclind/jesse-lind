@@ -106,6 +106,10 @@ const BackgroundIcons = () => {
       el.setAttribute('id', id)
       el.setAttribute('class', 'item svg')
       el.setAttribute('src', `${icons[randomNumber(0, icons.length)]}`)
+      el.setAttribute('alt', 'inconsequential floating icon')
+      el.setAttribute('height', '22')
+      el.setAttribute('width', '22')
+      el.setAttribute('loading', 'eager')
       if (document.querySelector('.background-icons-container')) {
         document.querySelector('.background-icons-container').appendChild(el)
       }

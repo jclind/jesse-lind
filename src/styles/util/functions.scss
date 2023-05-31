@@ -4,3 +4,9 @@
   $remValue: math.div($value, 16) + rem;
   @return $remValue;
 }
+@mixin outline() {
+  outline-color: #fff;
+  // outline-offset: -2px;
+  outline-style: solid;
+  outline-width: 1px;
+}

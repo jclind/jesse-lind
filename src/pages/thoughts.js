@@ -29,7 +29,6 @@ export async function getStaticProps() {
 }
 
 const scrollToTop = () => {
-  console.log('yop')
   document.querySelector('nav').scrollIntoView({
     behavior: 'smooth',
   })

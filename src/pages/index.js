@@ -11,6 +11,8 @@ const Index = () => {
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Home | Jesse Lind</title>
+
+        <link rel='canonical' href='https://www.jesselind.com/' />
       </Head>
       <div className='page home-page'>
         <div className='container'>

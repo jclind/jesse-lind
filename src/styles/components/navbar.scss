@@ -4,6 +4,7 @@
 .nav {
   position: absolute;
   top: $nav-margin-height;
+  z-index: 5;
   margin: 0 auto;
   top: 0;
   padding-top: 2.25rem;

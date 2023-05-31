@@ -68,7 +68,7 @@ const About = () => {
           </div>
         </div>
         <div className='skills section fadeinup ad-1-4' ref={skillsRef}>
-          <h1 className='title'>Skills And Technologies</h1>
+          <h2 className='title'>Skills And Technologies</h2>
           <p className='text '>
             I love creating beautiful websites with simple but functional UI for
             the best user experience possible. These are some of the languages
@@ -85,7 +85,7 @@ const About = () => {
                   objectFit='contain'
                 />
               </div>
-              <h2 className='skill-title'>Languages / Software</h2>
+              <h3 className='skill-title'>Languages / Software</h3>
               <div className='skill-items'>
                 {skillsData
                   .find(data => data.type === 'language')
@@ -114,7 +114,7 @@ const About = () => {
                   objectFit='contain'
                 />
               </div>
-              <h2 className='skill-title'>Frameworks / Libraries</h2>
+              <h3 className='skill-title'>Frameworks / Libraries</h3>
               <div className='skill-items'>
                 {skillsData
                   .find(data => data.type === 'framework')
@@ -143,7 +143,7 @@ const About = () => {
                   objectFit='contain'
                 />
               </div>
-              <h2 className='skill-title'>CMS / Databases</h2>
+              <h3 className='skill-title'>CMS / Databases</h3>
               <div className='skill-items'>
                 {skillsData
                   .find(data => data.type === 'database')

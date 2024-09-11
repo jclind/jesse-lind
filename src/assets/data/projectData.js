@@ -20,7 +20,7 @@ export const projectData = [
     name: 'Jesse Lind Photography',
     desc: "This page is my personal photography portfolio website. I've always been fascinated with photography and capturing a moment, and over the years I've taken some pictures that I think are worthy of sharing.",
     skills: ['Gatsby.js', 'React.js', 'Sass', 'Contentful'],
-    link: 'https://jesselindphotography.netlify.com/',
+    link: 'https://jesselindphotography.netlify.app/',
     id: 2,
   },
   {

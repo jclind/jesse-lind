@@ -7,6 +7,8 @@ export const skillsData = [
       { title: 'HTML', link: 'https://www.w3schools.com/html/' },
       { title: 'CSS', link: 'https://www.w3schools.com/css/' },
       { title: 'Figma', link: 'https://www.figma.com/' },
+      { title: 'PHP', link: 'https://www.php.net/' },
+      { title: 'WordPress.org', link: 'https://wordpress.org/' },
     ],
   },
   {

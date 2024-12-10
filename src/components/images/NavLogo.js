@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useContext } from 'react'
-import Lottie from 'lottie-web'
 import animation from '../../assets/animations/jl-nav-logo-animation.json'
 import { LoadingContext } from '../../contexts/LoadingContext'
 
@@ -12,12 +11,17 @@ const NavLogo = () => {
   }, [context])
   useEffect(() => {
     if (!context.loading) {
-      setTimeout(() => {
-        Lottie.loadAnimation({
+      const loadLottieAnimation = async () => {
+        const lottie = await import('lottie-web')
+        lottie.default.loadAnimation({
           container: animationContainer.current,
           animationData: animation,
           loop: false,
         })
+      }
+
+      setTimeout(() => {
+        loadLottieAnimation()
       }, 600)
     }
   }, [context.loading])

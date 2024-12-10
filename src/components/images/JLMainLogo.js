@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useContext } from 'react'
-import Lottie from 'lottie-web'
 import animation from '../../assets/animations/jl-logo-animation.json'
 import { LoadingContext } from '../../contexts/LoadingContext'
 
@@ -7,19 +6,27 @@ const JLMainLogo = () => {
   const context = useContext(LoadingContext)
 
   const animationContainer = useRef()
+
   useEffect(() => {
     if (animationContainer && animationContainer.current) {
       context.setLogoLoading(false)
     }
   }, [context])
   useEffect(() => {
-    if (!context.loading) {
-      setTimeout(() => {
-        Lottie.loadAnimation({
+    if (!context.loading && animationContainer.current) {
+      const loadLottieAnimation = async () => {
+        const lottie = await import('lottie-web')
+        lottie.default.loadAnimation({
           container: animationContainer.current,
           animationData: animation,
-          loop: false,
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
         })
+      }
+
+      setTimeout(() => {
+        loadLottieAnimation()
       }, 800)
     }
   }, [context.loading])

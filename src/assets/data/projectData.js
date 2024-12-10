@@ -16,6 +16,14 @@ export const projectData = [
     id: 9,
   },
   {
+    path: '/projects-page/dasher-recap.png',
+    name: 'DoorDash Driver Recap',
+    desc: 'Dasher Recap is an app allowing dashers to see a recap of their year of DoorDashing including number of orders completed, minutes dashed, most frequent restaurants, top dashing times, and much more. Influenced from Spotify Wrapped, the yearly data is wrapped in slick designs and satisfying animations.',
+    skills: ['React.js', 'Typescript', 'Sass', 'Firebase'],
+    link: 'https://dasher-recap.netlify.app/',
+    id: 10,
+  },
+  {
     path: '/projects-page/bitworkout.png',
     name: 'BitWorkout',
     desc: 'A gamified RPG-like workout app to give added motivation to exercise. Users can earn coins/experience, purchase items with their rewards, create their own workouts, track their progress and much more.',

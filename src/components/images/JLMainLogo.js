@@ -20,7 +20,7 @@ const JLMainLogo = () => {
           container: animationContainer.current,
           animationData: animation,
           renderer: 'svg',
-          loop: true,
+          loop: false,
           autoplay: true,
         })
       }

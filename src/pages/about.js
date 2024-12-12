@@ -41,6 +41,7 @@ const About = () => {
               width={400}
               height={400}
               objectFit='contain'
+              layout='fill'
             />
           </div>
           <div className='about-content'>

@@ -1,6 +1,11 @@
 @import '../util/vars.scss';
 @import '../util/functions.scss';
 
+@function calculate-height($x) {
+  $ratio: 341 / 500;
+  @return $x * $ratio;
+}
+
 .contact-page {
   min-height: 970px;
 
@@ -12,6 +17,7 @@
       position: relative;
 
       width: 225px;
+      height: calculate-height(225px);
       margin: 0 auto;
       margin-top: toRem(40);
       margin-bottom: toRem(30);
@@ -156,8 +162,7 @@
       }
       .img-container {
         width: 340px;
-      }
-      .img-container {
+        height: calculate-height(340px);
         padding: 0;
         margin: 0;
       }
@@ -184,6 +189,7 @@
       .img-container {
         height: fit-content;
         width: 500px;
+        height: calculate-height(500px);
         padding: 0;
         margin: 0;
 

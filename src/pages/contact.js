@@ -30,6 +30,7 @@ const Contact = () => {
                 width={500}
                 height={341}
                 objectFit='contain'
+                layout='fill'
               />
             </div>
             <div className='content'>
